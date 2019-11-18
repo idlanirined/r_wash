@@ -8,11 +8,13 @@ import { fromLeft, fromTop, flipY, fadeOut, fromRight, fromBottom } from 'react-
 //Screen
 import Login from '../Container/LoginScreen'
 import Register from '../Container/RegisterScreen'
+import HomeNavigation from './HomeNavigation'
 
 
 const MainNavigator = createStackNavigator({
     Login : { screen: Login, navigationOptions: { header: null} },
     Register: { screen: Register, navigationOptions: { header: null } },
+    HomeNavigation: { screen: HomeNavigation, navigationOptions: { header: null} },
 }, {
     headerMode: 'screen',
     initialRouteName: 'Login',
