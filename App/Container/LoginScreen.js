@@ -34,7 +34,7 @@ class Login extends Component {
 
                 {/* Password */}
                 <View style={styles.inputContainer}>
-                    <Image style={[styles.inputIcon, { rotation: 270}]} source={Images.iconPassword}/>
+                    <Image style={styles.inputIcon} source={Images.iconPassword}/>
                     <TextInput 
                         style={styles.inputs}
                         secureTextEntry={this.state.pass}
@@ -55,7 +55,7 @@ class Login extends Component {
                 {/* Button Login */}
                 <View style={{ width: 300, paddingHorizontal: 30}}>
                     <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#32d7e3', '#40bec7']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
-                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 40}} >
+                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 40}} onPress={()=> this.props.navigation.navigate('HomeNavigation')} >
                             <Text style={{color: 'white', fontWeight: 'bold', fontSize: 16}}> Sign In </Text>
                         </TouchableOpacity>
                     </LinearGradient>
