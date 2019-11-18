@@ -6,14 +6,14 @@ import { createStackNavigator } from 'react-navigation-stack';
 import { fromLeft, fromTop, flipY, fadeOut, fromRight, fromBottom } from 'react-navigation-transitions';
 
 //Screen
-import LoginScreen from '../Container/LoginScreen'
+import Login from '../Container/LoginScreen'
 
 
 const MainNavigator = createStackNavigator({
-    LoginScreen: { screen: LoginScreen, navigationOptions: { header: null} },
+    Login : { screen: Login, navigationOptions: { header: null} },
 }, {
     headerMode: 'screen',
-    initialRouteName: 'LoginScreen',
+    initialRouteName: 'Login',
     transitionConfig: () => fromLeft(500),
     // defaultNavigationOptions: {
     //   headerStyle,

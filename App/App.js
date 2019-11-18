@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Container } from 'native-base';
+import { Container, View } from 'native-base';
 
 import AppNavigation from './Navigation/AppNavigation.js'
 
