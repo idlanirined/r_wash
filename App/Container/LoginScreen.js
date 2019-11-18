@@ -62,7 +62,7 @@ class Login extends Component {
                 </View>
                 <View style={{ flexDirection: 'row'}}>
                     <Text style={{ fontWeight: 'bold'}}>Dont have an account? </Text>
-                    <Text style={{ color: '#32d7e3', fontWeight: 'bold'}} onPress={()=> alert('sign Up')}>Sign Up</Text>
+                    <Text style={{ color: '#32d7e3', fontWeight: 'bold'}} onPress={()=> this.props.navigation.navigate('Register')}>Sign Up</Text>
                 </View>
             </View>
         )
