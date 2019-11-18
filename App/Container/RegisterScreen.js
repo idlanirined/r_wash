@@ -34,6 +34,16 @@ class Register extends Component {
                         onChangeText={(username) => this.setState({username})}
                     />
                 </View>
+
+                {/* EMail */}
+                <View style={styles.inputContainer}>
+                    {/* <Image style={styles.inputIcon} source={Images.iconEmail}/> */}
+                    <TextInput style={styles.inputs}
+                        placeholder="Email" 
+                        underlineColorAndroid='transparent'
+                        onChangeText={(email) => this.setState({email})}
+                    />
+                </View>
             </View>
             
 
