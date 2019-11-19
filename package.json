@@ -9,6 +9,11 @@
     "test": "jest",
     "lint": "eslint ."
   },
+  "rnpm": {
+    "assets": [
+      "./App/Fonts"
+    ]
+  },
   "dependencies": {
     "native-base": "^2.13.8",
     "react": "16.9.0",
