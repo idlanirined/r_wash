@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Image, TextInput, StyleSheet, TouchableOpacity } from 'react-native'
+import { Text, Image, TextInput, StyleSheet, TouchableOpacity, PermissionsAndroid } from 'react-native'
 import { View, Container, Icon } from 'native-base';
 import LinearGradient from 'react-native-linear-gradient'
 import Images from '../Lib/Images';
@@ -15,6 +15,7 @@ class Login extends Component {
             icon: 'eye-off',
         }
     }
+
     render(){
         return(
             <View style={styles.container}>
