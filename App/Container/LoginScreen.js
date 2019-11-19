@@ -3,6 +3,7 @@ import { Text, Image, TextInput, StyleSheet, TouchableOpacity } from 'react-nati
 import { View, Container, Icon } from 'native-base';
 import LinearGradient from 'react-native-linear-gradient'
 import Images from '../Lib/Images';
+import Fonts from '../Themes/Fonts';
 
 class Login extends Component {
     constructor(props) {
@@ -56,13 +57,13 @@ class Login extends Component {
                 <View style={{ width: 300, paddingHorizontal: 30}}>
                     <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#32d7e3', '#40bec7']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
                         <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 40}} onPress={()=> this.props.navigation.navigate('HomeNavigation')} >
-                            <Text style={{color: 'white', fontWeight: 'bold', fontSize: 16}}> Sign In </Text>
+                            <Text style={{color: 'white', fontFamily: Fonts.type.bold, fontSize: 18}}> Sign In </Text>
                         </TouchableOpacity>
                     </LinearGradient>
                 </View>
                 <View style={{ flexDirection: 'row'}}>
-                    <Text style={{ fontWeight: 'bold'}}>Dont have an account? </Text>
-                    <Text style={{ color: '#32d7e3', fontWeight: 'bold'}} onPress={()=> this.props.navigation.navigate('Register')}>Sign Up</Text>
+                    <Text style={{ fontFamily: Fonts.type.bold}}>Dont have an account? </Text>
+                    <Text style={{ color: '#32d7e3', fontFamily: Fonts.type.bold}} onPress={()=> this.props.navigation.navigate('Register')}>Sign Up</Text>
                 </View>
             </View>
         )

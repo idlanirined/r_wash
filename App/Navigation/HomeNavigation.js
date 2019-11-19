@@ -40,7 +40,7 @@ class MyComponent extends React.Component {
   render() {
     return (
         <Container>
-            <StatusBar backgroundColor={'blue'} barStyle={'light-content'} animated={true} translucent={false} />
+            <StatusBar backgroundColor={'blue'} barStyle={'light-content'} translucent={false} />
             <BottomNavigation
                 activeColor={'blue'}
                 inactiveColor={'#a69ead'}
