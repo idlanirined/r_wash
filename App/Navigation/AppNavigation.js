@@ -4,6 +4,8 @@ import React from 'react'
 import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import { fromLeft, fromTop, flipY, fadeOut, fromRight, fromBottom } from 'react-navigation-transitions';
+import { headerStyle, headerTitleStyle, headerRighStyle, headerBgStyle } from '../Container/Styles/AppBarStyle'
+import IconBack from 'react-native-vector-icons/Ionicons'
 
 //Screen
 import Login from '../Container/LoginScreen'
@@ -19,16 +21,16 @@ const MainNavigator = createStackNavigator({
     headerMode: 'screen',
     initialRouteName: 'Login',
     // transitionConfig: () => fromLeft(500),
-    // defaultNavigationOptions: {
-    //   headerStyle,
-    //   headerTitleStyle,
+    defaultNavigationOptions: {
+      headerStyle,
+      headerTitleStyle,
     //   headerBackground: (<Image source={Images.backgroundHomeTop} style={headerBgStyle} />),
-    //   headerTintColor: 'white',
-    //   headerBackImage: (
-    //     // <Image source={Images.buttonBack} style={{width: 30, height: 20}}/>
-    //     <IconBack name='arrow-back' size={30} color={'white'} />
-    //   )
-    // }
+      headerTintColor: 'white',
+      headerBackImage: (
+        // <Image source={Images.buttonBack} style={{width: 30, height: 20}}/>
+        <IconBack name='arrow-back' size={30} color={'white'} />
+      )
+    }
   });
   
   export default createAppContainer(MainNavigator);
