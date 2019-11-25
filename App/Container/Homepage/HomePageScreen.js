@@ -6,6 +6,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import { Avatar } from 'react-native-elements';
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
+import Geolocation from '@react-native-community/geolocation';
 
 class HomePageScreen extends Component {
     constructor(props){
@@ -13,6 +14,10 @@ class HomePageScreen extends Component {
         this.state={
             mobil: '',
             search: '',
+            arrayDummy: [
+                { latitude: -6.223558, longitude: 106.8238007 },
+                { latitude: -6.2271424, longitude: 106.8222551 },
+            ]
         }
     }
 
@@ -22,6 +27,7 @@ class HomePageScreen extends Component {
         ).then(granted => {
         //   alert(granted) 
         });
+        Geolocation.getCurrentPosition(info => console.log(info));
     }
     
     render(){
@@ -66,6 +72,8 @@ class HomePageScreen extends Component {
                 </View>
                 <View style={{ flex: 1}}>
                 <MapView
+                    followsUserLocation={true}
+                    showsUserLocation={true}
                     provider={PROVIDER_GOOGLE} // remove if not using Google Maps
                     style={styles.map}
                     zoomEnabled={true}
@@ -76,12 +84,17 @@ class HomePageScreen extends Component {
                         longitudeDelta: 0.0421,
                     }}
                     >
-                    <Marker
-                        coordinate={{ latitude: -6.229504, longitude: 106.825163 }}
-                        title={"title"}
-                        description={"test"}
-                    // icon={image}
-                    />
+                        {this.state.arrayDummy.map((item, index) => {  
+                            return(
+                                <Marker
+                                    coordinate={{ latitude: item.latitude, longitude: item.longitude }}
+                                    title={"Kantor"}
+                                    description={"test"}
+                                // icon={image}
+                                />
+                            )
+                        })}
+                    
                     </MapView>
                 </View>
             </View>
