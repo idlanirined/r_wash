@@ -4,6 +4,7 @@ const Images = {
     login: require('../Assets/Logo/Login.png'),
     rwash: require('../Assets/Logo/Rwash.png'),
     avatar: require('../Assets/Logo/avatar.png'),
+    register: require('../Assets/Logo/Register.png'),
 
 
     //Icon
