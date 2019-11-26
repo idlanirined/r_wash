@@ -6,82 +6,130 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import { Avatar } from 'react-native-elements';
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
+import Geolocation from '@react-native-community/geolocation';
 
 class HomePageScreen extends Component {
-    constructor(props){
+    constructor(props) {
         super(props)
-        this.state={
+        this.state = {
             mobil: '',
             search: '',
+            Rwash: [
+                { latitude: -6.897774, longitude: 107.613805 },
+            ],
+            GotenWash: [{
+                latitude: -6.899035, longitude: 107.620709
+            },
+
+            ],
+            LearningClean: [{
+                latitude: -6.902092, longitude: 107.615473
+            },
+
+
+            ]
         }
     }
 
-    componentDidMount(){
+    componentDidMount() {
         PermissionsAndroid.request(
-          PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
+            PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
         ).then(granted => {
-        //   alert(granted) 
+            //   alert(granted) 
         });
+        Geolocation.getCurrentPosition(info => console.log(info));
     }
-    
-    render(){
-        return(
-            <View style={{ flex: 1}}>
+
+    render() {
+        return (
+            <View style={{ flex: 1 }}>
                 {/* HEADER */}
                 <View style={{ height: 60, width: '100%', backgroundColor: '#32d7e3', flexDirection: 'row', justifyContent: 'space-between' }}>
                     <View style={{ height: '80%', width: '24%', alignSelf: 'center' }}>
-                        <Image source={Images.rwash} style={{ marginLeft: 20, justifyContent: 'center', resizeMode: 'contain', height: '100%', width: '100%' }}/>
+                        <Image source={Images.rwash} style={{ marginLeft: 20, justifyContent: 'center', resizeMode: 'contain', height: '100%', width: '100%' }} />
                     </View>
-                    <View style={{ alignSelf: 'center', flexDirection: 'row', width: '20%', marginRight: 20, justifyContent: 'flex-end'}}>
-                        <Entypo name='heart' size={24} color='white' style={{ marginRight: 20 }}/>
-                        <FontAwesome name='shopping-cart' size={24} color='white'/>
+                    <View style={{ alignSelf: 'center', flexDirection: 'row', width: '20%', marginRight: 20, justifyContent: 'flex-end' }}>
+                        <Entypo name='heart' size={24} color='white' style={{ marginRight: 20 }} />
+                        <FontAwesome name='shopping-cart' size={24} color='white' />
                     </View>
                 </View>
 
                 {/* USER */}
-                <View style={{ height: 60, width: '100%', borderBottomColor: 'gray', borderBottomWidth: 1, elevation: 2, paddingHorizontal: 20, flexDirection: 'row'}}>
-                    <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center'}}/>
-                    <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 15}}>
-                        <Text style={{ fontSize: 16, alignSelf: 'center'}}>Hi, ( User )</Text>
-                        <Text style={{ fontSize: 12, alignSelf: 'center', color: '#32d7e3'}}>Honda Jazz</Text>
+                <View style={{ height: 60, width: '100%', borderBottomColor: 'gray', borderBottomWidth: 1, elevation: 2, paddingHorizontal: 20, flexDirection: 'row' }}>
+                    <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center' }} />
+                    <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 15 }}>
+                        <Text style={{ fontSize: 16, alignSelf: 'center' }}>Hi, ( User )</Text>
+                        <Text style={{ fontSize: 12, alignSelf: 'center', color: '#32d7e3' }}>Honda Jazz</Text>
                     </View>
-                    <Picker 
+                    <Picker
                         selectedValue={this.state.mobil}
-                        style={{height: 50, width: 20, marginLeft: 15}}
-                        onValueChange={(itemValue, itemIndex) => this.setState({mobil: itemValue}) }>
-                            <Picker.Item label="Honda Jazz" value="java" />
-                            <Picker.Item label="Honda Mobilio" value="js" />
+                        style={{ height: 50, width: 20, marginLeft: 15 }}
+                        onValueChange={(itemValue, itemIndex) => this.setState({ mobil: itemValue })}>
+                        <Picker.Item label="Honda Jazz" value="java" />
+                        <Picker.Item label="Honda Mobilio" value="js" />
                     </Picker>
-                    <View style={{ width: '100%', justifyContent: 'center'}}>
+                    <View style={{ width: '100%', justifyContent: 'center' }}>
                         <View style={styles.inputContainer}>
-                            <TextInput 
+                            <TextInput
                                 style={styles.inputs}
                                 placeholder="Search.."
                                 underlineColorAndroid='transparent'
-                                onChangeText={(search) => this.setState({search})}
+                                onChangeText={(search) => this.setState({ search })}
                             />
-                            <AntDesign name='search1' size={20} style={{ marginRight: 5}}/>
+                            <AntDesign name='search1' size={20} style={{ marginRight: 5 }} />
                         </View>
                     </View>
                 </View>
-                <View style={{ flex: 1}}>
-                <MapView
-                    provider={PROVIDER_GOOGLE} // remove if not using Google Maps
-                    style={styles.map}
-                    zoomEnabled={true}
-                    region={{
-                        latitude: -6.229504,
-                        longitude: 106.825163,
-                        latitudeDelta: 0.0922,
-                        longitudeDelta: 0.0421,
-                    }}
+                <View style={{ flex: 1 }}>
+                    <MapView
+                        followsUserLocation={true}
+                        showsUserLocation={true}
+                        provider={PROVIDER_GOOGLE} // remove if not using Google Maps
+                        style={styles.map}
+                        zoomEnabled={true}
+                        region={{
+                            latitude: -6.9032739,
+                            longitude: 107.573116,
+                            latitudeDelta: 0.0922,
+                            longitudeDelta: 0.0421,
+                        }}
                     >
-                    <Marker
-                        coordinate={{ latitude: -6.229504, longitude: 106.825163 }}
-                        title={"title"}
-                        description={"test"}
-                    // icon={image}
-                    />
+                        {this.state.Rwash.map((item, index) => {
+                            return (
+                                <Marker
+                                    coordinate={{ latitude: item.latitude, longitude: item.longitude }}
+                                    title={"R*Wash Dipatiukur"}
+                                    description={"7 min"}
+                                // icon={image}
+                                />
+                            )
+                        })}
+
+                        {this.state.GotenWash.map((item, index) => {
+                            return (
+                                <Marker
+                                    coordinate={{ latitude: item.latitude, longitude: item.longitude }}
+                                    title={"Goten Wash"}
+                                    description={"12 min"}
+                                // icon={image}
+                                />
+                            )
+                        })}
+
+                        {this.state.LearningClean.map((item, index) => {
+                            return (
+                                <Marker
+                                    coordinate={{ latitude: item.latitude, longitude: item.longitude }}
+                                    title={"Learning Clean"}
+                                    description={"20 min"}
+                                // icon={image}
+                                />
+                            )
+                        })}
+
+
+
+
                     </MapView>
                 </View>
             </View>
@@ -102,24 +150,24 @@ const styles = StyleSheet.create({
         borderWidth: 1,
         elevation: 2,
         backgroundColor: '#FFFFFF',
-        borderRadius:30,
-        width:'55%',
-        height:30,
+        borderRadius: 30,
+        width: '55%',
+        height: 30,
         flexDirection: 'row',
-        alignItems:'center'
+        alignItems: 'center'
     },
-    inputIcon:{
-        width:30,
-        height:30,
-        marginLeft:15,
+    inputIcon: {
+        width: 30,
+        height: 30,
+        marginLeft: 15,
         justifyContent: 'center',
         tintColor: '#30dae3'
     },
-    inputs:{
-        height:45,
-        marginLeft:16,
+    inputs: {
+        height: 45,
+        marginLeft: 16,
         borderBottomColor: '#FFFFFF',
-        flex:1,
+        flex: 1,
     },
     map: {
         ...StyleSheet.absoluteFillObject,

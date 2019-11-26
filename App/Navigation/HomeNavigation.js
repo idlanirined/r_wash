@@ -1,11 +1,6 @@
 
-import React from 'react';  
-import {StyleSheet, Text, View,Image} from 'react-native';  
-import { createBottomTabNavigator, createAppContainer} from 'react-navigation';  
-import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';  
-import Icon from 'react-native-vector-icons/Ionicons';  
-
-
+import React from 'react'
+import { createBottomTabNavigator } from 'react-navigation-tabs'
 //Screen
 import HomePageScreen from '../Container/Homepage/HomePageScreen'
 import MyOrderScreen from '../Container/MyOrder'
@@ -14,69 +9,90 @@ import HistoryScreen from '../Container/History'
 import AccountScreen from '../Container/Account'
 import Images from '../Lib/Images';
 
-const TabNavigator = createMaterialBottomTabNavigator(  
-    {  
-        Home: { screen: HomePageScreen,  
-            navigationOptions:{  
-                tabBarLabel:'Home',  
-                tabBarIcon: ({ tintColor }) => (  
-                  <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
-                        {/* <Icon style={[{color: tintColor}]} size={25} name={'ios-home'}/>   */}
-                        <Image source={Images.iconHome} style={{ width: 20, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>
-                    </View>),  
-            }  
-        },  
-        MyOrder: { screen: MyOrderScreen,  
-            navigationOptions:{  
-                tabBarLabel:'My Order',  
-                tabBarIcon: ({ tintColor }) => (  
-                  <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
-                        <Image source={Images.iconMyOrder} style={{ width: 20, height: 25, tintColor: tintColor, resizeMode: 'contain'}}/>
-                    </View>),  
-                // activeColor: '#f60c0d',  
-                // inactiveColor: '#f65a22',  
-                // barStyle: { backgroundColor: '#f69b31' },  
-            }  
-        },  
-        Nearby: { screen: NearbyScreen,  
-            navigationOptions:{  
-                tabBarLabel:'Nearby',  
-                tabBarIcon: ({ tintColor }) => (  
-                  <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
-                        <Image source={Images.iconNearby} style={{ width: 20, height: 35, tintColor: tintColor, resizeMode: 'center'}}/>
-                    </View>),  
-                // activeColor: '#615af6',  
-                // inactiveColor: '#46f6d7',  
-                // barStyle: { backgroundColor: '#67baf6' },  
-            }  
-        },  
-        History: {  
-            screen: HistoryScreen,  
-            navigationOptions:{  
-                tabBarLabel:'History',  
-                tabBarIcon: ({ tintColor }) => ( 
-                  <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
-                        <Image source={Images.iconhistory} style={{ width: 25, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>  
-                    </View>),  
-            }  
-        },  
-        Account: {  
-          screen: AccountScreen,  
-          navigationOptions:{  
-              tabBarLabel:'Account',  
-              tabBarIcon: ({ tintColor }) => (  
-                  <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
-                        <Image source={Images.iconAccount} style={{ width: 20, height: 25, tintColor: tintColor, resizeMode: 'contain'}}/>
-                  </View>),  
-        }  
-      },  
-    },  
-    {  
-      initialRouteName: "Home",  
-      activeColor: '#f0edf6',  
-      inactiveColor: '#9e9e9e',  
-      barStyle: { backgroundColor: 'gray' },  
-    },  
-);  
-  
-export default createAppContainer(TabNavigator);  
+// import { Colors, Images } from '../Themes'
+import { Image, Text } from 'react-native'
+import { View } from 'native-base';
+
+
+export default HomeNavigation = createBottomTabNavigator({
+    Home: {
+        screen: HomePageScreen,
+        navigationOptions: {
+            header: null,
+            tabBarLabel: ({ tintColor }) => (
+                <Text style={[styles.label, { color: tintColor }]}>Home</Text>
+            ),
+            tabBarIcon: ({ tintColor }) => (  
+                <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
+                    {/* <Icon style={[{color: tintColor}]} size={25} name={'ios-home'}/>   */}
+                    <Image source={Images.iconHome} style={{ width: 20, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>
+                </View>),  
+        }
+    },
+    MyOrder: {
+        screen: MyOrderScreen, navigationOptions: {
+            header: null,
+            tabBarLabel: ({ tintColor }) => (
+                <Text style={[styles.label, { color: tintColor }]}>My Order</Text>
+            ),
+            tabBarIcon: ({ tintColor }) => (  
+                <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
+                    <Image source={Images.iconMyOrder} style={{ width: 20, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>
+                </View>),  
+        }
+    },
+    Nearby: {
+        screen: NearbyScreen, navigationOptions: {
+            header: null,
+            tabBarLabel: ({ tintColor }) => (
+                <Text style={[styles.label, { color: tintColor }]}>Nearby</Text>
+            ),
+            tabBarIcon: ({ tintColor }) => (  
+                <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
+                    <Image source={Images.iconNearby} style={{ width: 20, height: 30, tintColor: tintColor, resizeMode: 'center'}}/>
+                </View>),
+        }
+    },
+    History: {
+        screen: HistoryScreen, navigationOptions: {
+            header: null,
+            tabBarLabel: ({ tintColor }) => (
+                <Text style={[styles.label, { color: tintColor }]}>History</Text>
+            ),
+            tabBarIcon: ({ tintColor }) => ( 
+                <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
+                    <Image source={Images.iconhistory} style={{ width: 20, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>  
+                </View>), 
+        }
+    },
+    Account: {
+        screen: AccountScreen, navigationOptions: {
+            header: null,
+            tabBarLabel: ({ tintColor }) => (
+                <Text style={[styles.label, { color: tintColor }]}>Account</Text>
+            ),
+            tabBarIcon: ({ tintColor }) => (  
+                <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
+                        <Image source={Images.iconAccount} style={{ width: 20, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>
+                </View>),
+        }
+    }
+}, { 
+        tabBarOptions: {
+            inactiveTintColor: '#929292',
+            activeTintColor: '#1c85d6',
+            style: {
+                backgroundColor: '#FFFFFF',
+                width: '100%',
+            },
+            labelStyle: {
+                color: 'black'
+            }
+        },
+    })
+
+const styles = {
+    label: {
+        textAlign: 'center', fontSize: 12
+    }
+}
