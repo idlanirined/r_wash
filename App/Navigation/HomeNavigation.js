@@ -82,7 +82,7 @@ export default HomeNavigation = createBottomTabNavigator({
             inactiveTintColor: '#808080',
             activeTintColor: '#00CCFF',
             style: {
-                backgroundColor: '#FFFFFF',
+                backgroundColor: '#FAFAFA',
                 width: '100%',
             },
             labelStyle: {
