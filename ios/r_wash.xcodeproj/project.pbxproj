@@ -34,6 +34,10 @@
 		8FFB9890D9B14A0A97678059 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D46A451CC43F4258B825552A /* rubicon-icon-font.ttf */; };
 		E6F041F4328B4AD59129D923 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87078315EDD04685B1E0851E /* SimpleLineIcons.ttf */; };
 		697C2323A3FF4293BA3C3E8D /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6B07008096244666A11E5A47 /* Zocial.ttf */; };
+		28BBB08C943D4A6FB6386E0B /* Kometa_Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D3DC4E3C1E2E4A579F22133C /* Kometa_Bold.ttf */; };
+		9C22F5CB0FE44C958049C73F /* Kometa_Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F3D034D334A45F29FBE9CDD /* Kometa_Light.ttf */; };
+		F7573326A8ED4977990D6886 /* Kometa_Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F9E36FE92A9248CD906026BC /* Kometa_Medium.ttf */; };
+		8D507701E5714F41AED1D960 /* Kometa_Reguler.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F498E7D0BEF4DFFA67D262C /* Kometa_Reguler.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +92,10 @@
 		D46A451CC43F4258B825552A /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		87078315EDD04685B1E0851E /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		6B07008096244666A11E5A47 /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D3DC4E3C1E2E4A579F22133C /* Kometa_Bold.ttf */ = {isa = PBXFileReference; name = "Kometa_Bold.ttf"; path = "../App/Fonts/Kometa_Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0F3D034D334A45F29FBE9CDD /* Kometa_Light.ttf */ = {isa = PBXFileReference; name = "Kometa_Light.ttf"; path = "../App/Fonts/Kometa_Light.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		F9E36FE92A9248CD906026BC /* Kometa_Medium.ttf */ = {isa = PBXFileReference; name = "Kometa_Medium.ttf"; path = "../App/Fonts/Kometa_Medium.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0F498E7D0BEF4DFFA67D262C /* Kometa_Reguler.ttf */ = {isa = PBXFileReference; name = "Kometa_Reguler.ttf"; path = "../App/Fonts/Kometa_Reguler.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,6 +225,10 @@
 				D46A451CC43F4258B825552A /* rubicon-icon-font.ttf */,
 				87078315EDD04685B1E0851E /* SimpleLineIcons.ttf */,
 				6B07008096244666A11E5A47 /* Zocial.ttf */,
+				D3DC4E3C1E2E4A579F22133C /* Kometa_Bold.ttf */,
+				0F3D034D334A45F29FBE9CDD /* Kometa_Light.ttf */,
+				F9E36FE92A9248CD906026BC /* Kometa_Medium.ttf */,
+				0F498E7D0BEF4DFFA67D262C /* Kometa_Reguler.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -377,6 +389,10 @@
 				8FFB9890D9B14A0A97678059 /* rubicon-icon-font.ttf in Resources */,
 				E6F041F4328B4AD59129D923 /* SimpleLineIcons.ttf in Resources */,
 				697C2323A3FF4293BA3C3E8D /* Zocial.ttf in Resources */,
+				28BBB08C943D4A6FB6386E0B /* Kometa_Bold.ttf in Resources */,
+				9C22F5CB0FE44C958049C73F /* Kometa_Light.ttf in Resources */,
+				F7573326A8ED4977990D6886 /* Kometa_Medium.ttf in Resources */,
+				8D507701E5714F41AED1D960 /* Kometa_Reguler.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

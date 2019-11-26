@@ -50,21 +50,21 @@ class Login extends Component {
                         style={{ marginRight: 10}} 
                         onPress={()=> 
                             this.setState({ pass: !this.state.pass, icon: this.state.icon === 'eye' ? 'eye-off' : 'eye' })} 
-                        color={'#626f91'}
+                        color={'#808080'}
                     />
                 </View>
 
                 {/* Button Login */}
                 <View style={{ width: 300, paddingHorizontal: 30}}>
-                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#32d7e3', '#40bec7']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
+                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
                         <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 40}} onPress={()=> this.props.navigation.navigate('HomeNavigation')} >
                             <Text style={{color: 'white', fontFamily: Fonts.type.bold, fontSize: 18}}> Sign In </Text>
                         </TouchableOpacity>
                     </LinearGradient>
                 </View>
                 <View style={{ flexDirection: 'row'}}>
-                    <Text style={{ fontFamily: Fonts.type.bold}}>Dont have an account? </Text>
-                    <Text style={{ color: '#32d7e3', fontFamily: Fonts.type.bold}} onPress={()=> this.props.navigation.navigate('Register')}>Sign Up</Text>
+                    <Text style={{ fontFamily: Fonts.type.bold}}>Don't have an account? </Text>
+                    <Text style={{ color: '#00CCFF', fontFamily: Fonts.type.bold}} onPress={()=> this.props.navigation.navigate('Register')}>Sign Up</Text>
                 </View>
             </View>
         )
@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
         height:30,
         marginLeft:15,
         justifyContent: 'center',
-        tintColor: '#30dae3'
+        tintColor: '#00CCFF'
     },
     inputs:{
         height:45,

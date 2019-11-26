@@ -79,8 +79,8 @@ export default HomeNavigation = createBottomTabNavigator({
     }
 }, { 
         tabBarOptions: {
-            inactiveTintColor: '#929292',
-            activeTintColor: '#1c85d6',
+            inactiveTintColor: '#808080',
+            activeTintColor: '#00CCFF',
             style: {
                 backgroundColor: '#FFFFFF',
                 width: '100%',
