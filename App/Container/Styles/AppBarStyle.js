@@ -6,7 +6,7 @@ export const headerStyle = {
     backgroundColor: Colors.primary,
     shadowRadius: 0,
     elevation: 0,
-    marginTop: DeviceInfo.hasNotch() ? 20 : 0,
+    marginTop: DeviceInfo.hasNotch() ? 20 : 20,
     borderBottomWidth: 0,
 }
 
