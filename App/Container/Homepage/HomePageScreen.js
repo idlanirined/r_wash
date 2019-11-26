@@ -50,11 +50,7 @@ class HomePageScreen extends Component {
                     <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center' }} />
                     <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 15 }}>
                         <Text style={{ fontSize: 16, alignSelf: 'center' }}>Hi, ( User )</Text>
-<<<<<<< Updated upstream
-                        <Text style={{ fontSize: 12, alignSelf: 'center', color: '#32d7e3' }}>{this.state.mobil}</Text>
-=======
                         <Text style={{ fontSize: 12, alignSelf: 'center', color: '#00CCFF' }}>Honda Jazz</Text>
->>>>>>> Stashed changes
                     </View>
                     <Picker
                         selectedValue={this.state.mobil}
