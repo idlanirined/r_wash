@@ -12,22 +12,13 @@ class HomePageScreen extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            mobil: '',
+            mobil: 'Honda Jazz',
             search: '',
-            Rwash: [
-                { latitude: -6.897774, longitude: 107.613805 },
+            array: [
+                { latitude: -6.897774, longitude: 107.613805, title: 'R*Wash Dipatiukur', desc: '7 min' },
+                { latitude: -6.899035, longitude: 107.620709, title: 'Goten Wash', desc: '12 min'},
+                { latitude: -6.902092, longitude: 107.615473, title: 'Learning Clean', desc: '20 min'}
             ],
-            GotenWash: [{
-                latitude: -6.899035, longitude: 107.620709
-            },
-
-            ],
-            LearningClean: [{
-                latitude: -6.902092, longitude: 107.615473
-            },
-
-
-            ]
         }
     }
 
@@ -59,14 +50,14 @@ class HomePageScreen extends Component {
                     <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center' }} />
                     <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 15 }}>
                         <Text style={{ fontSize: 16, alignSelf: 'center' }}>Hi, ( User )</Text>
-                        <Text style={{ fontSize: 12, alignSelf: 'center', color: '#32d7e3' }}>Honda Jazz</Text>
+                        <Text style={{ fontSize: 12, alignSelf: 'center', color: '#32d7e3' }}>{this.state.mobil}</Text>
                     </View>
                     <Picker
                         selectedValue={this.state.mobil}
                         style={{ height: 50, width: 20, marginLeft: 15 }}
                         onValueChange={(itemValue, itemIndex) => this.setState({ mobil: itemValue })}>
-                        <Picker.Item label="Honda Jazz" value="java" />
-                        <Picker.Item label="Honda Mobilio" value="js" />
+                        <Picker.Item label="Honda Jazz" value="Honda Jazz" />
+                        <Picker.Item label="Honda Mobilio" value="Honda Mobilio" />
                     </Picker>
                     <View style={{ width: '100%', justifyContent: 'center' }}>
                         <View style={styles.inputContainer}>
@@ -94,42 +85,16 @@ class HomePageScreen extends Component {
                             longitudeDelta: 0.0421,
                         }}
                     >
-                        {this.state.Rwash.map((item, index) => {
+                        {this.state.array.map((item, index) => {
                             return (
                                 <Marker
                                     coordinate={{ latitude: item.latitude, longitude: item.longitude }}
-                                    title={"R*Wash Dipatiukur"}
-                                    description={"7 min"}
+                                    title={item.title}
+                                    description={item.desc}
                                 // icon={image}
                                 />
                             )
                         })}
-
-                        {this.state.GotenWash.map((item, index) => {
-                            return (
-                                <Marker
-                                    coordinate={{ latitude: item.latitude, longitude: item.longitude }}
-                                    title={"Goten Wash"}
-                                    description={"12 min"}
-                                // icon={image}
-                                />
-                            )
-                        })}
-
-                        {this.state.LearningClean.map((item, index) => {
-                            return (
-                                <Marker
-                                    coordinate={{ latitude: item.latitude, longitude: item.longitude }}
-                                    title={"Learning Clean"}
-                                    description={"20 min"}
-                                // icon={image}
-                                />
-                            )
-                        })}
-
-
-
-
                     </MapView>
                 </View>
             </View>

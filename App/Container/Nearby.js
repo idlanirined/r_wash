@@ -24,7 +24,7 @@ class Nearby extends Component {
 
                     {/* Content Bawah */}
                     <ScrollView style={{ paddingHorizontal: 15, paddingBottom: 10}}>
-
+                        
                     </ScrollView>
             </View>
         )
