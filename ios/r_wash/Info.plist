@@ -74,6 +74,10 @@
 		<string>rubicon-icon-font.ttf</string>
 		<string>SimpleLineIcons.ttf</string>
 		<string>Zocial.ttf</string>
+		<string>Kometa_Bold.ttf</string>
+		<string>Kometa_Light.ttf</string>
+		<string>Kometa_Medium.ttf</string>
+		<string>Kometa_Reguler.ttf</string>
 	</array>
 </dict>
 </plist>
