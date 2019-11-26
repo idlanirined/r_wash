@@ -14,6 +14,7 @@ class Register extends Component {
             password: '',
             confPassword: '',
             typevehicle: [
+                'Type Vehicle',
                 'Small Car',
                 'Sedan',
                 'Mini Bus',
@@ -71,17 +72,24 @@ class Register extends Component {
                     />
                 </View>
                   {/* Type Vehicle */}
-                <View style={styles.inputContainer}>
-            <Picker selectedValue = {this.state.typevehicle} onValueChange = {this.typevehicle}>
-               <Picker.Item label = "Type Vehicle" value = "" />
-               <Picker.Item label = "Small Car" value = "" />
-               <Picker.Item label = "Sedan" value = "" />
-               <Picker.Item label = "Mini Bus" value = "" />
-            </Picker>
-         </View>
+                <View style={[styles.inputContainer, { paddingHorizontal: 10}]}>
+                <Picker
+                    selectedValue={this.state.Vehiclebrand}
+                    style={{ width: '100%'}}
+                    onValueChange={(itemValue) =>
+                        // alert(itemValue)
+                        this.setState({Vehiclebrand: itemValue})
+                    }>
+                        {this.state.typevehicle.map((item, index) => {
+                            return(
+                                <Picker.Item label = {item} value={item} />
+                            )
+                        })}
+                </Picker>
+                </View>
 
-         {/* Vehicle Brand */}
-         <View style={styles.inputContainer}>
+                {/* Vehicle Brand */}
+                <View style={styles.inputContainer}>
                     {/* <Image style={styles.inputIcon} source={Images.password}/> */}
                     <TextInput style={styles.inputs}
                         placeholder="Vehicle Brand" 
@@ -91,7 +99,7 @@ class Register extends Component {
                 </View>
 
                 {/* License Plate */}
-         <View style={styles.inputContainer}>
+                <View style={styles.inputContainer}>
                     {/* <Image style={styles.inputIcon} source={Images.password}/> */}
                     <TextInput style={styles.inputs}
                         placeholder="License Plate" 
@@ -103,11 +111,11 @@ class Register extends Component {
                 {/* Button OK */}
                 <View style={{ width: 250, paddingHorizontal: 30}}>
                     <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#32d7e3', '#40bec7']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
-                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 50}} onPress={()=> this.props.navigation.navigate('HomeNavigation')} >
+                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 50}} >
                             <Text style={{color: 'white', fontFamily: Fonts.type.bold, fontSize: 18}}> OK </Text>
                         </TouchableOpacity>
                     </LinearGradient>
-            </View>
+                </View>
             </View>
             
         
