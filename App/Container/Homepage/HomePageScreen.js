@@ -35,7 +35,7 @@ class HomePageScreen extends Component {
         return (
             <View style={{ flex: 1 }}>
                 {/* HEADER */}
-                <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFZ', flexDirection: 'row', justifyContent: 'space-between' }}>
+                <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', justifyContent: 'space-between' }}>
                     <View style={{ height: '80%', width: '24%', alignSelf: 'center' }}>
                         <Image source={Images.rwash} style={{ marginLeft: 20, justifyContent: 'center', resizeMode: 'contain', height: '100%', width: '100%' }} />
                     </View>
