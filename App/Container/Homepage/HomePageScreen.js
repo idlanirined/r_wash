@@ -7,8 +7,10 @@ import AntDesign from 'react-native-vector-icons/AntDesign'
 import { Avatar } from 'react-native-elements';
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
+let myMap;
 
 class HomePageScreen extends Component {
+    
     constructor(props) {
         super(props)
         this.state = {
@@ -73,6 +75,7 @@ class HomePageScreen extends Component {
                 </View>
                 <View style={{ flex: 1 }}>
                     <MapView
+                    ref={ref => myMap = ref}
                         followsUserLocation={true}
                         showsUserLocation={true}
                         provider={PROVIDER_GOOGLE} // remove if not using Google Maps
@@ -91,6 +94,17 @@ class HomePageScreen extends Component {
                                     coordinate={{ latitude: item.latitude, longitude: item.longitude }}
                                     title={item.title}
                                     description={item.desc}
+                                    
+                                    // animasi
+                                    onPress={() => {
+                                        myMap.fitToCoordinates ([ 
+                                            { latitude: -6.897774, longitude: 107.613805, latitude: -6.899035, longitude: 107.620709, latitude: -6.902092, longitude: 107.615473}
+                                           
+                                        ], {
+                                            animated: true
+                                        })
+
+                                    }}
                                 // icon={image}
                                 />
                             )
