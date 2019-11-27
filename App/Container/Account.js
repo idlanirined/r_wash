@@ -9,7 +9,7 @@ class Account extends Component {
     render(){
         return(
             <View style={{ flex: 1, backgroundColor: '#edeff0'}}> 
-                <View style={{ height: 120, width: '100%', backgroundColor: '#32d7e3'}}>
+                <View style={{ height: 120, width: '100%', backgroundColor: '#00CCFF'}}>
                 </View>
                 <View style={{ justifyContent: 'space-between', flex: 1, paddingBottom: 20}}>
                     <View style={{ paddingHorizontal: 20, marginTop: -80, elevation: 2}}>

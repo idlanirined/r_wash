@@ -35,7 +35,7 @@ class HomePageScreen extends Component {
         return (
             <View style={{ flex: 1 }}>
                 {/* HEADER */}
-                <View style={{ height: 60, width: '100%', backgroundColor: '#32d7e3', flexDirection: 'row', justifyContent: 'space-between' }}>
+                <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', justifyContent: 'space-between' }}>
                     <View style={{ height: '80%', width: '24%', alignSelf: 'center' }}>
                         <Image source={Images.rwash} style={{ marginLeft: 20, justifyContent: 'center', resizeMode: 'contain', height: '100%', width: '100%' }} />
                     </View>
@@ -46,11 +46,11 @@ class HomePageScreen extends Component {
                 </View>
 
                 {/* USER */}
-                <View style={{ height: 60, width: '100%', borderBottomColor: 'gray', borderBottomWidth: 1, elevation: 2, paddingHorizontal: 20, flexDirection: 'row' }}>
+                <View style={{ height: 60, width: '100%', borderBottomColor: 'gray', borderBottomWidth: 0, elevation: 0, paddingHorizontal: 20, flexDirection: 'row' }}>
                     <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center' }} />
                     <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 15 }}>
                         <Text style={{ fontSize: 16, alignSelf: 'center' }}>Hi, ( User )</Text>
-                        <Text style={{ fontSize: 12, alignSelf: 'center', color: '#32d7e3' }}>{this.state.mobil}</Text>
+                        <Text style={{ fontSize: 12, alignSelf: 'center', color: '#00CCFF' }}>Honda Jazz</Text>
                     </View>
                     <Picker
                         selectedValue={this.state.mobil}
@@ -131,7 +131,7 @@ const styles = StyleSheet.create({
     inputs: {
         height: 45,
         marginLeft: 16,
-        borderBottomColor: '#FFFFFF',
+        borderBottomColor: '#FAFAFA',
         flex: 1,
     },
     map: {
