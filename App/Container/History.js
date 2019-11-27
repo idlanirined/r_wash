@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, ScrollView } from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
 import { Fonts } from '../Themes'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
@@ -16,11 +16,22 @@ class History extends Component {
             ]
         }
     }
+
+    clearAll(){
+        this.setState({
+            arrayDummy: []
+        })
+    }
     render(){
         return(
             <View style={{ flex: 1, backgroundColor: 'white'}}>
-                <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', justifyContent: 'center'}}>
-                    <Text style={{ alignSelf: 'center', justifyContent: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20}}>History</Text>
+                <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', paddingHorizontal: 20, justifyContent: 'center'}} >
+                    <View style={{  width: '95%', justifyContent: 'center'}}>
+                        <Text style={{ alignSelf: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20}}>History</Text>
+                    </View>
+                    <TouchableOpacity onPress={()=> this.clearAll()} style={{ width: '5%', alignSelf: 'center', justifyContent: 'center'}}>
+                        <Ionicons name='md-trash' size={28}/>
+                    </TouchableOpacity>
                 </View>
                 <ScrollView style={{ paddingHorizontal: 20, marginVertical: 10}} showsVerticalScrollIndicator={false} >
                     {this.state.arrayDummy.map((item, index) => {
