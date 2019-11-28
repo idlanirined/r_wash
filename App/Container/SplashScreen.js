@@ -6,14 +6,14 @@ import Images from '../Lib/Images';
 export default class SplashScreen extends Component {
     render() {
         return (
-        // <View style={{ width: 200, height: 100, justifyContent: 'center', alignSelf: 'center' }}>
-         //       <Image source={Images.logo} style={{ width: 100, height: 100, justifyContent: 'center', alignSelf: 'center' }} resizeMode='contain' />
-        //  </View>
+            <View style={styles.wrapper}>
+         <View style={{ width: 200, height: 100, justifyContent: 'center', alignSelf: 'center' }}>
+                <Image source={Images.splash} style={{ width: 500, height: 707, justifyContent: 'center', alignSelf: 'center' }} resizeMode='contain' />
+          </View>
+          </View>
           
       
-            <View style={styles.wrapper}>
-                <Text style={styles.title}>WELCOME</Text>
-            </View>
+         
         );
     }
 }
