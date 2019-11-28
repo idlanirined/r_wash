@@ -30,7 +30,7 @@ class History extends Component {
                         <Text style={{ alignSelf: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20}}>History</Text>
                     </View>
                     <TouchableOpacity onPress={()=> this.clearAll()} style={{ width: '5%', alignSelf: 'center', justifyContent: 'center'}}>
-                        <Ionicons name='md-trash' size={28}/>
+                        <Ionicons name='md-trash' size={28} color='white'/>
                     </TouchableOpacity>
                 </View>
                 <ScrollView style={{ paddingHorizontal: 20, marginVertical: 10}} showsVerticalScrollIndicator={false} >
