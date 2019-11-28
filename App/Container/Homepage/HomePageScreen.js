@@ -52,8 +52,8 @@ class HomePageScreen extends Component {
                 <View style={{ height: 60, width: '100%', borderBottomColor: 'gray', borderBottomWidth: 0, elevation: 0, paddingHorizontal: 20, flexDirection: 'row' }}>
                     <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center' }} />
                     <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 15 }}>
-                        <Text style={{ fontSize: 16, alignSelf: 'center' }}>Hi, ( User )</Text>
-                        <Text style={{ fontSize: 12, alignSelf: 'center', color: '#00CCFF' }}>Honda Jazz</Text>
+                        <Text style={{ fontSize: 16, alignSelf: 'center', fontWeight: 'bold' }}>Hi, ( User )</Text>
+                        <Text style={{ fontSize: 12, alignSelf: 'center', color: '#00CCFF', fontWeight: 'bold'}}>Honda Jazz</Text>
                     </View>
                     <Picker
                         selectedValue={this.state.mobil}
