@@ -83,8 +83,8 @@ class HomePageScreen extends Component {
                         style={styles.map}
                         zoomEnabled={true}
                         region={{
-                            latitude: -6.9032739,
-                            longitude: 107.573116,
+                            latitude: -6.9198966,
+                            longitude: 107.6197455,
                             latitudeDelta: 0.0922,
                             longitudeDelta: 0.0421,
                         }}
