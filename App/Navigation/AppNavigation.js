@@ -21,7 +21,7 @@ const MainNavigator = createStackNavigator({
     SplashScreen: { screen: SplashScreen, navigationOptions: { header: null}}
 }, {
     headerMode: 'screen',
-    initialRouteName: 'Login',
+    initialRouteName: 'SplashScreen',
     // transitionConfig: () => fromLeft(500),
     defaultNavigationOptions: {
       headerStyle,

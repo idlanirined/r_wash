@@ -17,6 +17,9 @@ const Images = {
     iconAccount: require('../Assets/Icon/Account.png'),
     iconhistory: require('../Assets/Icon/history.png'),
 
+    //img
+    splash: require('../Assets/img/Splashscreen.jpg'),
+
 }
 
 export default Images
