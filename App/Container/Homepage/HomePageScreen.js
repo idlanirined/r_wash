@@ -17,8 +17,8 @@ class HomePageScreen extends Component {
             mobil: 'Honda Jazz',
             search: '',
             array: [
-                { latitude: -6.897774, longitude: 107.613805, title: 'R*Wash Dipatiukur', desc: '7 min' }
-              //  { latitude: -6.899035, longitude: 107.620709, title: 'Goten Wash', desc: '12 min' },
+                { latitude: -6.897774, longitude: 107.613805, title: 'R*Wash Dipatiukur', desc: '7 min' },
+              // { latitude: -6.899035, longitude: 107.620709, title: 'Goten Wash', desc: '12 min' },
               //  { latitude: -6.902092, longitude: 107.615473, title: 'Learning Clean', desc: '20 min' },
                // { latitude: -6.899146, longitude: 107.611600, title: 'Car Wash', desc: '23 min' }
             ],
@@ -57,10 +57,11 @@ class HomePageScreen extends Component {
                     </View>
                     <Picker
                         selectedValue={this.state.mobil}
-                        style={{ height: 50, width: 20, marginLeft: 15 }}
+                        style={{ height: 60, width: 30, marginLeft: 15 }}
                         onValueChange={(itemValue, itemIndex) => this.setState({ mobil: itemValue })}>
                         <Picker.Item label="Honda Jazz" value="Honda Jazz" />
                         <Picker.Item label="Honda Mobilio" value="Honda Mobilio" />
+                        <Picker.Item label="Alphard" value="Alphard" />
                     </Picker>
                     <View style={{ height:30, width: 350, justifyContent: 'center', marginTop:15 }}>
                         <View style={styles.inputContainer}>
