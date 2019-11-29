@@ -14,11 +14,15 @@ import HomeNavigation from './HomeNavigation'
 import SplashScreen from '../Container/SplashScreen'
 
 
+
+
 const MainNavigator = createStackNavigator({
     Login : { screen: Login, navigationOptions: { header: null} },
     Register: { screen: Register, navigationOptions: { header: null } },
     HomeNavigation: { screen: HomeNavigation, navigationOptions: { header: null} },
-    SplashScreen: { screen: SplashScreen, navigationOptions: { header: null}}
+    SplashScreen: { screen: SplashScreen, navigationOptions: { header: null}},
+   
+    
 }, {
     headerMode: 'screen',
     initialRouteName: 'Login',

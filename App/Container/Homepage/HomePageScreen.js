@@ -38,22 +38,22 @@ class HomePageScreen extends Component {
         return (
             <View style={{ flex: 1 }}>
                 {/* HEADER */}
-                <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', justifyContent: 'space-between' }}>
+                <View style={{ height: 50, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', justifyContent: 'space-between' }}>
                     <View style={{ height: '80%', width: '24%', alignSelf: 'center' }}>
-                        <Image source={Images.rwash} style={{ marginLeft: 20, justifyContent: 'center', resizeMode: 'contain', height: '100%', width: '100%' }} />
+                        <Image source={Images.rwash} style={{ marginLeft: 20, marginTop: 5, justifyContent: 'center', resizeMode: 'contain', height: '85%', width: '85%' }} />
                     </View>
                     <View style={{ alignSelf: 'center', flexDirection: 'row', width: '20%', marginRight: 20, justifyContent: 'flex-end' }}>
-                        <Entypo name='heart' size={24} color='white' style={{ marginRight: 20 }} />
+                        <Entypo name='heart' size={24} color='white' style={{ marginRight: 10 }} />
                         <FontAwesome name='shopping-cart' size={24} color='white' />
                     </View>
                 </View>
 
                 {/* USER */}
                 <View style={{ height: 60, width: '100%', borderBottomColor: 'gray', borderBottomWidth: 0, elevation: 0, paddingHorizontal: 20, flexDirection: 'row' }}>
-                    <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center' }} />
-                    <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 15 }}>
-                        <Text style={{ fontSize: 16, alignSelf: 'center', fontWeight: 'bold' }}>Hi, ( User )</Text>
-                        <Text style={{ fontSize: 12, alignSelf: 'center', color: '#00CCFF', fontWeight: 'bold'}}>Honda Jazz</Text>
+                    <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center' , height: 35, width:35}} />
+                    <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 5 }}>
+                        <Text style={{ fontSize: 12, alignSelf: 'center', fontWeight: 'bold' }}>Hi, ( User )</Text>
+                        <Text style={{ fontSize: 10, alignSelf: 'center', color: '#00CCFF', fontWeight: 'bold'}}>Honda Jazz</Text>
                     </View>
                     <Picker
                         selectedValue={this.state.mobil}
@@ -62,7 +62,7 @@ class HomePageScreen extends Component {
                         <Picker.Item label="Honda Jazz" value="Honda Jazz" />
                         <Picker.Item label="Honda Mobilio" value="Honda Mobilio" />
                     </Picker>
-                    <View style={{ width: '100%', justifyContent: 'center' }}>
+                    <View style={{ height:30, width: 350, justifyContent: 'center', marginTop:15 }}>
                         <View style={styles.inputContainer}>
                             <TextInput
                                 style={styles.inputs}

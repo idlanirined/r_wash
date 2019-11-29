@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, Image } from 'react-native'
+import { View, Text, Image, StyleSheet, } from 'react-native'
 import { Fonts } from '../Themes'
 import { Avatar } from 'react-native-elements'
 import Fontisto from 'react-native-vector-icons/Fontisto'
@@ -42,6 +42,7 @@ class Account extends Component {
                             <Fontisto name='power' size={20} style={{ alignSelf: 'center' }} color={'gray'} />
                             <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium}}>Logout</Text>
                         </View>
+                        
                     </View>
                 </View>
                

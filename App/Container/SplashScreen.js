@@ -25,10 +25,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
-
-    title: {
-        color: 'white'
-
-
-    }
 });
