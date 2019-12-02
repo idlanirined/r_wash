@@ -16,6 +16,10 @@ const Images = {
     iconNearby: require('../Assets/Icon/Nearby.png'),
     iconAccount: require('../Assets/Icon/Account.png'),
     iconhistory: require('../Assets/Icon/history.png'),
+    iconHome1: require('../Assets/Icon/home1.png'),
+    iconEmail1: require('../Assets/Icon/email1.png'),
+    iconPhone: require('../Assets/Icon/phone.png'),
+    iconCar: require('../Assets/Icon/car.png'),
 
     //img
     splash: require('../Assets/img/Splashscreen.jpg'),

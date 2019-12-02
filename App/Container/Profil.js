@@ -5,7 +5,7 @@ import { Avatar } from 'react-native-elements'
 import Fontisto from 'react-native-vector-icons/Fontisto'
 import Images from '../Lib/Images'
 
-class Account extends Component {
+class Profil extends Component {
     render(){
         return(
             <View style={{ flex: 1, backgroundColor: '#edeff0'}}> 
@@ -13,7 +13,7 @@ class Account extends Component {
                 </View>
                 <View style={{ justifyContent: 'space-between', flex: 1, paddingBottom: 20}}>
                     <View style={{ paddingHorizontal: 20, marginTop: -80, elevation: 2}}>
-                        <Text style={{ fontFamily: Fonts.type.regular, fontSize: 20, alignSelf : 'center', color: 'white'}}>Account</Text>
+                        <Text style={{ fontFamily: Fonts.type.regular, fontSize: 20, alignSelf : 'center', color: 'white'}}>Profile</Text>
 
                         {/* Account */}
                         <View style={{ backgroundColor:'white' , width: '100%', height: 140, borderRadius: 15, marginTop: 5, paddingVertical: 5}}>
@@ -23,27 +23,25 @@ class Account extends Component {
                         </View>
 
                         {/* Profile */}
-                        <View style={{ backgroundColor:'white' , width: '100%', height: 60, borderRadius: 15, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20}}>
-                            <Image source={Images.iconAccount} style={{width: 20, height: 20, resizeMode: 'contain', alignSelf: 'center'}}/>
-                            <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium}}onPress={()=> this.props.navigation.navigate('Profil')}>Profile</Text>
+                        <View style={{ backgroundColor:'white' , width: '100%', height: 150, borderRadius: 15, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20}}>
+                            <Image source={Images.iconHome1} style={{width: 25, height: 25, resizeMode: 'contain', alignSelf: 'center'}}/>
+                            
+                            <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium}}>komplek Bumi Pakusarakan 2</Text>
+                            
+
+                           
+                           
                         </View>
 
                         {/* Payment */}
                         <View style={{ backgroundColor:'white' , width: '100%', height: 60, borderRadius: 15, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20}}>
-                            <Fontisto name='wallet' size={20} style={{ alignSelf: 'center' }} color={'gray'} />
+                        <Image source={Images.iconCar} style={{width: 25, height: 25, resizeMode: 'contain', alignSelf: 'center'}}/>
                             <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium}}>Payment</Text>
                         </View>
     
                     </View>
 
-                    <View style={{ paddingHorizontal: 20, }}>
-                        {/* Logout */}
-                        <View style={{ backgroundColor:'white' , width: '100%', height: 60, borderRadius: 15, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20 }}>
-                            <Fontisto name='power' size={20} style={{ alignSelf: 'center' }} color={'gray'} />
-                            <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium}}>Logout</Text>
-                        </View>
-                        
-                    </View>
+                 
                 </View>
                
             </View>
@@ -51,4 +49,4 @@ class Account extends Component {
     }
 }
 
-export default Account;
+export default Profil;

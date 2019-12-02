@@ -17,8 +17,8 @@ class HomePageScreen extends Component {
             mobil: 'Honda Jazz',
             search: '',
             array: [
-                { latitude: -6.897774, longitude: 107.613805, title: 'R*Wash Dipatiukur', desc: '7 min' }
-              //  { latitude: -6.899035, longitude: 107.620709, title: 'Goten Wash', desc: '12 min' },
+                { latitude: -6.897774, longitude: 107.613805, title: 'R*Wash Dipatiukur', desc: '7 min' },
+              // { latitude: -6.899035, longitude: 107.620709, title: 'Goten Wash', desc: '12 min' },
               //  { latitude: -6.902092, longitude: 107.615473, title: 'Learning Clean', desc: '20 min' },
                // { latitude: -6.899146, longitude: 107.611600, title: 'Car Wash', desc: '23 min' }
             ],
@@ -38,31 +38,32 @@ class HomePageScreen extends Component {
         return (
             <View style={{ flex: 1 }}>
                 {/* HEADER */}
-                <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', justifyContent: 'space-between' }}>
+                <View style={{ height: 50, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', justifyContent: 'space-between' }}>
                     <View style={{ height: '80%', width: '24%', alignSelf: 'center' }}>
-                        <Image source={Images.rwash} style={{ marginLeft: 20, justifyContent: 'center', resizeMode: 'contain', height: '100%', width: '100%' }} />
+                        <Image source={Images.rwash} style={{ marginLeft: 20, marginTop: 5, justifyContent: 'center', resizeMode: 'contain', height: '85%', width: '85%' }} />
                     </View>
                     <View style={{ alignSelf: 'center', flexDirection: 'row', width: '20%', marginRight: 20, justifyContent: 'flex-end' }}>
-                        <Entypo name='heart' size={24} color='white' style={{ marginRight: 20 }} />
+                        <Entypo name='heart' size={24} color='white' style={{ marginRight: 10 }} />
                         <FontAwesome name='shopping-cart' size={24} color='white' />
                     </View>
                 </View>
 
                 {/* USER */}
                 <View style={{ height: 60, width: '100%', borderBottomColor: 'gray', borderBottomWidth: 0, elevation: 0, paddingHorizontal: 20, flexDirection: 'row' }}>
-                    <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center' }} />
-                    <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 15 }}>
-                        <Text style={{ fontSize: 16, alignSelf: 'center', fontWeight: 'bold' }}>Hi, ( User )</Text>
-                        <Text style={{ fontSize: 12, alignSelf: 'center', color: '#00CCFF', fontWeight: 'bold'}}>Honda Jazz</Text>
+                    <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center' , height: 35, width:35}} />
+                    <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 5 }}>
+                        <Text style={{ fontSize: 12, alignSelf: 'center', fontWeight: 'bold' }}>Hi, ( User )</Text>
+                        <Text style={{ fontSize: 10, alignSelf: 'center', color: '#00CCFF', fontWeight: 'bold'}}>Honda Jazz</Text>
                     </View>
                     <Picker
                         selectedValue={this.state.mobil}
-                        style={{ height: 50, width: 20, marginLeft: 15 }}
+                        style={{ height: 60, width: 30, marginLeft: 15 }}
                         onValueChange={(itemValue, itemIndex) => this.setState({ mobil: itemValue })}>
                         <Picker.Item label="Honda Jazz" value="Honda Jazz" />
                         <Picker.Item label="Honda Mobilio" value="Honda Mobilio" />
+                        <Picker.Item label="Alphard" value="Alphard" />
                     </Picker>
-                    <View style={{ width: '100%', justifyContent: 'center' }}>
+                    <View style={{ height:30, width: 350, justifyContent: 'center', marginTop:15 }}>
                         <View style={styles.inputContainer}>
                             <TextInput
                                 style={styles.inputs}
