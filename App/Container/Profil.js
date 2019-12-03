@@ -4,6 +4,7 @@ import { Fonts } from '../Themes'
 import { Avatar } from 'react-native-elements'
 import Fontisto from 'react-native-vector-icons/Fontisto'
 import Images from '../Lib/Images'
+import { ConfirmDialog } from 'react-native-simple-dialogs';
 
 class Profil extends Component {
     render(){
@@ -38,6 +39,8 @@ class Profil extends Component {
                         <Image source={Images.iconCar} style={{width: 25, height: 25, resizeMode: 'contain', alignSelf: 'center'}}/>
                             <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium}}>Payment</Text>
                         </View>
+
+                        
     
                     </View>
 
