@@ -7,6 +7,7 @@ import MyOrderScreen from '../Container/MyOrder'
 import NearbyScreen from '../Container/Nearby'
 import HistoryScreen from '../Container/History'
 import AccountScreen from '../Container/Account'
+
 import Images from '../Lib/Images'
 
 
@@ -78,6 +79,9 @@ export default HomeNavigation = createBottomTabNavigator({
                 </View>),
         }
     }
+
+
+    
 }, { 
         tabBarOptions: {
             inactiveTintColor: '#808080',
