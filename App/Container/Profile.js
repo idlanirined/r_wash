@@ -29,6 +29,7 @@ class Profile extends Component {
                             
                             <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium}}>komplek Bumi Pakusarakan 2</Text>
                             
+                            
 
                            
                            

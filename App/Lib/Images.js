@@ -24,6 +24,7 @@ const Images = {
     //img
     splash: require('../Assets/img/Splashscreen.jpg'),
     rwash1: require('../Assets/img/Rwash1.jpg'),
+    noorder: require('../Assets/img/noorderr.png'),
 
 
 }
