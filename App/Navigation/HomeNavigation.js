@@ -7,6 +7,7 @@ import MyOrderScreen from '../Container/MyOrder'
 import NearbyScreen from '../Container/Nearby'
 import HistoryScreen from '../Container/History'
 import AccountScreen from '../Container/Account'
+//import ProfileScreen from '../Container/Profil'
 
 import Images from '../Lib/Images'
 
@@ -79,6 +80,19 @@ export default HomeNavigation = createBottomTabNavigator({
                 </View>),
         }
     }
+
+   // Profil: {
+    //    screen: ProfileScreen, navigationOptions: {
+     //       header: null,
+    //        tabBarLabel: ({ tintColor }) => (
+       //         <Text style={[styles.label, { color: tintColor, marginBottom:10 }]}>Account</Text>
+   //         ),
+     //       tabBarIcon: ({ tintColor }) => (  
+    //            <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
+        //                <Image source={Images.iconAccount} style={{ marginTop:10, width: 23, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>
+    //            </View>),
+     //   }
+  //  }
 
 
     

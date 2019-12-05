@@ -14,10 +14,13 @@ class Account extends Component {
             'Are you sure you want to logout?',
             [
               {text: 'NO', onPress: () => console.warn('Tidak jadi keluar'), style: 'cancel'},
-              {text: 'YES', onPress:() => navigation.navigate('Login') },
-            ]
-          )
-              }
+              //{text: 'YES', onPress:() => this.props.navigation.navigate('Login') }
+              {text: 'YES', onPress: () => console.warn('Keluar')},
+            ],
+            { cancelable: false }
+      //clicking out side of alert will not cancel
+          );
+              };
       
     
     render() {
@@ -38,8 +41,8 @@ class Account extends Component {
 
                         {/* Profile */}
                         <View style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 15, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20 }}>
-                            <Image source={Images.iconAccount} style={{ width: 20, height: 20, resizeMode: 'contain', alignSelf: 'center' }} />
-                            <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium }} onPress={() => this.props.navigation.navigate('Profil')}>Profile</Text>
+                            <Image source={Images.iconAccount} style={{ width: 20, height: 20, resizeMode: 'contain', alignSelf: 'center' }}  />
+                            <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium }} onPress={() => this.props.navigation.navigate('Profile')}>Profile</Text>
                         </View>
 
                         {/* Payment */}
@@ -53,8 +56,8 @@ class Account extends Component {
                     <View style={{ paddingHorizontal: 20, }}>
                         {/* Logout */}
                         <View style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 15, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20 }}>
-                            <Fontisto name='power' size={20} style={{ alignSelf: 'center' }} color={'gray'} />
-                            <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium }} onPress={this._onPressButton}>Logout</Text>
+                            <Fontisto name='power' size={20} style={{ alignSelf: 'center' }} color={'gray'} onPress={this._onPressButton} />
+                            <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium }} onPress={this._onPressButton} >Logout</Text>
                         </View>
 
                     </View>

@@ -6,7 +6,7 @@ import Fontisto from 'react-native-vector-icons/Fontisto'
 import Images from '../Lib/Images'
 import { ConfirmDialog } from 'react-native-simple-dialogs';
 
-class Profil extends Component {
+class Profile extends Component {
     render(){
         return(
             <View style={{ flex: 1, backgroundColor: '#edeff0'}}> 
@@ -52,4 +52,4 @@ class Profil extends Component {
     }
 }
 
-export default Profil;
+export default Profile;
