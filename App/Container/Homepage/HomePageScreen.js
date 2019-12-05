@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import { View, Text, Image, Picker, StyleSheet, TextInput, PermissionsAndroid } from 'react-native'
 import Images from '../../Lib/Images'
 import Entypo from 'react-native-vector-icons/Entypo'
@@ -9,8 +9,10 @@ import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
 let myMap;
 
-class HomePageScreen extends Component {
+//const [marker, setMarker] = useState ({})
 
+class HomePageScreen extends Component {
+     
     constructor(props) {
         super(props)
         this.state = {
@@ -34,7 +36,42 @@ class HomePageScreen extends Component {
         Geolocation.getCurrentPosition(info => console.log(info));
     }
 
+    
+
     render() {
+
+        const renderDetailMarker = () => (
+            <View 
+                style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    padding: 10,
+                    width: '100%',
+                    height:'40%',
+                    flexDirection: 'row',
+                    backgroundColor: '#FFFFFF'
+                }} 
+            >
+
+                <Image 
+                   // source={{ uri: 'https://serpongku.com/wp-content/uploads/2018/08/Eka-Hospital-BSD-City.jpg'}}
+                   source = {Images.rwash1} 
+                   resizeMode= "cover"
+                    style={{width: 140, height: 100, borderRadius: 10}}
+                />
+
+                <View
+                style={{ flex:1, paddingLeft: 5, flexDirection: 'column'}}
+                >
+                    <Text style={{fontWeight: 'bold', alignItems: 'center', fontSize: 18, paddingLeft: 10}}>R*Wash Dipatiukur</Text>
+                    <Text style={{paddingLeft: 10}} allowFontScaling={false}>No Telp </Text>
+
+                </View>
+
+            </View>
+
+        )
+
         return (
             <View style={{ flex: 1 }}>
                 {/* HEADER */}
@@ -75,6 +112,7 @@ class HomePageScreen extends Component {
                         </View>
                     </View>
                 </View>
+
                 <View style={{ flex: 1 }}>
                     <MapView
                         ref={ref => myMap = ref}
@@ -118,6 +156,8 @@ class HomePageScreen extends Component {
                             )
                         })}
                     </MapView>
+
+                    {renderDetailMarker ()}
                 </View>
             </View>
         )

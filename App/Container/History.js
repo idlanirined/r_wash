@@ -13,6 +13,7 @@ class History extends Component {
                 { tempat: 'Dipatiukur', jalan: 'Jl. Dipatiukur No.5 Bandung', waktu: 'THU, 24 October / 13.20.05', mobil: 'Honda Jazz / D 1514 BFF', via: 'Cash', harga:'IDR 25.000,-', status: 'Done'},
                 { tempat: 'Dipatiukur', jalan: 'Jl. Dipatiukur No.5 Bandung', waktu: 'THU, 24 October / 13.20.05', mobil: 'Honda Jazz / D 1514 BFF', via: 'Cash', harga:'IDR 25.000,-', status: 'Proccess'},
                 { tempat: 'Dipatiukur', jalan: 'Jl. Dipatiukur No.5 Bandung', waktu: 'THU, 24 October / 13.20.05', mobil: 'Honda Jazz / D 1514 BFF', via: 'Cash', harga:'IDR 25.000,-', status: 'Done'},
+                { tempat: 'Dipatiukur', jalan: 'Jl. Dipatiukur No.5 Bandung', waktu: 'THU, 24 October / 13.20.05', mobil: 'Honda Jazz / D 1514 BFF', via: 'Cash', harga:'IDR 25.000,-', status: 'Done'},
             ]
         }
     }

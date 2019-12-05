@@ -6,7 +6,7 @@ const Images = {
     avatar: require('../Assets/Logo/avatar.png'),
     register: require('../Assets/Logo/Register.png'),
     logo: require('../Assets/Logo/logo1.png'),
-
+    
 
     //Icon
     iconEmail: require('../Assets/Icon/email.png'),
@@ -23,6 +23,8 @@ const Images = {
 
     //img
     splash: require('../Assets/img/Splashscreen.jpg'),
+    rwash1: require('../Assets/img/Rwash1.jpg'),
+
 
 }
 
