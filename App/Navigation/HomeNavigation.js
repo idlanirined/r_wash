@@ -7,7 +7,9 @@ import MyOrderScreen from '../Container/MyOrder'
 import NearbyScreen from '../Container/Nearby'
 import HistoryScreen from '../Container/History'
 import AccountScreen from '../Container/Account'
-import Images from '../Lib/Images';
+
+import Images from '../Lib/Images'
+
 
 // import { Colors, Images } from '../Themes'
 import { Image, Text } from 'react-native'
@@ -20,12 +22,12 @@ export default HomeNavigation = createBottomTabNavigator({
         navigationOptions: {
             header: null,
             tabBarLabel: ({ tintColor }) => (
-                <Text style={[styles.label, { color: tintColor }]}>Home</Text>
+                <Text style={[styles.label, { color: tintColor, marginBottom:10 }]}>Home</Text>
             ),
             tabBarIcon: ({ tintColor }) => (  
                 <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
                     {/* <Icon style={[{color: tintColor}]} size={25} name={'ios-home'}/>   */}
-                    <Image source={Images.iconHome} style={{ width: 20, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>
+                    <Image source={Images.iconHome} style={{marginTop:10, width: 23, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>
                 </View>),  
         }
     },
@@ -33,11 +35,11 @@ export default HomeNavigation = createBottomTabNavigator({
         screen: MyOrderScreen, navigationOptions: {
             header: null,
             tabBarLabel: ({ tintColor }) => (
-                <Text style={[styles.label, { color: tintColor }]}>My Order</Text>
+                <Text style={[styles.label, { color: tintColor, marginBottom:10 }]}>My Order</Text>
             ),
             tabBarIcon: ({ tintColor }) => (  
                 <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
-                    <Image source={Images.iconMyOrder} style={{ width: 20, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>
+                    <Image source={Images.iconMyOrder} style={{ marginTop:10, width: 23, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>
                 </View>),  
         }
     },
@@ -45,11 +47,11 @@ export default HomeNavigation = createBottomTabNavigator({
         screen: NearbyScreen, navigationOptions: {
             header: null,
             tabBarLabel: ({ tintColor }) => (
-                <Text style={[styles.label, { color: tintColor }]}>Nearby</Text>
+                <Text style={[styles.label, { color: tintColor, marginBottom:10 }]}>Nearby</Text>
             ),
             tabBarIcon: ({ tintColor }) => (  
                 <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
-                    <Image source={Images.iconNearby} style={{ width: 20, height: 30, tintColor: tintColor, resizeMode: 'center'}}/>
+                    <Image source={Images.iconNearby} style={{ marginTop:10, width: 23, height: 30, tintColor: tintColor, resizeMode: 'center'}}/>
                 </View>),
         }
     },
@@ -57,11 +59,11 @@ export default HomeNavigation = createBottomTabNavigator({
         screen: HistoryScreen, navigationOptions: {
             header: null,
             tabBarLabel: ({ tintColor }) => (
-                <Text style={[styles.label, { color: tintColor }]}>History</Text>
+                <Text style={[styles.label, { color: tintColor, marginBottom:10 }]}>History</Text>
             ),
             tabBarIcon: ({ tintColor }) => ( 
                 <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
-                    <Image source={Images.iconhistory} style={{ width: 20, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>  
+                    <Image source={Images.iconhistory} style={{ marginTop:10, width: 23, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>  
                 </View>), 
         }
     },
@@ -69,21 +71,25 @@ export default HomeNavigation = createBottomTabNavigator({
         screen: AccountScreen, navigationOptions: {
             header: null,
             tabBarLabel: ({ tintColor }) => (
-                <Text style={[styles.label, { color: tintColor }]}>Account</Text>
+                <Text style={[styles.label, { color: tintColor, marginBottom:10 }]}>Account</Text>
             ),
             tabBarIcon: ({ tintColor }) => (  
                 <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
-                        <Image source={Images.iconAccount} style={{ width: 20, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>
+                        <Image source={Images.iconAccount} style={{ marginTop:10, width: 23, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>
                 </View>),
         }
     }
+
+
+    
 }, { 
         tabBarOptions: {
             inactiveTintColor: '#808080',
             activeTintColor: '#00CCFF',
             style: {
                 backgroundColor: '#FAFAFA',
-                width: '100%',
+                width: 360,
+                height: 60,
             },
             labelStyle: {
                 color: 'black'
@@ -93,6 +99,6 @@ export default HomeNavigation = createBottomTabNavigator({
 
 const styles = {
     label: {
-        textAlign: 'center', fontSize: 12
+        textAlign: 'center', fontSize: 10
     }
 }

@@ -12,16 +12,23 @@ import Login from '../Container/LoginScreen'
 import Register from '../Container/RegisterScreen'
 import HomeNavigation from './HomeNavigation'
 import SplashScreen from '../Container/SplashScreen'
+import Profil from '../Container/Profil'
+
+
 
 
 const MainNavigator = createStackNavigator({
     Login : { screen: Login, navigationOptions: { header: null} },
     Register: { screen: Register, navigationOptions: { header: null } },
     HomeNavigation: { screen: HomeNavigation, navigationOptions: { header: null} },
-    SplashScreen: { screen: SplashScreen, navigationOptions: { header: null}}
+    SplashScreen: { screen: SplashScreen, navigationOptions: { header: null}},
+    Profil: { screen: Profil, navigationOptions: { header: null}},
+   
+   
+    
 }, {
     headerMode: 'screen',
-    initialRouteName: 'SplashScreen',
+    initialRouteName: 'Login',
     // transitionConfig: () => fromLeft(500),
     defaultNavigationOptions: {
       headerStyle,
