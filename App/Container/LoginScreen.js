@@ -19,8 +19,8 @@ class Login extends Component {
     render(){
         return(
             <View style={styles.container}>
-                <View style={{ width: 200, height: 100, justifyContent: 'center', alignSelf: 'center'}}>
-                    <Image source={Images.login} style={{ width: 100, height: 100, justifyContent: 'center', alignSelf: 'center'}} resizeMode='contain'/>
+                <View style={{ width: 200, height: 50, justifyContent: 'center', alignSelf: 'center'}}>
+                    <Image source={Images.login} style={{ marginBottom:50, width: 100, height: 100, justifyContent: 'center', alignSelf: 'center'}} resizeMode='contain'/>
                 </View>
 
                 {/* Email */}

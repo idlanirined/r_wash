@@ -8,7 +8,7 @@ export default class SplashScreen extends Component {
         return (
             <View style={styles.wrapper}>
          <View style={{ width: 200, height: 100, justifyContent: 'center', alignSelf: 'center' }}>
-                <Image source={Images.splash} style={{ width: 500, height: 707, justifyContent: 'center', alignSelf: 'center' }} resizeMode='contain' />
+                <Image source={Images.splash} style={{ width: 500, height: 733, justifyContent: 'center', alignSelf: 'center' }} resizeMode='contain' />
           </View>
           </View>
           
@@ -25,10 +25,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     },
-
-    title: {
-        color: 'white'
-
-
-    }
 });

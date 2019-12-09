@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Text, ScrollView, TouchableOpacity } from 'react-native'
+import { View, Text, ScrollView, TouchableOpacity, Alert} from 'react-native'
 import { Fonts } from '../Themes'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 
@@ -13,6 +13,7 @@ class History extends Component {
                 { tempat: 'Dipatiukur', jalan: 'Jl. Dipatiukur No.5 Bandung', waktu: 'THU, 24 October / 13.20.05', mobil: 'Honda Jazz / D 1514 BFF', via: 'Cash', harga:'IDR 25.000,-', status: 'Done'},
                 { tempat: 'Dipatiukur', jalan: 'Jl. Dipatiukur No.5 Bandung', waktu: 'THU, 24 October / 13.20.05', mobil: 'Honda Jazz / D 1514 BFF', via: 'Cash', harga:'IDR 25.000,-', status: 'Proccess'},
                 { tempat: 'Dipatiukur', jalan: 'Jl. Dipatiukur No.5 Bandung', waktu: 'THU, 24 October / 13.20.05', mobil: 'Honda Jazz / D 1514 BFF', via: 'Cash', harga:'IDR 25.000,-', status: 'Done'},
+                { tempat: 'Dipatiukur', jalan: 'Jl. Dipatiukur No.5 Bandung', waktu: 'THU, 24 October / 13.20.05', mobil: 'Honda Jazz / D 1514 BFF', via: 'Cash', harga:'IDR 25.000,-', status: 'Done'},
             ]
         }
     }
@@ -22,6 +23,11 @@ class History extends Component {
             arrayDummy: []
         })
     }
+    _onPressButton (){
+        Alert.alert('Are you sure you want to delete history');
+        
+    }
+    
     render(){
         return(
             <View style={{ flex: 1, backgroundColor: 'white'}}>
@@ -30,7 +36,7 @@ class History extends Component {
                         <Text style={{ alignSelf: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20}}>History</Text>
                     </View>
                     <TouchableOpacity onPress={()=> this.clearAll()} style={{ width: '5%', alignSelf: 'center', justifyContent: 'center'}}>
-                        <Ionicons name='md-trash' size={28} color='white'/>
+                        <Ionicons name='md-trash' size={28} color='white' />
                     </TouchableOpacity>
                 </View>
                 <ScrollView style={{ paddingHorizontal: 20, marginVertical: 10}} showsVerticalScrollIndicator={false} >
