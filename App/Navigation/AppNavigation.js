@@ -14,7 +14,7 @@ import HomeNavigation from './HomeNavigation'
 import SplashScreen from '../Container/SplashScreen'
 import Profile from '../Container/Profile'
 import Maps from '../Container/Maps'
-//import Home from '../Container/Home'
+import Menu from '../Container/MainMenu'
 
 
 
@@ -25,7 +25,7 @@ const MainNavigator = createStackNavigator({
     SplashScreen: { screen: SplashScreen, navigationOptions: { header: null}},
     Profile: { screen: Profile, navigationOptions: { header: null}},
     Maps: { screen: Maps, navigationOptions: { header: null}},
-    //Home: { screen: Home, navigationOptions: { header: null}},
+    Menu: { screen: Menu, navigationOptions: { header: null}},
    
    
     
