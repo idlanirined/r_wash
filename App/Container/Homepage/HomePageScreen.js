@@ -20,9 +20,9 @@ class HomePageScreen extends Component {
             search: '',
             array: [
                 { latitude: -6.897774, longitude: 107.613805, title: 'R*Wash Dipatiukur', desc: '7 min' },
-              // { latitude: -6.899035, longitude: 107.620709, title: 'Goten Wash', desc: '12 min' },
-              //  { latitude: -6.902092, longitude: 107.615473, title: 'Learning Clean', desc: '20 min' },
-               // { latitude: -6.899146, longitude: 107.611600, title: 'Car Wash', desc: '23 min' }
+              { latitude: -6.899035, longitude: 107.620709, title: 'Goten Wash', desc: '12 min' },
+              { latitude: -6.902092, longitude: 107.615473, title: 'Learning Clean', desc: '20 min' },
+                { latitude: -6.904738, longitude: 107.588264, title: 'Car Wash', desc: '23 min' }
             ],
         }
     }
@@ -137,13 +137,12 @@ class HomePageScreen extends Component {
 
                                     // animasi
                                     onPress={() => {
+                                       // show.renderDetailMarker()
                                         myMap.fitToCoordinates([
-                                            {
-                                                latitude: -6.897774, longitude: 107.613805,
-                                               // latitude: -6.899035, longitude: 107.620709,
-                                               // latitude: -6.902092, longitude: 107.615473,
-                                               // latitude: -6.899146, longitude: 107.611600
-                                            }
+                                            { latitude: -6.897774, longitude: 107.613805},
+                                            { latitude: -6.899035, longitude: 107.620709},
+                                            {  latitude: -6.902092, longitude: 107.615473},
+                                            { latitude: -6.904738, longitude: 107.588264}
 
                                         ], {
                                           
@@ -156,9 +155,10 @@ class HomePageScreen extends Component {
                             )
                         })}
                     </MapView>
-
-                    {renderDetailMarker ()}
+                        {renderDetailMarker()}
+                
                 </View>
+            
             </View>
         )
     }
