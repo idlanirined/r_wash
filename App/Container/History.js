@@ -31,7 +31,7 @@ class History extends Component {
     render(){
         return(
             <View style={{ flex: 1, backgroundColor: 'white'}}>
-                <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', paddingHorizontal: 20, justifyContent: 'center'}} >
+                <View style={{ height: 50, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', paddingHorizontal: 20, justifyContent: 'center'}} >
                     <View style={{  width: '95%', justifyContent: 'center'}}>
                         <Text style={{ alignSelf: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20}}>History</Text>
                     </View>

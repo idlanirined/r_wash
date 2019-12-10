@@ -9,7 +9,7 @@ class MyOrder extends Component {
     render(){
         return(
             <View style={{ flex: 1, backgroundColor: 'white'}}>
-                <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', justifyContent: 'center'}}>
+                <View style={{ height: 50, width: '100%', backgroundColor: '#00CCFF', justifyContent: 'center'}}>
                     <Text style={{ alignSelf: 'center', justifyContent: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20}}>My Order</Text>
                 </View>
             <View style={styles.container}>
