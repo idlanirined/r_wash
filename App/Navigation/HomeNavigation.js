@@ -7,6 +7,7 @@ import MyOrderScreen from '../Container/MyOrder'
 import NearbyScreen from '../Container/Nearby'
 import HistoryScreen from '../Container/History'
 import AccountScreen from '../Container/Account'
+import MapScreen from '../Container/Maps'
 //import ProfileScreen from '../Container/Profil'
 
 import Images from '../Lib/Images'
@@ -45,10 +46,10 @@ export default HomeNavigation = createBottomTabNavigator({
         }
     },
     Nearby: {
-        screen: NearbyScreen, navigationOptions: {
+        screen: MapScreen, navigationOptions: {
             header: null,
             tabBarLabel: ({ tintColor }) => (
-                <Text style={[styles.label, { color: tintColor, marginBottom:10 }]}>Nearby</Text>
+                <Text style={[styles.label, { color: tintColor, marginBottom:10 }]}>Maps</Text>
             ),
             tabBarIcon: ({ tintColor }) => (  
                 <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
