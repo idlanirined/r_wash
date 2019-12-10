@@ -9,7 +9,7 @@ import HistoryScreen from '../Container/History'
 import AccountScreen from '../Container/Account'
 import MapScreen from '../Container/Maps'
 //import ProfileScreen from '../Container/Profil'
-
+import MenuPageScreen from '../Container/MainMenu'
 import Images from '../Lib/Images'
 
 
@@ -20,7 +20,7 @@ import { View } from 'native-base';
 
 export default HomeNavigation = createBottomTabNavigator({
     Home: {
-        screen: HomePageScreen,
+        screen: MenuPageScreen,
         navigationOptions: {
             header: null,
             tabBarLabel: ({ tintColor }) => (
@@ -46,7 +46,7 @@ export default HomeNavigation = createBottomTabNavigator({
         }
     },
     Nearby: {
-        screen: MapScreen, navigationOptions: {
+        screen: HomePageScreen, navigationOptions: {
             header: null,
             tabBarLabel: ({ tintColor }) => (
                 <Text style={[styles.label, { color: tintColor, marginBottom:10 }]}>Maps</Text>

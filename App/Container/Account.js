@@ -35,7 +35,7 @@ class Account extends Component {
                         {/* Account */}
                         <View style={{ backgroundColor: 'white', width: '100%', height: 140, borderRadius: 15, marginTop: 5, paddingVertical: 5 }}>
                             <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center' }} size='large' />
-                            <Text style={{ fontFamily: Fonts.type.bold, marginTop: 10, alignSelf: 'center' }}>HAMJAH HUAILID</Text>
+                            <Text style={{ fontFamily: Fonts.type.bold, marginTop: 10, alignSelf: 'center', fontSize: 16}}>HAMJAH HUAILID</Text>
                             <Text style={{ fontFamily: Fonts.type.light, alignSelf: 'center', fontSize: 12 }}>082240206592</Text>
                         </View>
 
