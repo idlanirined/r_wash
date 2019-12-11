@@ -110,8 +110,8 @@ class Register extends Component {
 
                 {/* Button OK */}
                 <View style={{ width: 250, paddingHorizontal: 30}}>
-                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#32d7e3', '#40bec7']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
-                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 50}} >
+                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
+                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 50}} onPress={()=> this.props.navigation.navigate('Login')}>
                             <Text style={{color: 'white', fontFamily: Fonts.type.bold, fontSize: 18}}> OK </Text>
                         </TouchableOpacity>
                     </LinearGradient>

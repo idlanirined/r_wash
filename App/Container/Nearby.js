@@ -7,7 +7,7 @@ class Nearby extends Component {
     render(){
         return(
             <View style={{ flex: 1, backgroundColor: 'white'}}>
-                <View style={{ height: 60, width: '100%', backgroundColor: '#32d7e3', justifyContent: 'center'}}>
+                <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', justifyContent: 'center'}}>
                     <Text style={{ alignSelf: 'center', justifyContent: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20}}>Nearby</Text>
                 </View>
                     <View style={{ width: '100%', justifyContent: 'center', paddingHorizontal: 15, paddingTop: 10}}>
