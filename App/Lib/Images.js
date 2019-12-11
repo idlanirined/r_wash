@@ -20,6 +20,8 @@ const Images = {
     iconEmail1: require('../Assets/Icon/email1.png'),
     iconPhone: require('../Assets/Icon/phone.png'),
     iconCar: require('../Assets/Icon/car.png'),
+    iconCarProfile: require('../Assets/Icon/mobilprofile.png'),
+    iconArround: require('../Assets/Icon/arround.png'),
 
     //img
     splash: require('../Assets/img/Splashscreen.jpg'),

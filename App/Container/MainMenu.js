@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Image, TextInput, StyleSheet, TouchableOpacity, PermissionsAndroid } from 'react-native'
+import { Text, Image, TextInput, Picker, StyleSheet, TouchableOpacity, PermissionsAndroid } from 'react-native'
 import { View, Container, Icon } from 'native-base';
 import LinearGradient from 'react-native-linear-gradient'
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -9,6 +9,21 @@ import Images from '../Lib/Images';
 import Fonts from '../Themes/Fonts';
 
 class MainMenu extends Component {
+
+    constructor() {
+        super()
+        this.state= {
+            typevehicle: [
+                'Type Vehicle',
+                'Small Car',
+                'Sedan',
+                'Mini Bus',
+                'VAN'
+            ],
+            Vehiclebrand: '',
+        }
+    }
+
     render() {
         return (
             <View style={{ flex: 1, backgroundColor: 'white' }}>
@@ -27,13 +42,13 @@ class MainMenu extends Component {
                 <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', borderBottomColor: 'gray', borderBottomWidth: 0, elevation: 0, paddingHorizontal: 20, flexDirection: 'row' }}>
                     <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center', height: 35, width: 35 }}></Avatar>
                     <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 5 }}>
-                        <Text style={{ fontSize: 12, alignSelf: 'flex-start', fontWeight: 'bold' }}>Hamjah</Text>
-                        <Text style={{ fontSize: 10, alignSelf: 'center', color: '#000000' }}>Balance IDR 50.000</Text>
+                        <Text style={{ fontSize: 16, alignSelf: 'flex-start', fontFamily: Fonts.type.bold }}>Hamjah</Text>
+                        <Text style={{ fontSize: 14, alignSelf: 'center', color: 'grey' }}>Balance IDR 50.000</Text>
                     </View>
                     {/* Button TOP-UP*/}
                     <View style={{ alignSelf: 'center', flex: 1, width: '20%', justifyContent: 'flex-end' }}>
 
-                        <View style={{ width: 100, paddingHorizontal: 10, alignSelf: 'flex-end' }}>
+                        <View style={{ width: 100, paddingHorizontal: 0, alignSelf: 'flex-end' }}>
                             <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#FFFFFF', '#FFFFFF']} style={{ borderRadius: 10, marginVertical: 12, justifyContent: 'flex-end' }}>
                                 <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('HomeNavigation')} >
                                     <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 15, alignSelf: 'center', fontWeight: 'bold' }}> Top Up </Text>
@@ -47,14 +62,47 @@ class MainMenu extends Component {
                 {/* Konten */}
 
                 <View style={styles.container}>
-                  
-                    <Text style={{ flexDirection: 'row', }}>Car Wash Arround</Text>
-                     <TextInput
-                        style={styles.inputs}
+               
+
+               {/* Car wash arround */}
+                <Text style={{paddingBottom:5, paddingLeft:0, fontFamily: Fonts.type.regular, color: 'grey'}}>Car Wash Arround</Text>
+                <View style={styles.inputContainer}>
+                    <Image style={styles.inputIcon} source={Images.iconArround}/>
+                    <TextInput style={styles.inputs}
                         placeholder="City"
-                        underlineColorAndroid='transparent'
-                     
-                     ></TextInput>
+                        underlineColorAndroid='transparent'    
+                    />
+                </View>
+
+
+                <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10}}>Vehicle</Text>
+                <View style={styles.inputContainer}>
+                <Image style={styles.inputIcon} source={Images.iconCarProfile}/>
+                    <Picker
+                        selectedValue={this.state.vehicle}
+                        style={{ width: '90%'}}
+                        onValueChange={(itemValue, itemIndex) =>
+                            this.setState({vehicle: itemValue})
+                          }
+                    
+                    >
+                        <Picker.Item label="Vehicle" value="car" />
+                        <Picker.Item label="Honda Jazz" value="jazz" />
+                        <Picker.Item label="Honda Civic" value="civic" />
+
+
+                        
+                    </Picker>
+
+
+                </View>
+
+                
+
+             
+
+                   
+                   
 
                 </View>
             </View>
@@ -64,16 +112,35 @@ class MainMenu extends Component {
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: 'row',
+        
         flex: 1,
         justifyContent: 'flex-start',
-        alignItems: 'flex-start'
+        alignItems: 'flex-start',
+        padding: 20
     },
     inputs: {
         height: 45,
         marginLeft: 16,
         borderBottomColor: '#FAFAFA',
         flex: 1,
+    },
+    inputContainer: {
+        borderBottomWidth: 1,
+        borderWidth: 0,
+        elevation: 0,
+        backgroundColor: '#FFFFFF',
+        borderRadius: 0,
+        width: 350,
+        height: 30,
+        flexDirection: 'row',
+        alignItems: 'center'
+    },
+    inputIcon: {
+        width: 25,
+        height: 25,
+        marginLeft: 0,
+        justifyContent: 'center',
+        tintColor: 'grey'
     },
 });
 
