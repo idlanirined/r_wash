@@ -22,6 +22,7 @@ const Images = {
     iconCar: require('../Assets/Icon/car.png'),
     iconCarProfile: require('../Assets/Icon/mobilprofile.png'),
     iconArround: require('../Assets/Icon/arround.png'),
+    iconFilter: require('../Assets/Icon/filter&sort.png'),
 
     //img
     splash: require('../Assets/img/Splashscreen.jpg'),
