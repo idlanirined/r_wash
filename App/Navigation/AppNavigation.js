@@ -15,6 +15,7 @@ import SplashScreen from '../Container/SplashScreen'
 import Profile from '../Container/Profile'
 import Maps from '../Container/Maps'
 import Menu from '../Container/MainMenu'
+import Payment from '../Container/Payment'
 
 
 
@@ -26,6 +27,7 @@ const MainNavigator = createStackNavigator({
     Profile: { screen: Profile, navigationOptions: { header: null}},
     Maps: { screen: Maps, navigationOptions: { header: null}},
     Menu: { screen: Menu, navigationOptions: { header: null}},
+    Payment: { screen: Payment, navigationOptions: { header: null}},
    
    
     
