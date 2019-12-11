@@ -74,7 +74,7 @@ class MainMenu extends Component {
                     />
                 </View>
 
-
+                  {/* Pilih Mobil */}
                 <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10}}>Vehicle</Text>
                 <View style={styles.inputContainer}>
                 <Image style={styles.inputIcon} source={Images.iconCarProfile}/>
@@ -89,14 +89,39 @@ class MainMenu extends Component {
                         <Picker.Item label="Vehicle" value="car" />
                         <Picker.Item label="Honda Jazz" value="jazz" />
                         <Picker.Item label="Honda Civic" value="civic" />
-
-
-                        
+ 
                     </Picker>
-
-
                 </View>
 
+                  {/* Filter */}
+
+                  <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10}}>Filter</Text>
+                <View style={styles.inputContainer}>
+                <Image style={styles.inputIcon} source={Images.iconFilter}/>
+                    <Picker
+                        selectedValue={this.state.filter}
+                        style={{ width: '90%'}}
+                        onValueChange={(itemValue, itemIndex) =>
+                            this.setState({filter: itemValue})
+                          }
+                    
+                    >
+                        <Picker.Item label="Nearby" value="nearby" />
+                        <Picker.Item label="Lowest Price" value="price" />
+                        <Picker.Item label="The Fastes" value="fastes" />
+ 
+                    </Picker>
+                </View>
+
+                 {/* Button search */}
+               
+                <View style={{ width: 325, paddingHorizontal: 10}}>
+                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 29, marginVertical: 40, justifyContent: 'center' }}>
+                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 50}} onPress={()=> this.props.navigation.navigate('Login')}>
+                            <Text style={{color: 'white', fontFamily: Fonts.type.bold, fontSize: 18}}> Search Car Wash </Text>
+                        </TouchableOpacity>
+                    </LinearGradient>
+                </View>
                 
 
              
