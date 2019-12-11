@@ -7,6 +7,7 @@ import FontAwesome from 'react-native-vector-icons/FontAwesome';
 import { Avatar } from 'react-native-elements';
 import Images from '../Lib/Images';
 import Fonts from '../Themes/Fonts';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 
 class MainMenu extends Component {
 
@@ -43,14 +44,14 @@ class MainMenu extends Component {
                     <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center', height: 57, width: 57 }}size='large' />
                     <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 5 }}>
                         <Text style={{ fontSize: 16, alignSelf: 'flex-start', fontFamily: Fonts.type.bold, paddingLeft:5 }}>Hamjah</Text>
-                        <Text style={{ fontSize: 14, alignSelf: 'center', color: '#808080', fontFamily: Fonts.type.regular , paddingLeft:5 }}>Balance IDR 50.000</Text>
+                      {/*  <Text style={{ fontSize: 14, alignSelf: 'center', color: '#808080', fontFamily: Fonts.type.regular , paddingLeft:5 }}>Hamjah</Text> */}
                     </View>
                     {/* Button TOP-UP*/}
                     <View style={{ alignSelf: 'center', flex: 1, width: '20%', justifyContent: 'flex-end' }}>
 
                         <View style={{ width: 100, paddingHorizontal: 0, alignSelf: 'flex-end' }}>
                             <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#FFFFFF', '#FFFFFF']} style={{ borderRadius: 10, marginVertical: 12, justifyContent: 'flex-end' }}>
-                                <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('HomeNavigation')} >
+                                <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('Payment')} >
                                     <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 15, alignSelf: 'center' }}> Top Up </Text>
                                 </TouchableOpacity>
                             </LinearGradient>
@@ -65,7 +66,7 @@ class MainMenu extends Component {
                
 
                {/* Car wash arround */}
-                <Text style={{paddingBottom:5, paddingLeft:40, fontFamily: Fonts.type.regular, color: 'grey'}}>Car Wash Arround</Text>
+                <Text style={{paddingBottom:5, paddingLeft:30, fontFamily: Fonts.type.regular, color: 'grey'}}>Car Wash Arround</Text>
                 <View style={styles.inputContainer}>
                     <Image style={styles.inputIcon} source={Images.iconArround}/>
                     <TextInput style={styles.inputs}
@@ -75,7 +76,7 @@ class MainMenu extends Component {
                 </View>
 
                   {/* Pilih Mobil */}
-                <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10, paddingLeft:40}}>Vehicle</Text>
+                <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10, paddingLeft:30}}>Vehicle</Text>
                 <View style={styles.inputContainer}>
                 <Image style={styles.inputIcon} source={Images.iconCarProfile}/>
                     <Picker
@@ -95,7 +96,7 @@ class MainMenu extends Component {
 
                   {/* Filter */}
 
-                  <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10, paddingLeft:40}}>Filter</Text>
+                  <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10, paddingLeft:30}}>Filter</Text>
                 <View style={styles.inputContainer}>
                 <Image style={styles.inputIcon} source={Images.iconFilter}/>
                     <Picker
@@ -108,16 +109,29 @@ class MainMenu extends Component {
                     >
                         <Picker.Item label="Nearby" value="nearby" />
                         <Picker.Item label="Lowest Price" value="price" />
-                        <Picker.Item label="The Fastes" value="fastes" />
+                        <Picker.Item label="Fastest" value="fastest" />
  
                     </Picker>
                 </View>
+
+
+                <Text style={{paddingTop:10, paddingLeft:30, fontFamily: Fonts.type.regular, color: 'grey'}}>Search</Text>
+                <View style={styles.inputContainer}>
+                    <Image style={styles.inputIcon} source={Images.iconSearch}/>
+                    <TextInput style={styles.inputs}
+                        placeholder="Search by Car Wash Name"
+                        underlineColorAndroid='transparent'    
+                    />
+                </View>
+
+                   {/* Search */}
+
 
                  {/* Button search */}
                
                 <View style={{ width: 325, paddingHorizontal: 10}}>
                     <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 29, marginVertical: 40, justifyContent: 'center' }}>
-                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 50}} onPress={()=> this.props.navigation.navigate('Login')}>
+                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 50}} onPress={()=> this.props.navigation.navigate('')}>
                             <Text style={{color: 'white', fontFamily: Fonts.type.bold, fontSize: 18}}> Search Car Wash </Text>
                         </TouchableOpacity>
                     </LinearGradient>
@@ -148,6 +162,7 @@ const styles = StyleSheet.create({
         marginLeft: 16,
         borderBottomColor: '#FAFAFA',
         flex: 1,
+        fontSize: 13,
     },
     inputContainer: {
         borderBottomWidth: 1,
@@ -167,6 +182,21 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         tintColor: 'grey'
     },
+
+    inputSearch: {
+        borderColor: 'gray',
+        borderWidth: 1,
+        elevation: 2,
+        backgroundColor: '#FFFFFF',
+        borderRadius:30,
+        width: 290,
+        height:50,
+        flexDirection: 'row',
+        alignItems:'center'
+    },
+    label: {
+        paddingLeft: 10,
+    }
 });
 
 export default MainMenu;
