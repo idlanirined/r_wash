@@ -80,7 +80,7 @@ class Profile extends Component {
                 <View style={{ width: 180, paddingHorizontal: 30}}>
                     <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
                         <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 40}} onPress={()=> this.props.navigation.navigate('HomeNavigation')} >
-                            <Text style={{color: 'white', fontFamily: Fonts.type.bold, fontSize: 18}}> Edit </Text>
+                            <Text style={{color: 'white', fontFamily: Fonts.type.bold, fontSize: 18}}> Edit Profile </Text>
                         </TouchableOpacity>
                     </LinearGradient>
                 </View>
