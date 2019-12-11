@@ -15,9 +15,9 @@ class Account extends Component {
             [
               {text: 'NO', onPress: () => console.warn('Tidak jadi keluar'), style: 'cancel'},
               //{text: 'YES', onPress:() => this.props.navigation.navigate('Login') }
-              {text: 'YES', onPress: () => console.warn('Keluar')},
+              {text: 'YES', onPress:() => this.props.navigation.navigate('Login')}
             ],
-            { cancelable: false }
+         
       //clicking out side of alert will not cancel
           );
               };
@@ -48,7 +48,7 @@ class Account extends Component {
                         {/* Payment */}
                         <View style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 5, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20 }}>
                             <Fontisto name='wallet' size={20} style={{ alignSelf: 'center' }} color={'gray'} />
-                            <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium }}>Payment</Text>
+                            <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium }} onPress={() => this.props.navigation.navigate('Payment')}>Payment</Text>
                         </View>
 
                     </View>
