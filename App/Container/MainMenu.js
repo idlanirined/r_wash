@@ -39,11 +39,11 @@ class MainMenu extends Component {
                 </View>
 
                 {/* User */}
-                <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', borderBottomColor: 'gray', borderBottomWidth: 0, elevation: 0, paddingHorizontal: 20, flexDirection: 'row' }}>
-                    <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center', height: 35, width: 35 }}></Avatar>
+                <View style={{ height: 100, width: '100%', backgroundColor: '#00CCFF', borderBottomColor: 'gray', borderBottomWidth: 0, elevation: 0, paddingHorizontal: 20, flexDirection: 'row' }}>
+                    <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center', height: 57, width: 57 }}size='large' />
                     <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 5 }}>
-                        <Text style={{ fontSize: 16, alignSelf: 'flex-start', fontFamily: Fonts.type.bold }}>Hamjah</Text>
-                        <Text style={{ fontSize: 14, alignSelf: 'center', color: 'grey' }}>Balance IDR 50.000</Text>
+                        <Text style={{ fontSize: 16, alignSelf: 'flex-start', fontFamily: Fonts.type.bold, paddingLeft:5 }}>Hamjah</Text>
+                        <Text style={{ fontSize: 14, alignSelf: 'center', color: '#808080', fontFamily: Fonts.type.regular , paddingLeft:5 }}>Balance IDR 50.000</Text>
                     </View>
                     {/* Button TOP-UP*/}
                     <View style={{ alignSelf: 'center', flex: 1, width: '20%', justifyContent: 'flex-end' }}>
@@ -51,7 +51,7 @@ class MainMenu extends Component {
                         <View style={{ width: 100, paddingHorizontal: 0, alignSelf: 'flex-end' }}>
                             <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#FFFFFF', '#FFFFFF']} style={{ borderRadius: 10, marginVertical: 12, justifyContent: 'flex-end' }}>
                                 <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('HomeNavigation')} >
-                                    <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 15, alignSelf: 'center', fontWeight: 'bold' }}> Top Up </Text>
+                                    <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 15, alignSelf: 'center' }}> Top Up </Text>
                                 </TouchableOpacity>
                             </LinearGradient>
                         </View>
@@ -65,7 +65,7 @@ class MainMenu extends Component {
                
 
                {/* Car wash arround */}
-                <Text style={{paddingBottom:5, paddingLeft:0, fontFamily: Fonts.type.regular, color: 'grey'}}>Car Wash Arround</Text>
+                <Text style={{paddingBottom:5, paddingLeft:40, fontFamily: Fonts.type.regular, color: 'grey'}}>Car Wash Arround</Text>
                 <View style={styles.inputContainer}>
                     <Image style={styles.inputIcon} source={Images.iconArround}/>
                     <TextInput style={styles.inputs}
@@ -75,7 +75,7 @@ class MainMenu extends Component {
                 </View>
 
                   {/* Pilih Mobil */}
-                <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10}}>Vehicle</Text>
+                <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10, paddingLeft:40}}>Vehicle</Text>
                 <View style={styles.inputContainer}>
                 <Image style={styles.inputIcon} source={Images.iconCarProfile}/>
                     <Picker
@@ -95,7 +95,7 @@ class MainMenu extends Component {
 
                   {/* Filter */}
 
-                  <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10}}>Filter</Text>
+                  <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10, paddingLeft:40}}>Filter</Text>
                 <View style={styles.inputContainer}>
                 <Image style={styles.inputIcon} source={Images.iconFilter}/>
                     <Picker
