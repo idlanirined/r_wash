@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from 'react'
 import {ActivityIndicator, View, Text, Image, Picker, StyleSheet, TextInput, PermissionsAndroid } from 'react-native'
 
+
 import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
 
 
@@ -25,14 +26,21 @@ const Maps = () => {
         })
     }, [])
     return(
+        
 
         <MapView 
             provider={PROVIDER_GOOGLE}
             style={{ flex: 1 }}
-            showsUserLocation
+            showsUserLocation={true}
+            followsUserLocation={true}
+            zoomEnabled={true}
             initialRegion={curentPosition}
+
+           
             />
-    ) ;
+          
+            
+    ) 
 };
 
 export default Maps;
