@@ -24,6 +24,7 @@ class Profile extends Component {
                         </View>
 
                         {/* Profile */}
+
                         <View style={{ height: 150, paddingTop: 20, backgroundColor: 'white', marginTop: 10, borderRadius: 15}}>
                             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', position: 'relative'}}>
                                 <Text style={{ alignSelf: 'flex-start', marginLeft: 55, fontFamily: Fonts.type.medium, fontSize: 16}}>Komplek Bumi Pakusarakan 2</Text>
@@ -37,6 +38,8 @@ class Profile extends Component {
                                 <Text style={{ alignSelf: 'flex-start', marginLeft: 55, fontFamily: Fonts.type.medium, fontSize: 16}}>hamjah.huailid18@gmail.com</Text>
                                 <Image source={Images.iconEmail1} style={{height: 23, width: 23, position:'absolute', left: 20}}/>
                             </View>
+                    
+
                         </View>
 
                         {/* Payment */}
