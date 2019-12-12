@@ -90,6 +90,8 @@ class MainMenu extends Component {
                         <Picker.Item label="Vehicle" value="car" />
                         <Picker.Item label="Honda Jazz" value="jazz" />
                         <Picker.Item label="Honda Civic" value="civic" />
+                        <Picker.Item label="Toyota Avanza" value="avanza" />
+                        <Picker.Item label="Alphard" value="alphard" />
  
                     </Picker>
                 </View>
@@ -115,6 +117,7 @@ class MainMenu extends Component {
                 </View>
 
 
+                            {/* Search */}
                 <Text style={{paddingTop:10, paddingLeft:30, fontFamily: Fonts.type.regular, color: 'grey'}}>Search</Text>
                 <View style={styles.inputContainer}>
                     <Image style={styles.inputIcon} source={Images.iconSearch}/>
@@ -124,14 +127,14 @@ class MainMenu extends Component {
                     />
                 </View>
 
-                   {/* Search */}
+                 
 
 
                  {/* Button search */}
                
                 <View style={{ width: 325, paddingHorizontal: 10}}>
                     <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 29, marginVertical: 40, justifyContent: 'center' }}>
-                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 50}} onPress={()=> this.props.navigation.navigate('')}>
+                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 50}} onPress={()=> this.props.navigation.navigate('NearbyNew')}>
                             <Text style={{color: 'white', fontFamily: Fonts.type.bold, fontSize: 18}}> Search Car Wash </Text>
                         </TouchableOpacity>
                     </LinearGradient>
