@@ -26,6 +26,7 @@ const Images = {
     iconOvo: require('../Assets/Icon/OVO.png'),
     iconGopay: require('../Assets/Icon/Gopay.png'),
     iconSearch: require('../Assets/Icon/search.png'),
+    iconPin: require('../Assets/Icon/pinred.png'),
 
     //img
     splash: require('../Assets/img/Splashscreen.jpg'),
