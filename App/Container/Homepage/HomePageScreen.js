@@ -89,7 +89,7 @@ class HomePageScreen extends Component {
                 <View style={{ height: 60, width: '100%', borderBottomColor: 'gray', borderBottomWidth: 0, elevation: 0, paddingHorizontal: 20, flexDirection: 'row' }}>
                     <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center' , height: 35, width:35}} />
                     <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 5 }}>
-                        <Text style={{ fontSize: 12, alignSelf: 'center', fontWeight: 'bold' }}>Hi, ( User )</Text>
+                        <Text style={{ fontSize: 12, alignSelf: 'center', fontWeight: 'bold' }}>Hi, Hamjah</Text>
                         <Text style={{ fontSize: 10, alignSelf: 'center', color: '#00CCFF', fontWeight: 'bold'}}>Honda Jazz</Text>
                     </View>
                     <Picker
@@ -155,7 +155,7 @@ class HomePageScreen extends Component {
                             )
                         })}
                     </MapView>
-                        {renderDetailMarker()}
+                    {/*    {renderDetailMarker()}  */}
                 
                 </View>
             
