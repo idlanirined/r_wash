@@ -7,6 +7,7 @@ import { fromLeft, fromTop, flipY, fadeOut, fromRight, fromBottom } from 'react-
 import { headerStyle, headerTitleStyle, headerRighStyle, headerBgStyle } from '../Container/Styles/AppBarStyle'
 import IconBack from 'react-native-vector-icons/Ionicons'
 
+
 //Screen
 import Login from '../Container/LoginScreen'
 import Register from '../Container/RegisterScreen'
@@ -16,6 +17,8 @@ import Profile from '../Container/Profile'
 import Maps from '../Container/Maps'
 import Menu from '../Container/MainMenu'
 import Payment from '../Container/Payment'
+import Nearby from '../Container/Nearby'
+import NearbyNew from '../Container/NearbyNew'
 
 
 
@@ -28,6 +31,8 @@ const MainNavigator = createStackNavigator({
     Maps: { screen: Maps, navigationOptions: { header: null}},
     Menu: { screen: Menu, navigationOptions: { header: null}},
     Payment: { screen: Payment, navigationOptions: { header: null}},
+    Nearby: { screen: Nearby, navigationOptions: { header: null}},
+    NearbyNew: { screen: NearbyNew, navigationOptions: {header: null}},
    
    
     
