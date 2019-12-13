@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Text, Image, TextInput, ScrollView, StyleSheet, TouchableOpacity, PermissionsAndroid } from 'react-native'
 import { View, Icon, Container, Header, Content, Button, } from 'native-base';
-
+import LinearGradient from 'react-native-linear-gradient'
 import { Fonts } from '../Themes'
 import { Avatar } from 'react-native-elements'
 import Images from '../Lib/Images'
@@ -127,12 +127,26 @@ class NearbyNew extends Component {
                         </View>
                     </View>
 
-
-
-
-
-
                 </ScrollView>
+
+                <View  style={{ backgroundColor: 'transparent', width: '100%', height: 50, borderRadius: 5, marginBottom: 20, paddingVertical: 5, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, position: 'absolute', bottom: 0, }}>
+                    <View style={{ width: 180, height: 100, paddingHorizontal: 30 , left: 17.5, top: -20}}>
+                        <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#00CCFF', '#00CCFF']} style={{ borderBottomLeftRadius: 20, borderTopLeftRadius: 20, marginVertical: 20, justifyContent: 'flex-end' }}>
+                            <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('')} >
+                                <Text style={{ color: 'white', fontFamily: Fonts.type.bold, fontSize: 12 }}> Filter&Sort </Text>
+                            </TouchableOpacity>
+                        </LinearGradient>
+                    </View>
+
+                    <View style={{ backgroundColor: 'transparent', width: 180, height: 100, paddingHorizontal: 30 , right: 42.5, top: -20}}>
+                        <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#00CCFF', '#00CCFF']} style={{ borderBottomRightRadius: 20, borderTopRightRadius: 20, marginVertical: 20, justifyContent: 'flex-end' }}>
+                            <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('')} >
+                                <Text style={{ color: 'white', fontFamily: Fonts.type.bold, fontSize: 12 }}> Map View </Text>
+                            </TouchableOpacity>
+                        </LinearGradient>
+                    </View>
+
+                </View>
 
             </View>
 
