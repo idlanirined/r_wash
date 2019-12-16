@@ -24,7 +24,15 @@ class Filtersort extends Component {
             
           <ListItem>
             <Left>
-              <Text>Recommendation</Text>
+              <Text style={{fontFamily: Fonts.type.medium, fontSize: 14}}>Recommendation</Text>
+            </Left>
+            <Right>
+              <Radio selected={true} />
+            </Right>
+          </ListItem>
+          <ListItem>
+            <Left>
+              <Text style={{fontFamily: Fonts.type.medium, fontSize: 14}}>Nearby</Text>
             </Left>
             <Right>
               <Radio selected={false} />
@@ -32,7 +40,7 @@ class Filtersort extends Component {
           </ListItem>
           <ListItem>
             <Left>
-              <Text>Nearby</Text>
+              <Text style={{fontFamily: Fonts.type.medium, fontSize: 14}}>Lowest Price</Text>
             </Left>
             <Right>
               <Radio selected={false} />
@@ -40,26 +48,21 @@ class Filtersort extends Component {
           </ListItem>
           <ListItem>
             <Left>
-              <Text>Lowest Price</Text>
-            </Left>
-            <Right>
-              <Radio selected={false} />
-            </Right>
-          </ListItem>
-          <ListItem>
-            <Left>
-              <Text>Fastest</Text>
+              <Text style={{fontFamily: Fonts.type.medium, fontSize: 14}}>Fastest</Text>
             </Left>
             <Right>
               <Radio selected={false} />
             </Right>
           </ListItem>
         </Content>
-
-      
-                            </View>
-                            </View>
-                            </View>
+      </View>             
+        <View style={{width:400, height:-20, justifyContent:'center', left: -10, marginBottom:20, paddingTop:300}}>
+            <Button block style={{margin:10, backgroundColor:'#FFCA00', height: 100}}>
+                <Text style={{left: -10, color:'#000000',top: -15, fontFamily: Fonts.type.bold, fontSize: 18}}>Apply Changes</Text>
+            </Button>
+        </View>
+      </View>
+    </View>
 
     );
   }
