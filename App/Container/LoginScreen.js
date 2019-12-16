@@ -79,9 +79,9 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
     inputContainer: {
-        borderColor: 'gray',
-        borderWidth: 1,
-        elevation: 2,
+        borderColor: '#808080',
+        borderWidth: 0,
+        elevation: 3,
         backgroundColor: '#FFFFFF',
         borderRadius:30,
         width:300,

@@ -58,26 +58,26 @@ class Account extends Component {
                 <View style={{ height: 120, width: '100%', backgroundColor: '#00CCFF' }}>
                 </View>
                 <View style={{ justifyContent: 'space-between', flex: 1, paddingBottom: 20 }}>
-                    <View style={{ paddingHorizontal: 20, marginTop: -80, elevation: 2 }}>
+                    <View style={{ paddingHorizontal: 15, marginTop: -80, elevation: 2 }}>
                         <Text style={{ fontFamily: Fonts.type.regular, fontSize: 20, alignSelf: 'center', color: 'white' }}>Account</Text>
 
                         {/* Account */}
-                        <View style={{ backgroundColor: 'white', width: '100%', height: 140, borderRadius: 5, marginTop: 5, paddingVertical: 5 }}>
+                        <View style={{ backgroundColor: 'white', width: '100%', height: 140, borderRadius: 5, marginTop: 5, paddingVertical: 5, elevation:2 }}>
                             <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center' }} size='large' />
                             <Text style={{ fontFamily: Fonts.type.bold, marginTop: 10, alignSelf: 'center', fontSize: 16 }}>HAMJAH HUAILID</Text>
                             <Text style={{ fontFamily: Fonts.type.light, alignSelf: 'center', fontSize: 12 }}>082240206592</Text>
                         </View>
 
                         {/* Profile */}
-                        <TouchableOpacity style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 5, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20 }} onPress={() => this.props.navigation.navigate('Profile')}>
+                        <TouchableOpacity style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 5, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20, elevation:2 }} onPress={() => this.props.navigation.navigate('Profile')}>
 
-                            <Image source={Images.iconAccount} style={{ width: 20, height: 20, resizeMode: 'contain', alignSelf: 'center' }} />
+                            <Image source={Images.iconAccount} style={{ width: 25, height: 25, resizeMode: 'contain', alignSelf: 'center' }} />
                             <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium }} onPress={() => this.props.navigation.navigate('Profile')}>Profile</Text>
 
                         </TouchableOpacity>
 
                         {/* Payment */}
-                        <TouchableOpacity style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 5, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20 }} onPress={() => this.props.navigation.navigate('Payment')}>
+                        <TouchableOpacity style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 5, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20, elevation:2 }} onPress={() => this.props.navigation.navigate('Payment')}>
 
                             <Fontisto name='wallet' size={20} style={{ alignSelf: 'center' }} color={'gray'} />
                             <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium }} >Payment</Text>
@@ -88,7 +88,7 @@ class Account extends Component {
 
                     <View style={{ paddingHorizontal: 20, }}>
                         {/* Logout */}
-                        <TouchableOpacity style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 5, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20 }} onPress={() => this.setState({ modalLogout: true })}>
+                        <TouchableOpacity style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 5, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20, elevation:2 }} onPress={() => this.setState({ modalLogout: true })}>
                             <Fontisto name='power' size={20} style={{ alignSelf: 'center' }} color={'gray'} />
                             <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium }}>Logout</Text>
                         </TouchableOpacity>
@@ -106,6 +106,7 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
+        elevation: 3,
     }
 });
 
