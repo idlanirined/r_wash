@@ -29,6 +29,8 @@ const Images = {
     iconPin: require('../Assets/Icon/pinred.png'),
     iconMapView: require('../Assets/Icon/MapBlack.png'),
     iconFilterBlack: require('../Assets/Icon/filter&sortBlack.png'),
+    iconFacebook: require('../Assets/Icon/facebook.png'),
+    iconGoogle: require('../Assets/Icon/google.png'),
 
     //img
     splash: require('../Assets/img/Splashscreen.jpg'),
