@@ -4,6 +4,12 @@ import { View, Container, Icon } from 'native-base';
 import Images from '../Lib/Images';
 
 export default class SplashScreen extends Component {
+
+    componentDidMount(){
+        setTimeout (() => {
+            this.props.navigation.navigate('Login')
+        }, 2000);
+    }
     render() {
         return (
             <View style={styles.wrapper}>

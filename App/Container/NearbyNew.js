@@ -19,7 +19,7 @@ class NearbyNew extends Component {
 
                 {/* log nearby */}
 
-                <ScrollView style={{ paddingHorizontal: 15, paddingBottom: 10, marginTop: 10, backgroundColor: '#F5F5F5', marginLeft: -15, marginRight: -15 }}>
+                <ScrollView style={{ paddingHorizontal: 15, paddingBottom: 10, marginTop: 0, backgroundColor: '#F5F5F5', marginLeft: -15, marginRight: -15 }}>
 
                     <View style={{ height: 130, paddingTop: 20, backgroundColor: 'white', marginTop: 10, borderRadius: 5, flexDirection: 'row' }}>
 
@@ -131,17 +131,19 @@ class NearbyNew extends Component {
 
                 <View  style={{ backgroundColor: 'transparent', width: '100%', height: 50, borderRadius: 5, marginBottom: 20, paddingVertical: 5, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, position: 'absolute', bottom: 0, }}>
                     <View style={{ width: 180, height: 100, paddingHorizontal: 30 , left: 17.5, top: -20}}>
-                        <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#00CCFF', '#00CCFF']} style={{ borderBottomLeftRadius: 20, borderTopLeftRadius: 20, marginVertical: 20, justifyContent: 'flex-end' }}>
-                            <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('')} >
-                                <Text style={{ color: 'white', fontFamily: Fonts.type.bold, fontSize: 12 }}> Filter&Sort </Text>
+                        <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#E8E8E8', '#E8E8E8']} style={{ borderBottomLeftRadius: 20, borderTopLeftRadius: 20, marginVertical: 20, justifyContent: 'flex-end', elevation: 2 }}>
+                            <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'row', height: 40 }} onPress={() => this.props.navigation.navigate('Filtersort')} >
+                            <Image style={styles.inputIcon} source={Images.iconFilterBlack}/>
+                                <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 10 }}>Filter&Sort </Text>
                             </TouchableOpacity>
                         </LinearGradient>
                     </View>
 
-                    <View style={{ backgroundColor: 'transparent', width: 180, height: 100, paddingHorizontal: 30 , right: 42.5, top: -20}}>
-                        <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#00CCFF', '#00CCFF']} style={{ borderBottomRightRadius: 20, borderTopRightRadius: 20, marginVertical: 20, justifyContent: 'flex-end' }}>
-                            <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('')} >
-                                <Text style={{ color: 'white', fontFamily: Fonts.type.bold, fontSize: 12 }}> Map View </Text>
+                    <View style={{ backgroundColor: 'transparent', width: 180, height: 130, paddingHorizontal: 30 , right: 42.5, top: -20}}>
+                        <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#E8E8E8', '#E8E8E8']} style={{ borderBottomRightRadius: 20, borderTopRightRadius: 20, marginVertical: 20, justifyContent: 'flex-end', elevation: 2 }}>
+                            <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'row', height: 40 }} onPress={() => this.props.navigation.navigate('')} >
+                            <Image style={styles.inputIcon} source={Images.iconMapView}/>
+                                <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 10 }}> Map View </Text>
                             </TouchableOpacity>
                         </LinearGradient>
                     </View>
@@ -158,6 +160,20 @@ class NearbyNew extends Component {
         )
     }
 }
+
+const styles = StyleSheet.create({
+
+    inputIcon: {
+        width: 20,
+        height: 20,
+        marginLeft: 0,
+        justifyContent: 'flex-start',
+        tintColor: 'black',
+        right: 10
+    },
+
+
+});
 
 
 export default NearbyNew;
