@@ -66,6 +66,22 @@ class Login extends Component {
                     <Text style={{ fontFamily: Fonts.type.bold}}>Don't have an account? </Text>
                     <Text style={{ color: '#00CCFF', fontFamily: Fonts.type.bold}} onPress={()=> this.props.navigation.navigate('Register')}>Sign Up</Text>
                 </View>
+                <View style={{ backgroundColor: 'transparent',width: 300, paddingHorizontal: 30, paddingTop:60}}>
+                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#FFFFFF', '#FFFFFF']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
+                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', flexDirection:'row', height: 40}} onPress={()=> this.props.navigation.navigate('')} >
+                        <Image style={styles.inputIcon} source={Images.iconFacebook}/>
+                            <Text style={{color: 'white', fontFamily: Fonts.type.bold, color:'#000000'}}> Sign In with Facebook </Text>
+                        </TouchableOpacity>
+                    </LinearGradient>
+                </View>
+                <View style={{ backgroundColor: 'transparent',width: 300, paddingHorizontal: 30}}>
+                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#FFFFFF', '#FFFFFF']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
+                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', flexDirection:'row', height: 40}} onPress={()=> this.props.navigation.navigate('')} >
+                        <Image style={styles.inputIcon} source={Images.iconGoogle}/>
+                            <Text style={{color: 'white', fontFamily: Fonts.type.bold, color:'#000000'}}> Sign In with Google </Text>
+                        </TouchableOpacity>
+                    </LinearGradient>
+                </View>
             </View>
         )
     }
@@ -79,9 +95,9 @@ const styles = StyleSheet.create({
         backgroundColor: 'white',
     },
     inputContainer: {
-        borderColor: 'gray',
-        borderWidth: 1,
-        elevation: 2,
+        borderColor: '#808080',
+        borderWidth: 0,
+        elevation: 3,
         backgroundColor: '#FFFFFF',
         borderRadius:30,
         width:300,

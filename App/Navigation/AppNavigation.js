@@ -19,7 +19,7 @@ import Menu from '../Container/MainMenu'
 import Payment from '../Container/Payment'
 import Nearby from '../Container/Nearby'
 import NearbyNew from '../Container/NearbyNew'
-
+import Filtersort from '../Container/Filter&Sort'
 
 
 const MainNavigator = createStackNavigator({
@@ -33,12 +33,12 @@ const MainNavigator = createStackNavigator({
     Payment: { screen: Payment, navigationOptions: { header: null}},
     Nearby: { screen: Nearby, navigationOptions: { header: null}},
     NearbyNew: { screen: NearbyNew, navigationOptions: {header: null}},
-   
+    Filtersort: { screen: Filtersort, navigationOptions: {header: null}},
    
     
 }, {
     headerMode: 'screen',
-    initialRouteName: 'Login',
+    initialRouteName: 'SplashScreen',
     // transitionConfig: () => fromLeft(500),
     defaultNavigationOptions: {
       headerStyle,
