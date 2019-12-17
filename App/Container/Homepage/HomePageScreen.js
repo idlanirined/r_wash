@@ -1,5 +1,5 @@
 import React, { Component, useState } from 'react'
-import { View, Text, Image, Picker, StyleSheet, TextInput, PermissionsAndroid } from 'react-native'
+import {ActivityIndicator, View, Text, Image, Picker, StyleSheet, TextInput, PermissionsAndroid } from 'react-native'
 import Images from '../../Lib/Images'
 import Entypo from 'react-native-vector-icons/Entypo'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
@@ -69,8 +69,10 @@ class HomePageScreen extends Component {
                 </View>
 
             </View>
-
         )
+
+     
+
 
         return (
             <View style={{ flex: 1 }}>
@@ -127,6 +129,8 @@ class HomePageScreen extends Component {
                             latitudeDelta: 0.0922,
                             longitudeDelta: 0.0421,
                         }}
+
+                     
                     >
                         {this.state.array.map((item, index) => {
                             return (
@@ -134,30 +138,20 @@ class HomePageScreen extends Component {
                                     coordinate={{ latitude: item.latitude, longitude: item.longitude }}
                                     title={item.title}
                                     description={item.desc}
-
+                                 
+                            
                                     // animasi
-                                    onPress={() => {
-                                       // show.renderDetailMarker()
-                                        myMap.fitToCoordinates([
-                                            { latitude: -6.897774, longitude: 107.613805},
-                                            { latitude: -6.899035, longitude: 107.620709},
-                                            {  latitude: -6.902092, longitude: 107.615473},
-                                            { latitude: -6.904738, longitude: 107.588264}
+                                  
 
-                                        ], {
-                                          
-                                            animated: true
-                                        })
-
-                                    }}
                                 // icon={image}
                                 />
                             )
                         })}
                     </MapView>
-                    {/*    {renderDetailMarker()}  */}
+                        {renderDetailMarker()}  
                 
                 </View>
+            
             
             </View>
         )

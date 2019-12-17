@@ -134,7 +134,7 @@ class NearbyNew extends Component {
                         <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#E8E8E8', '#E8E8E8']} style={{ borderBottomLeftRadius: 20, borderTopLeftRadius: 20, marginVertical: 20, justifyContent: 'flex-end', elevation: 2 }}>
                             <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'row', height: 40 }} onPress={() => this.props.navigation.navigate('Filtersort')} >
                             <Image style={styles.inputIcon} source={Images.iconFilterBlack}/>
-                                <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 10 }}> Filter&Sort </Text>
+                                <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 10 }}>Filter&Sort </Text>
                             </TouchableOpacity>
                         </LinearGradient>
                     </View>
