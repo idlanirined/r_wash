@@ -31,11 +31,14 @@ const Images = {
     iconFilterBlack: require('../Assets/Icon/filter&sortBlack.png'),
     iconFacebook: require('../Assets/Icon/facebook.png'),
     iconGoogle: require('../Assets/Icon/google.png'),
+    iconBackk: require('../Assets/Icon/Back.png'),
 
     //img
     splash: require('../Assets/img/Splashscreen.jpg'),
     rwash1: require('../Assets/img/Rwash1.jpg'),
     noorder: require('../Assets/img/noorderr.png'),
+    rwash2: require('../Assets/img/Rwash2.jpeg'),
+    rwash3: require('../Assets/img/Rwash3.jpg')
 
 
 }
