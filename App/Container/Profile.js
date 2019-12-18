@@ -85,9 +85,10 @@ class Profile extends Component {
                                 </LinearGradient>
                             </View>
 
+                        {/* Button Edit Profile */}
                             <View style={{ backgroundColor: 'transparent', width: 180, height: 100, paddingHorizontal: 30, alignContent: 'center', right: 50 }}>
                                 <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 20, marginVertical: 20, justifyContent: 'flex-end' }}>
-                                    <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('')} >
+                                    <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('EditProfil')} >
                                         <Text style={{ color: 'white', fontFamily: Fonts.type.bold, fontSize: 14 }}> Edit Profile </Text>
                                     </TouchableOpacity>
                                 </LinearGradient>
