@@ -39,6 +39,9 @@ const MainNavigator = createStackNavigator({
     EditProfil: { screen: EditProfil, navigationOptions: {header: null}},
     RwashDetail: { screen: RwashDetail, navigationOptions: {header: null}},
    
+
+
+
     
 }, {
     headerMode: 'screen',
