@@ -53,19 +53,19 @@ class Profile extends Component {
                         <ScrollView style={{width: 300, height: 120,paddingTop:10, paddingHorizontal: 10, paddingBottom: 10, marginTop: 10, left: 24, backgroundColor: 'white', marginLeft: -15, marginRight: -15, elevation:2, borderRadius: 5 }}>
                        
                             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-                                <Text style={{ alignSelf: 'flex-start', marginLeft: 35, fontFamily: Fonts.type.medium, fontSize: 16 }}>1. Honda Jazz / D 1514 BFF</Text>
+                                <Text style={{ alignSelf: 'flex-start', marginLeft: 35, fontFamily: Fonts.type.medium, fontSize: 14 }}>1. Honda Jazz / D 1514 BFF</Text>
 
                             </View>
                             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-                                <Text style={{ alignSelf: 'flex-start', marginLeft: 35, fontFamily: Fonts.type.medium, fontSize: 16 }}>2. Honda Civic / D 7920 DU</Text>
+                                <Text style={{ alignSelf: 'flex-start', marginLeft: 35, fontFamily: Fonts.type.medium, fontSize: 14 }}>2. Honda Civic / D 7920 DU</Text>
 
                             </View>
                             <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-                                <Text style={{ alignSelf: 'flex-start', marginLeft: 35, fontFamily: Fonts.type.medium, fontSize: 16 }}>3. Toyota Avanza / D 8070 AUH</Text>
+                                <Text style={{ alignSelf: 'flex-start', marginLeft: 35, fontFamily: Fonts.type.medium, fontSize: 14 }}>3. Toyota Avanza / D 8070 AUH</Text>
 
                             </View>
                             <View style={{ flex: 1, marginBottom: 20, alignItems: 'center', justifyContent: 'center', position: 'relative' }}>
-                                <Text style={{ alignSelf: 'flex-start', marginLeft: 35, fontFamily: Fonts.type.medium, fontSize: 16 }}>4. Alphard / D 8208 KLM</Text>
+                                <Text style={{ alignSelf: 'flex-start', marginLeft: 35, fontFamily: Fonts.type.medium, fontSize: 14 }}>4. Alphard / D 8208 KLM</Text>
 
                             </View>
 
@@ -77,7 +77,7 @@ class Profile extends Component {
 
 
                         <View style={{ backgroundColor: 'transparent', width: '100%', height: 80, borderRadius: 5, marginTop: 5, paddingVertical: 0, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20 }}>
-                            <View style={{ width: 180, height: 100, paddingHorizontal: 30, alignContent: 'center', left: -30 }}>
+                            <View style={{ width: 180, height: 100, paddingHorizontal: 30, alignContent: 'center', left: -30 , elevation: 10}}>
                                 <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 20, marginVertical: 20, justifyContent: 'flex-end' }}>
                                     <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('')} >
                                         <Text style={{ color: 'white', fontFamily: Fonts.type.bold, fontSize: 14 }}> Add Vehicle </Text>

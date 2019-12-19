@@ -36,18 +36,23 @@ class Payment extends Component {
 
 
                         {/* OVO */}
-                        <View style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 5, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20 }}>
+                        <TouchableOpacity style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 5, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20, elevation:2 }} onPress={() => this.props.navigation.navigate('')}>
+                      
                             <Image source={Images.iconOvo} style={{ width: 35, height: 35, resizeMode: 'contain', alignSelf: 'center' }} />
                             <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium }}>OVO</Text>
                             <Text style={{ alignSelf: 'center', marginLeft: 120, fontWeight: 'bold' }}>IDR 50.000,-</Text>
-                        </View>
+                       
+                        
+                        </TouchableOpacity>
 
                         {/* GoPay */}
-                        <View style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 5, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20 }}>
+                        <TouchableOpacity style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 5, marginTop: 10, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20, elevation:2 }} onPress={() => this.props.navigation.navigate('')}>
+                       
                             <Image source={Images.iconGopay} style={{ width: 35, height: 35, resizeMode: 'contain', alignSelf: 'center' }} />
                             <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium }}>GoPay</Text>
                             <Text style={{ alignSelf: 'center', marginLeft: 107, fontWeight: 'bold' }}>IDR 50.000,-</Text>
-                        </View>
+                      
+                        </TouchableOpacity>
 
                     </View>
 
