@@ -56,7 +56,7 @@ class Login extends Component {
 
                 {/* Button Login */}
                 <View style={{ width: 300, paddingHorizontal: 30, bottom: -70}}>
-                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
+                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{elevation: 10, borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
                         <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 40}} onPress={()=> this.props.navigation.navigate('HomeNavigation')} >
                             <Text style={{color: 'white', fontFamily: Fonts.type.bold, fontSize: 18}}> Sign In </Text>
                         </TouchableOpacity>
@@ -66,7 +66,7 @@ class Login extends Component {
                     <Text style={{ fontFamily: Fonts.type.bold}}>Don't have an account? </Text>
                     <Text style={{ color: '#00CCFF', fontFamily: Fonts.type.bold}} onPress={()=> this.props.navigation.navigate('Register')}>Sign Up</Text>
                 </View>
-                <View style={{ backgroundColor: 'transparent',width: 300, paddingHorizontal: 30, bottom: -80, left: -10}}>
+                <View style={{ backgroundColor: 'transparent',width: 300, paddingHorizontal: 30, bottom: -80, left: 0}}>
                     <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#FFFFFF', '#FFFFFF']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
                         <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', flexDirection:'row', height: 40}} onPress={()=> this.props.navigation.navigate('')} >
                         <Image source={Images.iconFacebook} style={{top: 25, marginBottom:50, width: 25, height: 25, justifyContent: 'center', alignSelf: 'center'}} resizeMode='contain'/>
@@ -74,7 +74,7 @@ class Login extends Component {
                         </TouchableOpacity>
                     </LinearGradient>
                 </View>
-                <View style={{ backgroundColor: 'transparent',width: 300, paddingHorizontal: 30, bottom: -50, left: -10}}>
+                <View style={{ backgroundColor: 'transparent',width: 300, paddingHorizontal: 30, bottom: -50, left: 0}}>
                     <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#FFFFFF', '#FFFFFF']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
                         <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', flexDirection:'row', height: 40}} onPress={()=> this.props.navigation.navigate('')} >
                         <Image source={Images.iconGoogle} style={{top: 25, marginBottom:50, width: 25, height: 25, justifyContent: 'center', alignSelf: 'center'}} resizeMode='contain'/>

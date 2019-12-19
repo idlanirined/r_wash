@@ -47,10 +47,10 @@ class MainMenu extends Component {
                       {/*  <Text style={{ fontSize: 14, alignSelf: 'center', color: '#808080', fontFamily: Fonts.type.regular , paddingLeft:5 }}>Hamjah</Text> */}
                     </View>
                     {/* Button TOP-UP*/}
-                    <View style={{ alignSelf: 'center', flex: 1, width: '20%', justifyContent: 'flex-end' }}>
+                    <View style={{ alignSelf: 'center', flex: 1, width: '20%', justifyContent: 'flex-end'}}>
 
                         <View style={{ width: 100, paddingHorizontal: 0, alignSelf: 'flex-end' }}>
-                            <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#FFFFFF', '#FFFFFF']} style={{ borderRadius: 10, marginVertical: 12, justifyContent: 'flex-end' }}>
+                            <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#FFFFFF', '#FFFFFF']} style={{ borderRadius: 10, marginVertical: 12, justifyContent: 'flex-end', elevation: 10 }}>
                                 <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('Payment')} >
                                     <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 15, alignSelf: 'center' }}> Top Up </Text>
                                 </TouchableOpacity>
@@ -133,7 +133,7 @@ class MainMenu extends Component {
                  {/* Button search */}
                
                 <View style={{ width: 325, paddingHorizontal: 10}}>
-                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 29, marginVertical: 40, justifyContent: 'center' }}>
+                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{elevation: 10, borderRadius: 29, marginVertical: 40, justifyContent: 'center' }}>
                         <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 50}} onPress={()=> this.props.navigation.navigate('NearbyNew')}>
                             <Text style={{color: 'white', fontFamily: Fonts.type.bold, fontSize: 18}}> Search Car Wash </Text>
                         </TouchableOpacity>
