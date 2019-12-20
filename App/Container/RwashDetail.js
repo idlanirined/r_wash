@@ -4,13 +4,44 @@ import { View, Container, Icon } from 'native-base';
 import LinearGradient from 'react-native-linear-gradient'
 import Images from '../Lib/Images';
 import Fonts from '../Themes/Fonts';
+import Modal from 'react-native-modal'
 
 
 class RwashDetail extends Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            modalbooking: false
+        }
+    }
+
     render() {
         return (
 
             <View style={{ flex: 1, backgroundColor: 'white' }}>
+
+                <Modal
+                    onBackdropPress={() => this.setState({ modalbooking: false })}
+                    isVisible={this.state.modalbooking}
+                >
+                    <View style={{ height: 200, width: '100%', backgroundColor: 'white', paddingVertical: 15, paddingHorizontal: 20 }}>
+                        <Text style={{ alignSelf: 'center', fontSize: 24 }}>Booking</Text>
+                        <Text style={{ alignSelf: 'center', flexWrap: 'wrap', marginTop: 10 }}>Slot 1</Text>
+                        <View style={{ justifyContent: 'space-between', flexDirection: 'row', flex: 1, paddingHorizontal: 40, paddingBottom: 30 }}>
+                            <TouchableOpacity style={{ height: 40, width: 70, borderRadius: 10, backgroundColor: '#f2f2f2', opacity: 1, alignSelf: 'flex-end' }} onPress={() => this.setState({ modalbooking: true })}>
+                                <View style={{ flex: 1, justifyContent: 'center' }}>
+                                    <Text style={{ alignSelf: 'center' }}>Yes</Text>
+                                </View>
+                            </TouchableOpacity>
+                            <TouchableOpacity style={{ height: 40, width: 70, borderRadius: 10, backgroundColor: '#f2f2f2', opacity: 1, alignSelf: 'flex-end' }} onPress={() => this.setState({ modalbooking: false })}>
+                                <View style={{ flex: 1, justifyContent: 'center' }}>
+                                    <Text style={{ alignSelf: 'center' }}>No</Text>
+                                </View>
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                </Modal>
                 {/* Slide Show */}
                 <ScrollView horizontal={true} style={{ position: 'absolute', backgroundColor: 'white', flexDirection: 'row', top: 0, left: 0, right: 0, height: '27%', width: 360 }}>
                     <View style={{ height: 180, width: 220, borderRadius: 0, backgroundColor: 'transparent', top: 0, left: 0, right: 0 }}>
@@ -133,7 +164,7 @@ class RwashDetail extends Component {
                     <View style={{ backgroundColor: 'transparent', left: -110, width: '100%', height: 80, borderRadius: 5, marginTop: 5, paddingVertical: 0, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20 }}>
                         <View style={{ width: 150, height: 100, paddingHorizontal: 30, alignContent: 'center', left: -30, elevation: 10 }}>
                             <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 20, marginVertical: 20, justifyContent: 'flex-end' }}>
-                                <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('')} >
+                                <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.setState({ modalbooking: true })} >
                                     <Text style={{ color: 'white', fontFamily: Fonts.type.bold, fontSize: 14 }}> Slot 1 </Text>
                                 </TouchableOpacity>
                             </LinearGradient>
