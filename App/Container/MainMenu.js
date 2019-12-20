@@ -66,9 +66,9 @@ class MainMenu extends Component {
                
 
                {/* Car wash arround */}
-                <Text style={{paddingBottom:5, paddingLeft:30, fontFamily: Fonts.type.regular, color: 'grey'}}>Car Wash Arround</Text>
-                <View style={styles.inputContainer}>
-                    <Image style={styles.inputIcon} source={Images.iconArround}/>
+                <Text style={{paddingBottom:5, paddingLeft:28, fontFamily: Fonts.type.regular, color: 'grey'}}>Car Wash Arround</Text>
+                <View style={styles.inputContainer}> 
+                    <Image source={Images.iconArround} style={{width:20, height:20}}/>
                     <TextInput style={styles.inputs}
                         placeholder="City"
                         underlineColorAndroid='transparent'    
@@ -78,7 +78,7 @@ class MainMenu extends Component {
                   {/* Pilih Mobil */}
                 <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10, paddingLeft:30}}>Vehicle</Text>
                 <View style={styles.inputContainer}>
-                <Image style={styles.inputIcon} source={Images.iconCarProfile}/>
+                <Image source={Images.iconCarProfile} style={{width:25, height:25}}/>
                     <Picker
                         selectedValue={this.state.vehicle}
                         style={{ width: '90%'}}
@@ -100,10 +100,10 @@ class MainMenu extends Component {
 
                   <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10, paddingLeft:30}}>Filter</Text>
                 <View style={styles.inputContainer}>
-                <Image style={styles.inputIcon} source={Images.iconFilter}/>
+                <Image source={Images.iconFilter} style={{width:23, height:23}}/>
                     <Picker
                         selectedValue={this.state.filter}
-                        style={{ width: '90%'}}
+                        style={{ width: '91%'}}
                         onValueChange={(itemValue, itemIndex) =>
                             this.setState({filter: itemValue})
                           }
@@ -118,9 +118,9 @@ class MainMenu extends Component {
 
 
                             {/* Search */}
-                <Text style={{paddingTop:10, paddingLeft:30, fontFamily: Fonts.type.regular, color: 'grey'}}>Search</Text>
+                <Text style={{paddingTop:10, paddingLeft:32, fontFamily: Fonts.type.regular, color: 'grey'}}>Search</Text>
                 <View style={styles.inputContainer}>
-                    <Image style={styles.inputIcon} source={Images.iconSearch}/>
+                <Image source={Images.iconSearch} style={{width:23, height:23}}/>
                     <TextInput style={styles.inputs}
                         placeholder="Search by Car Wash Name"
                         underlineColorAndroid='transparent'    
@@ -162,7 +162,8 @@ const styles = StyleSheet.create({
     },
     inputs: {
         height: 45,
-        marginLeft: 16,
+        marginLeft: 10,
+        paddingLeft: -5,
         borderBottomColor: '#FAFAFA',
         flex: 1,
         fontSize: 13,
