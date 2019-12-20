@@ -32,6 +32,9 @@ const Images = {
     iconFacebook: require('../Assets/Icon/facebook.png'),
     iconGoogle: require('../Assets/Icon/google.png'),
     iconBackk: require('../Assets/Icon/Back.png'),
+    iconSunBlack: require('../Assets/Icon/SunBlack.png'),
+    iconSunGrey: require('../Assets/Icon/SunGrey.png'),
+
 
     //img
     splash: require('../Assets/img/Splashscreen.jpg'),
