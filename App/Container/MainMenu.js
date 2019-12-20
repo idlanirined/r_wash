@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Text, Image, TextInput, Picker, StyleSheet, TouchableOpacity, PermissionsAndroid } from 'react-native'
+import { Text, Image, TextInput, Picker, StyleSheet, TouchableOpacity, PermissionsAndroid, ScrollView } from 'react-native'
 import { View, Container, Icon } from 'native-base';
 import LinearGradient from 'react-native-linear-gradient'
 import Entypo from 'react-native-vector-icons/Entypo';
@@ -27,7 +27,7 @@ class MainMenu extends Component {
 
     render() {
         return (
-            <View style={{ flex: 1, backgroundColor: 'white' }}>
+            <ScrollView style={{ flex: 1, backgroundColor: 'white' }}>
                 {/* Header */}
                 <View style={{ height: 50, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', justifyContent: 'space-between' }}>
                     <View style={{ height: '80%', width: '24%', alignSelf: 'center' }}>
@@ -126,28 +126,42 @@ class MainMenu extends Component {
                         underlineColorAndroid='transparent'    
                     />
                 </View>
-
+</View>
                  
-
 
                  {/* Button search */}
                
-                <View style={{ width: 325, paddingHorizontal: 10}}>
-                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{elevation: 10, borderRadius: 29, marginVertical: 40, justifyContent: 'center' }}>
-                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 50}} onPress={()=> this.props.navigation.navigate('NearbyNew')}>
+                <View style={{ width: 325, paddingHorizontal: 10, alignSelf:'center', marginTop: -25}}>
+                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{elevation: 3, borderRadius: 29, marginVertical: 30, justifyContent: 'center' }}>
+                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 60}} onPress={()=> this.props.navigation.navigate('NearbyNew')}>
                             <Text style={{color: 'white', fontFamily: Fonts.type.bold, fontSize: 18}}> Search Car Wash </Text>
                         </TouchableOpacity>
                     </LinearGradient>
                 </View>
-                
 
-             
-
-                   
-                   
-
+                {/* Promo */}
+                <View style={{paddingLeft:20}}>
+                    <Text style={{fontFamily: Fonts.type.bold, fontSize:20, marginTop:-10}}>Ongoing Promo</Text>
                 </View>
-            </View>
+                <View style={{flexDirection: 'row', paddingLeft:20}}>
+                <Text style={{fontFamily: Fonts.type.regular, fontSize:14, marginTop:5, color:'#808080'}}>Always save more with our special offers</Text>
+                    <Image source={Images.iconNextBiru} style={{width:20, height:20, marginLeft:70}}></Image>
+                </View>
+                <ScrollView horizontal={true} style={{flexDirection:'row', paddingLeft:20}}>
+                  <View style={{marginRight:16}}>
+                    <View style={{backgroundColor: '#00CCFF', height: 130, width: 160, marginTop:20, borderRadius:11}}></View>
+                        <Text>See All Promo</Text> 
+                </View>
+                  <View style={{marginRight:16}}>
+                    <View style={{backgroundColor: '#00CCFF', height: 130, width: 160, marginTop:20, borderRadius:11}}></View>
+                        <Text></Text> 
+                </View>
+                  <View style={{marginRight:16}}>
+                    <View style={{backgroundColor: '#00CCFF', height: 130, width: 160, marginTop:20, borderRadius:11}}></View>
+                        <Text></Text> 
+                </View>   
+                </ScrollView>
+            </ScrollView>
         )
     }
 }
@@ -158,7 +172,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
-        padding: 20
+        padding: 20,
     },
     inputs: {
         height: 45,
