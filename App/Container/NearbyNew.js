@@ -8,6 +8,10 @@ import Images from '../Lib/Images'
 
 
 class NearbyNew extends Component {
+
+
+
+    
     render() {
         return (
             <View style={{ flex: 1, backgroundColor: '#F5F5f5' }}>

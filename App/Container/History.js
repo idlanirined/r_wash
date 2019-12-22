@@ -23,6 +23,7 @@ class History extends Component {
     clearAll() {
         this.setState({
             arrayDummy: []
+            
           
         })
     }
