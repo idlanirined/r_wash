@@ -34,6 +34,8 @@ const Images = {
     iconBackk: require('../Assets/Icon/Back.png'),
     iconSunBlack: require('../Assets/Icon/SunBlack.png'),
     iconSunGrey: require('../Assets/Icon/SunGrey.png'),
+    iconNextBiru: require('../Assets/Icon/NextBiru.png'),
+    iconPersen: require('../Assets/Icon/persen.png'),
 
 
     //img
