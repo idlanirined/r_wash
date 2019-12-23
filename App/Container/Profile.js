@@ -18,7 +18,7 @@ class Profile extends Component {
                 { car: '2. Honda Civic / D 1514 BFF' },
                 { car: '3. Toyota Avanza / D 1514 BFF' },
                 { car: '4. Alphard / D 1514 BFF' },
-                { car: '4. Alphard / D 1514 BFF' },
+         
 
 
             ],
