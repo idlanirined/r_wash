@@ -19,7 +19,7 @@ class Login extends Component {
     render(){
         return(
             <View style={styles.container}>
-                <View style={{ width: 200, height: 50, justifyContent: 'center', alignSelf: 'center', bottom: -80}}>
+                <View style={{ width: 200, height: 50, justifyContent: 'center', alignSelf: 'center', bottom: -60}}>
                     <Image source={Images.login} style={{top: 10, marginBottom:50, width: 100, height: 100, justifyContent: 'center', alignSelf: 'center'}} resizeMode='contain'/>
                 </View>
 
@@ -55,8 +55,8 @@ class Login extends Component {
                 </View>
 
                 {/* Button Login */}
-                <View style={{ width: 300, paddingHorizontal: 30, bottom: -80}}>
-                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
+                <View style={{ width: 300, paddingHorizontal: 30, bottom: -70}}>
+                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{elevation: 10, borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
                         <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 40}} onPress={()=> this.props.navigation.navigate('HomeNavigation')} >
                             <Text style={{color: 'white', fontFamily: Fonts.type.bold, fontSize: 18}}> Sign In </Text>
                         </TouchableOpacity>
@@ -66,18 +66,18 @@ class Login extends Component {
                     <Text style={{ fontFamily: Fonts.type.bold}}>Don't have an account? </Text>
                     <Text style={{ color: '#00CCFF', fontFamily: Fonts.type.bold}} onPress={()=> this.props.navigation.navigate('Register')}>Sign Up</Text>
                 </View>
-                <View style={{ backgroundColor: 'transparent',width: 300, paddingHorizontal: 30, bottom: -80, left: -10}}>
+                <View style={{ backgroundColor: 'transparent',width: 300, paddingHorizontal: 30, bottom: -80, left: 0}}>
                     <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#FFFFFF', '#FFFFFF']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
                         <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', flexDirection:'row', height: 40}} onPress={()=> this.props.navigation.navigate('')} >
-                        <Image style={styles.inputIcon} source={Images.iconFacebook}/>
-                            <Text style={{color: 'white', fontFamily: Fonts.type.bold, color:'#000000'}}> Sign In with Facebook </Text>
+                        <Image source={Images.iconFacebook} style={{top: 25, marginBottom:50, width: 25, height: 25, justifyContent: 'center', alignSelf: 'center'}} resizeMode='contain'/>
+                            <Text style={{color: 'white', fontFamily: Fonts.type.bold, color:'#000000', paddingLeft:5}}> Sign In with Facebook </Text>
                         </TouchableOpacity>
                     </LinearGradient>
                 </View>
-                <View style={{ backgroundColor: 'transparent',width: 300, paddingHorizontal: 30, bottom: -50, left: -10}}>
+                <View style={{ backgroundColor: 'transparent',width: 300, paddingHorizontal: 30, bottom: -50, left: 0}}>
                     <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#FFFFFF', '#FFFFFF']} style={{ borderRadius: 30, marginVertical: 20, justifyContent: 'flex-end' }}>
                         <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', flexDirection:'row', height: 40}} onPress={()=> this.props.navigation.navigate('')} >
-                        <Image style={styles.inputIcon} source={Images.iconGoogle}/>
+                        <Image source={Images.iconGoogle} style={{top: 25, marginBottom:50, width: 25, height: 25, justifyContent: 'center', alignSelf: 'center'}} resizeMode='contain'/>
                             <Text style={{color: 'white', fontFamily: Fonts.type.bold, color:'#000000'}}> Sign In with Google </Text>
                         </TouchableOpacity>
                     </LinearGradient>
@@ -101,11 +101,11 @@ const styles = StyleSheet.create({
         backgroundColor: '#FFFFFF',
         borderRadius:30,
         width:300,
-        height:45,
-        marginBottom:20,
+        height:50,
+        marginBottom:30,
         flexDirection: 'row',
         alignItems:'center',
-        bottom: -100
+        bottom: -80
         
     },
     inputIcon:{
