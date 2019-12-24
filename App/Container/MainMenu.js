@@ -52,7 +52,8 @@ class MainMenu extends Component {
                         <View style={{ width: 100, paddingHorizontal: 0, alignSelf: 'flex-end' }}>
                             <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#FFFFFF', '#FFFFFF']} style={{ borderRadius: 10, marginVertical: 12, justifyContent: 'flex-end', elevation: 10 }}>
                                 <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('Payment')} >
-                                    <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 15, alignSelf: 'center' }}> Top Up </Text>
+                                    <Image source={Images.iconTopUp} style={{height:20, width:20, position:'absolute', marginLeft:13, alignSelf:'flex-start'}}></Image>
+                                    <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 15, alignSelf: 'center', marginLeft:20 }}> Top Up </Text>
                                 </TouchableOpacity>
                             </LinearGradient>
                         </View>
@@ -150,7 +151,6 @@ class MainMenu extends Component {
                 <ScrollView horizontal={true} style={{flexDirection:'row', paddingLeft:20}}>
                   <View style={{marginRight:16}}>
                     <View style={{backgroundColor: '#00CCFF', height: 130, width: 160, marginTop:20, borderRadius:11}}></View>
-                        <Text>See All Promo</Text> 
                 </View>
                   <View style={{marginRight:16}}>
                     <View style={{backgroundColor: '#00CCFF', height: 130, width: 160, marginTop:20, borderRadius:11}}></View>
