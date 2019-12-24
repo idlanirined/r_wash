@@ -13,7 +13,7 @@ class NearbyNew extends Component {
         super(props)
         this.state = {
             arrayDummy: [
-                { src: '../Assets/img/Rwash1.jpg', tempat: 'R*Wash Dipatiukur', jarak: '12 Km', jalan: 'Jl Dipatiukur No.5 Bandung', tlp: '088121xxxxxx', waktu: '(5 min)' },
+                { src: Images.rwash1, tempat: 'R*Wash Dipatiukur', jarak: '12 Km', jalan: 'Jl Dipatiukur No.5 Bandung', tlp: '088121xxxxxx', waktu: '(5 min)' },
 
 
 
