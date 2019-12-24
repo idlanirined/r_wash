@@ -42,7 +42,7 @@ class Filtersort extends Component {
 
           <ListItem>
             <Left>
-              <Text style={{fontFamily: Fonts.type.medium, fontSize: 14}}>Recommendation</Text>
+              <Text style={{fontFamily: Fonts.type.medium, fontSize: 14}}>Recommendationss</Text>
             </Left>
             <Right>
             <RadioButton
