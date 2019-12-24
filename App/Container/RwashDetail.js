@@ -29,7 +29,7 @@ class RwashDetail extends Component {
                         <Text style={{ alignSelf: 'center', fontSize: 24 }}>Booking</Text>
                         <Text style={{ alignSelf: 'center', flexWrap: 'wrap', marginTop: 10 }}>Slot 1</Text>
                         <View style={{ justifyContent: 'space-between', flexDirection: 'row', flex: 1, paddingHorizontal: 40, paddingBottom: 30 }}>
-                            <TouchableOpacity style={{ height: 40, width: 70, borderRadius: 10, backgroundColor: '#f2f2f2', opacity: 1, alignSelf: 'flex-end' }} onPress={() => this.setState({ modalbooking: true })}>
+                            <TouchableOpacity style={{ height: 40, width: 70, borderRadius: 10, backgroundColor: '#f2f2f2', opacity: 1, alignSelf: 'flex-end' }}onPress={() => this.props.navigation.navigate('MyOrder')}>
                                 <View style={{ flex: 1, justifyContent: 'center' }}>
                                     <Text style={{ alignSelf: 'center' }}>Yes</Text>
                                 </View>

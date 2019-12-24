@@ -9,9 +9,22 @@ import Images from '../Lib/Images'
 
 class NearbyNew extends Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            arrayDummy: [
+                { src: '../Assets/img/Rwash1.jpg', tempat: 'R*Wash Dipatiukur', jarak: '12 Km', jalan: 'Jl Dipatiukur No.5 Bandung', tlp: '088121xxxxxx', waktu: '(5 min)' },
 
 
-    
+
+
+            ],
+            modalvehicle: false
+        }
+    }
+
+
+
     render() {
         return (
             <View style={{ flex: 1, backgroundColor: '#F5F5f5' }}>
@@ -24,38 +37,40 @@ class NearbyNew extends Component {
                 {/* log nearby */}
 
                 <ScrollView style={{ paddingHorizontal: 15, paddingBottom: 10, marginTop: 0, backgroundColor: '#F5F5F5', marginLeft: -15, marginRight: -15 }}>
-                <TouchableOpacity style={{ height: 130, paddingTop: 20, backgroundColor: 'white', marginTop: 10, borderRadius: 5, flexDirection: 'row' }} onPress={() => this.props.navigation.navigate('RwashDetail')}>
-                        <Image source={Images.rwash1} style={{ height: 100, width: 130, position: 'relative', left: 10, top: -8, borderRadius: 9 }} />
-                        <View style={{ flex: 1, paddingLeft: 10, flexDirection: 'column' }}>
-                            <Text style={{ fontWeight: 'bold', alignItems: 'center', fontSize: 18, paddingLeft: 10, top: -10 }}>R*Wash Dipatiukur</Text>
-                            <View style={{ flex: 1, left: -25, top: 10, alignItems: 'center', justifyContent: 'center', position: 'absolute' }}>
-                                <Text style={{ alignSelf: 'center', color: 'red', top: 5, left: 5, marginLeft: 55, fontFamily: Fonts.type.medium, fontSize: 10 }}>12 km</Text>
-                                <Image source={Images.iconPin} style={{ height: 15, width: 15, left: 10, top: -10 }} />
-                            </View>
-                            <Text style={{ paddingLeft: 10, top: 5, color: 'grey' }} allowFontScaling={false}>Jl Dipatiukur No.5 Bandung </Text>
-                            <Text style={{ paddingLeft: 10, top: 5, color: 'grey' }} allowFontScaling={false}>0881 21xx xxx </Text>
-                            <Text style={{ paddingLeft: 10, top: 5, color: 'red' }} allowFontScaling={false}>( 5 Min) </Text>
-                        </View>
-                </TouchableOpacity>
+                    {this.state.arrayDummy.map((item, index) => {
+                        return (
+                            <TouchableOpacity style={{ height: 130, paddingTop: 20, backgroundColor: 'white', marginTop: 10, borderRadius: 5, flexDirection: 'row' }} onPress={() => this.props.navigation.navigate('RwashDetail')}>
+                                <Image source={item.src} style={{ height: 100, width: 130, position: 'relative', left: 10, top: -8, borderRadius: 9 }} />
+                                <View style={{ flex: 1, paddingLeft: 10, flexDirection: 'column' }}>
+                                    <Text style={{ fontWeight: 'bold', alignItems: 'center', fontSize: 18, paddingLeft: 10, top: -10 }}>{item.tempat}</Text>
+                                    <View style={{ flex: 1, left: -25, top: 10, alignItems: 'center', justifyContent: 'center', position: 'absolute' }}>
+                                        <Text style={{ alignSelf: 'center', color: 'red', top: 5, left: 5, marginLeft: 55, fontFamily: Fonts.type.medium, fontSize: 10 }}>{item.jarak}</Text>
+                                        <Image source={Images.iconPin} style={{ height: 15, width: 15, left: 10, top: -10 }} />
+                                    </View>
+                                    <Text style={{ paddingLeft: 10, top: 5, color: 'grey' }} allowFontScaling={false}>{item.jalan} </Text>
+                                    <Text style={{ paddingLeft: 10, top: 5, color: 'grey' }} allowFontScaling={false}>{item.tlp} </Text>
+                                    <Text style={{ paddingLeft: 10, top: 5, color: 'red' }} allowFontScaling={false}>{item.waktu} </Text>
+                                </View>
+                            </TouchableOpacity>
+                        )
 
-
-
+                        })}
                 </ScrollView>
 
-                <View  style={{ backgroundColor: 'transparent', width: '100%', height: 50, borderRadius: 5, marginBottom: 20, paddingVertical: 5, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, position: 'absolute', bottom: 0, }}>
-                    <View style={{ width: 180, height: 100, paddingHorizontal: 30 , left: 17.5, top: -20}}>
+                <View style={{ backgroundColor: 'transparent', width: '100%', height: 50, borderRadius: 5, marginBottom: 20, paddingVertical: 5, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, position: 'absolute', bottom: 0, }}>
+                    <View style={{ width: 180, height: 100, paddingHorizontal: 30, left: 17.5, top: -20 }}>
                         <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#E8E8E8', '#E8E8E8']} style={{ borderBottomLeftRadius: 20, borderTopLeftRadius: 20, marginVertical: 20, justifyContent: 'flex-end', elevation: 2 }}>
                             <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'row', height: 40 }} onPress={() => this.props.navigation.navigate('Filtersort')} >
-                            <Image style={styles.inputIcon} source={Images.iconFilterBlack}/>
+                                <Image style={styles.inputIcon} source={Images.iconFilterBlack} />
                                 <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 10 }}>Filter&Sort </Text>
                             </TouchableOpacity>
                         </LinearGradient>
                     </View>
 
-                    <View style={{ backgroundColor: 'transparent', width: 180, height: 130, paddingHorizontal: 30 , right: 42.5, top: -20}}>
+                    <View style={{ backgroundColor: 'transparent', width: 180, height: 130, paddingHorizontal: 30, right: 42.5, top: -20 }}>
                         <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#E8E8E8', '#E8E8E8']} style={{ borderBottomRightRadius: 20, borderTopRightRadius: 20, marginVertical: 20, justifyContent: 'flex-end', elevation: 2 }}>
                             <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'row', height: 40 }} onPress={() => this.props.navigation.navigate('')} >
-                            <Image style={styles.inputIcon} source={Images.iconMapView}/>
+                                <Image style={styles.inputIcon} source={Images.iconMapView} />
                                 <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 10 }}> Map View </Text>
                             </TouchableOpacity>
                         </LinearGradient>
