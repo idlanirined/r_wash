@@ -20,6 +20,8 @@ import Payment from '../Container/Payment'
 import Nearby from '../Container/Nearby'
 import NearbyNew from '../Container/NearbyNew'
 import Filtersort from '../Container/Filter&Sort'
+import EditProfil from '../Container/EditProfil'
+import RwashDetail from '../Container/RwashDetail'
 
 
 const MainNavigator = createStackNavigator({
@@ -34,7 +36,12 @@ const MainNavigator = createStackNavigator({
     Nearby: { screen: Nearby, navigationOptions: { header: null}},
     NearbyNew: { screen: NearbyNew, navigationOptions: {header: null}},
     Filtersort: { screen: Filtersort, navigationOptions: {header: null}},
+    EditProfil: { screen: EditProfil, navigationOptions: {header: null}},
+    RwashDetail: { screen: RwashDetail, navigationOptions: {header: null}},
    
+
+
+
     
 }, {
     headerMode: 'screen',
