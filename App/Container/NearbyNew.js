@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { Text, Image, TextInput, ScrollView, StyleSheet, TouchableOpacity, PermissionsAndroid } from 'react-native'
-import { View, Icon, Container, Header, Content, Button, } from 'native-base';
+import { View, Icon, Container, Header,Left,Right, Content, Button, } from 'native-base';
+import Ionicons from 'react-native-vector-icons/Ionicons'
+import Entypo from 'react-native-vector-icons/Entypo'
+import { Appbar } from 'react-native-paper';
 import LinearGradient from 'react-native-linear-gradient'
 import { Fonts } from '../Themes'
 import { Avatar } from 'react-native-elements'
@@ -27,12 +30,21 @@ class NearbyNew extends Component {
 
     render() {
         return (
+            
             <View style={{ flex: 1, backgroundColor: '#F5F5f5' }}>
                 <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', justifyContent: 'center' }}>
-                    <Text style={{ alignSelf: 'center', justifyContent: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20 }}>Nearby</Text>
+                <View style={{ height: 50, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', paddingHorizontal: 10, justifyContent: 'center' }} >
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Home')}style={{ width: '5%', alignSelf: 'center', justifyContent: 'center' }}>
+                        <Entypo name='chevron-thin-left' size={30} color='white' />
+                    </TouchableOpacity>
+                    <View style={{ width: '95%', justifyContent: 'center' }}>
+                        <Text style={{ alignSelf: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20 }}>Nearby</Text>
+                    </View>
+                   
                 </View>
-
-
+                </View>
+            
+                
 
                 {/* log nearby */}
 
@@ -69,7 +81,7 @@ class NearbyNew extends Component {
 
                     <View style={{ backgroundColor: 'transparent', width: 180, height: 130, paddingHorizontal: 30, right: 42.5, top: -20 }}>
                         <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#E8E8E8', '#E8E8E8']} style={{ borderBottomRightRadius: 20, borderTopRightRadius: 20, marginVertical: 20, justifyContent: 'flex-end', elevation: 2 }}>
-                            <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'row', height: 40 }} onPress={() => this.props.navigation.navigate('')} >
+                            <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'row', height: 40 }} onPress={() => this.props.navigation.navigate('Maps')} >
                                 <Image style={styles.inputIcon} source={Images.iconMapView} />
                                 <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 10 }}> Map View </Text>
                             </TouchableOpacity>
