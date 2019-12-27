@@ -64,7 +64,7 @@ class HomePageScreen extends Component {
                 style={{ flex:1, paddingLeft: 5, flexDirection: 'column'}}
                 >
                     <Text style={{fontWeight: 'bold', alignItems: 'center', fontSize: 18, paddingLeft: 10}}>R*Wash Dipatiukur</Text>
-                    <Text style={{paddingLeft: 10}} allowFontScaling={false}>No Telp </Text>
+                    <Text style={{paddingLeft: 10}} allowFontScaling={false}>No Telp nn </Text>
 
                 </View>
 
