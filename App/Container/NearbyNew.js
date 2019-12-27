@@ -17,6 +17,7 @@ class NearbyNew extends Component {
         this.state = {
             arrayDummy: [
                 { src: Images.rwash1, tempat: 'R*Wash Dipatiukur', jarak: '12 Km', jalan: 'Jl Dipatiukur No.5 Bandung', tlp: '088121xxxxxx', waktu: '(5 min)' },
+                { src: Images.rwash2, tempat: 'R*Wash Dipatiukur', jarak: '12 Km', jalan: 'Jl Dipatiukur No.5 Bandung', tlp: '088121xxxxxx', waktu: '(5 min)' },
 
 
 
@@ -83,7 +84,7 @@ class NearbyNew extends Component {
                         <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#E8E8E8', '#E8E8E8']} style={{ borderBottomRightRadius: 20, borderTopRightRadius: 20, marginVertical: 20, justifyContent: 'flex-end', elevation: 2 }}>
                             <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'row', height: 40 }} onPress={() => this.props.navigation.navigate('Maps')} >
                                 <Image style={styles.inputIcon} source={Images.iconMapView} />
-                                <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 10 }}> Map View </Text>
+                                <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 10 }}> Maps View </Text>
                             </TouchableOpacity>
                         </LinearGradient>
                     </View>

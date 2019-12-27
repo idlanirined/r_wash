@@ -22,7 +22,9 @@ class History extends Component {
 
     clearAll() {
         this.setState({
-            arrayDummy: []
+            arrayDummy: [],
+            modalClear: false
+            
             
           
         })
@@ -45,7 +47,7 @@ class History extends Component {
                                     <Text style={{ alignSelf: 'center' }}>Yes</Text>
                                 </View>
                             </TouchableOpacity>
-                            <TouchableOpacity style={{ height: 40, width: 70, borderRadius: 10, backgroundColor: '#f2f2f2', opacity: 1, alignSelf: 'flex-end' }} onPress={() => this.setState({ modalLogout: false })}>
+                            <TouchableOpacity style={{ height: 40, width: 70, borderRadius: 10, backgroundColor: '#f2f2f2', opacity: 1, alignSelf: 'flex-end' }} onPress={() => this.setState({ modalClear: false })}>
                                 <View style={{ flex: 1, justifyContent: 'center' }}>
                                     <Text style={{ alignSelf: 'center' }}>No</Text>
                                 </View>
