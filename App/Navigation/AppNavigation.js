@@ -25,6 +25,7 @@ import RwashDetail from '../Container/RwashDetail'
 
 
 
+
 const MainNavigator = createStackNavigator({
     Login : { screen: Login, navigationOptions: { header: null} },
     Register: { screen: Register, navigationOptions: { header: null } },
@@ -39,6 +40,7 @@ const MainNavigator = createStackNavigator({
     Filtersort: { screen: Filtersort, navigationOptions: {header: null}},
     EditProfil: { screen: EditProfil, navigationOptions: {header: null}},
     RwashDetail: { screen: RwashDetail, navigationOptions: {header: null}},
+    
  
    
 
