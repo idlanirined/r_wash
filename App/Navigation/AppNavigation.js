@@ -22,7 +22,7 @@ import NearbyNew from '../Container/NearbyNew'
 import Filtersort from '../Container/Filter&Sort'
 import EditProfil from '../Container/EditProfil'
 import RwashDetail from '../Container/RwashDetail'
-
+import Settingss from '../Container/Settings'
 
 
 
@@ -40,7 +40,7 @@ const MainNavigator = createStackNavigator({
     Filtersort: { screen: Filtersort, navigationOptions: {header: null}},
     EditProfil: { screen: EditProfil, navigationOptions: {header: null}},
     RwashDetail: { screen: RwashDetail, navigationOptions: {header: null}},
-    
+    Settingss: { screen: Settingss, navigationOptions: {header: null}},
  
    
 
