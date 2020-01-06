@@ -36,10 +36,6 @@ class Settingss extends Component {
                     <View style={{ height: 171, paddingTop: 5, backgroundColor: 'white', marginTop: 10, borderRadius: 5, flexDirection: 'row' }}>
 
                     <Content>
-              
-            
-              
-
           <ListItem>
             <Left>
               <Text style={{fontFamily: Fonts.type.medium, fontSize: 14}}>Country</Text>
@@ -80,6 +76,41 @@ class Settingss extends Component {
             </Right>
           </ListItem>
         </Content>
+        </View>
+        <View style={{ flex: 1, backgroundColor: '#F5F5f5' }}>
+                <Text style={{marginLeft:15, marginTop: 10, fontFamily: Fonts.type.bold}}></Text>
+                <View style={{ paddingHorizontal: 15, paddingBottom: 10, backgroundColor: '#F5F5F5', marginLeft: -15, marginRight: -15 }}>
+
+                    <View style={{ height: 150, paddingTop: 5, backgroundColor: 'white', marginTop: 10, borderRadius: 5, flexDirection: 'row' }}>
+
+                    <Content>
+          <ListItem>
+            <Left>
+              <Text style={{fontFamily: Fonts.type.medium, fontSize: 14}}>App Version</Text>
+            </Left>
+            <Right style={{flexDirection:'row', alignItems:'center'}}>
+            <Text style={{fontFamily: Fonts.type.medium, fontSize: 14, marginLeft:45}}>1.0</Text>
+            </Right>
+          </ListItem>
+          <ListItem>
+            <Left>
+              <Text style={{fontFamily: Fonts.type.medium, fontSize: 14}}>Terms & Conditions</Text>
+            </Left>
+            <Right style={{flexDirection:'row', alignItems:'center'}}>
+            <Image source={Images.iconNextBiru} style={{width:20, height:20, marginLeft:50}}></Image>
+            </Right>
+          </ListItem>
+          <ListItem>
+            <Left>
+              <Text style={{fontFamily: Fonts.type.medium, fontSize: 14}}>Privacy Policy</Text>
+            </Left>
+            <Right style={{flexDirection:'row', alignItems:'center'}}>
+            <Image source={Images.iconNextBiru} style={{width:20, height:20, marginLeft:50}}></Image>
+            </Right>
+          </ListItem>
+          </Content>
+    </View>
+    </View>
     </View>
     </View>
     </View>

@@ -46,7 +46,7 @@ class EditProfil extends Component {
                 <Text style={{paddingTop:10, paddingLeft:0, fontFamily: Fonts.type.regular, color: 'grey'}}>Phone Number*</Text>
                 <View style={styles.inputContainer}>
                     <TextInput style={styles.inputs}
-                        placeholder="82240206592"
+                        placeholder="082240206592"
                         underlineColorAndroid='transparent'    
                     />
                 </View>
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
-        padding: 20,
+        padding: 15,
     },
     inputs: {
         height: 45,
