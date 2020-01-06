@@ -1,140 +1,92 @@
 import React, { Component } from 'react';
-import { Text, Image, TextInput, Picker, StyleSheet, TouchableOpacity, PermissionsAndroid, Settings } from 'react-native'
-import { View, Container, Icon } from 'native-base';
+import { Text, Image, TextInput, ScrollView, StyleSheet, TouchableOpacity, PermissionsAndroid } from 'react-native'
+import { View, Icon, Container, Header, Content, Button,ListItem,Left, Right, Radio } from 'native-base';
+import { RadioButton } from 'react-native-paper';
 import LinearGradient from 'react-native-linear-gradient'
-import Fontisto from 'react-native-vector-icons/Fontisto'
-import Entypo from 'react-native-vector-icons/Entypo';
-import FontAwesome from 'react-native-vector-icons/FontAwesome';
-import { Avatar } from 'react-native-elements';
-import Images from '../Lib/Images';
-import Fonts from '../Themes/Fonts';
-import AntDesign from 'react-native-vector-icons/AntDesign';
+import { Fonts } from '../Themes'
+import { Avatar } from 'react-native-elements'
+import Images from '../Lib/Images'
 
+
+
+ 
 class Settingss extends Component {
+  
+    constructor() {
+      super();
+      this.state = {
+       //itemSelected: 'itemOne',
+     }
+    };
 
-    render(){
-        return(
-            <View style={{ flex: 1, backgroundColor: 'white'}}>
-                <View style={{ height: 50, width: '100%', backgroundColor: '#00CCFF', justifyContent: 'center'}}>
-                    <Text style={{ alignSelf: 'center', justifyContent: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20}}>Edit Profil</Text>
+ 
+    render() {
+      const { checked } = this.state;
+        return (
+
+          
+          
+            <View style={{ flex: 1, backgroundColor: '#F5F5f5' }}>
+                <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', justifyContent: 'center' }}>
+                    <Text style={{ alignSelf: 'center', justifyContent: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20 }}>Settings</Text>
                 </View>
+                <Text style={{marginLeft:15, marginTop: 10, fontFamily: Fonts.type.bold}}>PREFERENCES</Text>
+                <View style={{ paddingHorizontal: 15, paddingBottom: 10, backgroundColor: '#F5F5F5', marginLeft: -15, marginRight: -15 }}>
 
-                {/* Konten */}
+                    <View style={{ height: 171, paddingTop: 5, backgroundColor: 'white', marginTop: 10, borderRadius: 5, flexDirection: 'row' }}>
 
-                <View style={styles.container}>
-               
+                    <Content>
+              
+            
+              
 
-               {/* Full Name */}
-                <Text style={{paddingBottom:5, paddingLeft:0, fontFamily: Fonts.type.regular, color: 'grey'}}>Full Name*</Text>
-                <View style={styles.inputContainer}>
-                    <TextInput style={styles.inputs}
-                        placeholder="Hamjah Huailid"
-                        underlineColorAndroid='transparent'    
-                    />
-                </View>
+          <ListItem>
+            <Left>
+              <Text style={{fontFamily: Fonts.type.medium, fontSize: 14}}>Country</Text>
+            </Left>
+            <Right style={{flexDirection:'row', alignItems:'center'}}>
+            <Text style={{fontFamily: Fonts.type.medium, fontSize: 14,marginRight:10, marginLeft:-15}}>Indonesia</Text>
+            <Image source={Images.iconNextBiru} style={{width:20, height:20, marginRight:20}}></Image>
+            </Right>
+          </ListItem>
+          <ListItem>
+            <Left>
+              <Text style={{fontFamily: Fonts.type.medium, fontSize: 14}}>Curency</Text>
+            </Left>
+            <Right style={{flexDirection:'row', alignItems:'center'}}>
+            <Text style={{fontFamily: Fonts.type.medium, fontSize: 14,marginRight:10, marginLeft:-60}}>Indonesia Rupiah</Text>
+            <Image source={Images.iconNextBiru} style={{width:20, height:20, marginRight:20}}></Image>
+            </Right>
+          </ListItem>
+          <ListItem>
+            <Left style={{alignItems:'center'}}>
+              <Text style={{fontFamily: Fonts.type.medium, fontSize: 14}}>Language</Text>
+            </Left>
+            <Right style={{flexDirection:'row'}}>
+            <View style={{ width: 80, marginLeft:-100, marginRight:10}}>
+                            <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 10, justifyContent: 'flex-end'}}>
+                                <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('')} >
+                                    <Text style={{ color: 'white', fontFamily: Fonts.type.bold, fontSize: 16, alignSelf: 'center' }}> English </Text>
+                                </TouchableOpacity>
+                            </LinearGradient>
+                        </View>
+                        <View style={{ width: 80, paddingHorizontal: 0, alignSelf: 'flex-end' }}>
+                            <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#f5f5f5', '#f5f5f5']} style={{ borderRadius: 10, justifyContent: 'flex-end'}}>
+                                <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('')} >
+                                    <Text style={{ color: '#00ccff', fontFamily: Fonts.type.bold, fontSize: 16, alignSelf: 'center' }}> Indonesia </Text>
+                                </TouchableOpacity>
+                            </LinearGradient>
+                        </View>            
+            </Right>
+          </ListItem>
+        </Content>
+    </View>
+    </View>
+    </View>
 
-
-                            {/*Address */}
-                <Text style={{paddingTop:10, paddingLeft:0, fontFamily: Fonts.type.regular, color: 'grey'}}>Address*</Text>
-                <View style={styles.inputContainer}>
-                    <TextInput style={styles.inputs}
-                        placeholder="Komplek Bumi Pakusarakan 2"
-                        underlineColorAndroid='transparent'    
-                    />
-                </View>
-
-                    {/*Phone Number */}
-                <Text style={{paddingTop:10, paddingLeft:0, fontFamily: Fonts.type.regular, color: 'grey'}}>Phone Number*</Text>
-                <View style={styles.inputContainer}>
-                    <TextInput style={styles.inputs}
-                        placeholder="82240206592"
-                        underlineColorAndroid='transparent'    
-                    />
-                </View>
-                 
-                 {/*Email */}
-                <Text style={{paddingTop:10, paddingLeft:0, fontFamily: Fonts.type.regular, color: 'grey'}}>Email*</Text>
-                <View style={styles.inputContainer}>
-                    <TextInput style={styles.inputs}
-                        placeholder="hamjah.huailid18@gmail.com"
-                        underlineColorAndroid='transparent'    
-                    />
-                </View>
-
-
-                 {/* Button Confirm */}
-               
-                <View style={{ width: 250, paddingHorizontal: 10, alignSelf:'center'}}>
-                    <LinearGradient start={{x: 0, y: 0}} end={{x: 0.9, y: 0.5}} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 29, marginVertical: 40, justifyContent: 'center' }}>
-                        <TouchableOpacity style={{ alignItems:'center', justifyContent:'center', height: 50}} onPress={()=> this.props.navigation.navigate('Profile')}>
-                            <Text style={{color: 'white', fontFamily: Fonts.type.bold, fontSize: 18}}> Confirm </Text>
-                        </TouchableOpacity>
-                    </LinearGradient>
-                </View>
-                
-
-             
-
-                   
-                   
-
-                </View>
-            </View>
-        )
-    }
+    );
+  }
 }
 
-const styles = StyleSheet.create({
-    container: {
-        
-        flex: 1,
-        justifyContent: 'flex-start',
-        alignItems: 'flex-start',
-        padding: 20,
-    },
-    inputs: {
-        height: 45,
-        marginLeft: 0,
-        paddingLeft: 0,
-        borderBottomColor: '#00CCFF',
-        flex: 1,
-        fontSize: 14,
-        
-    },
-    inputContainer: {
-        borderBottomWidth: 1,
-        borderWidth: 0,
-        elevation: 0,
-        paddingLeft: 0,
-        backgroundColor: '#FFFFFF',
-        borderRadius: 0,
-        width: 320,
-        height: 30,
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-    inputIcon: {
-        width: 25,
-        height: 25,
-        marginLeft: 0,
-        justifyContent: 'center',
-        tintColor: 'grey'
-    },
-
-    inputSearch: {
-        borderColor: 'gray',
-        borderWidth: 1,
-        elevation: 2,
-        backgroundColor: '#FFFFFF',
-        borderRadius:30,
-        width: 290,
-        height:50,
-        flexDirection: 'row',
-        alignItems:'center'
-    },
-    label: {
-        paddingLeft: 10,
-    }
-});
 
 export default Settingss;
