@@ -98,7 +98,7 @@ class Filtersort extends Component {
 
       </View>             
         <View style={{width:400, height:20, justifyContent:'center', left: -10, marginBottom:20, paddingTop:305}}>
-            <Button block style={{margin:10, backgroundColor:'#FFCA00', height: 80}}>
+            <Button block style={{margin:10, backgroundColor:'#FFCA00', height: 80}} onPress={()=> this.props.navigation.navigate('NearbyNew')}>
                 <Text style={{left: -10, color:'#000000',top: 0, fontFamily: Fonts.type.bold, fontSize: 18}}>Apply Changes</Text>
             </Button>
         </View>
