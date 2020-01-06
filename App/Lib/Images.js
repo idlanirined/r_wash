@@ -45,7 +45,9 @@ const Images = {
     rwash1: require('../Assets/img/Rwash1.jpg'),
     noorder: require('../Assets/img/noorderr.png'),
     rwash2: require('../Assets/img/Rwash2.jpeg'),
-    rwash3: require('../Assets/img/Rwash3.jpg')
+    rwash3: require('../Assets/img/Rwash3.jpg'),
+    promo1: require('../Assets/img/Promo1.png'),
+    promo2: require('../Assets/img/Promo2.png')
 
 
 }
