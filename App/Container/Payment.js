@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { View, Text, Image, StyleSheet, Alert, TouchableOpacity } from 'react-native'
 import { Fonts } from '../Themes'
+import Entypo from 'react-native-vector-icons/Entypo'
 import { Avatar } from 'react-native-elements'
 import Fontisto from 'react-native-vector-icons/Fontisto'
 import Images from '../Lib/Images'
@@ -27,12 +28,15 @@ class Payment extends Component {
         return (
             <View style={{ flex: 1, backgroundColor: '#edeff0' }}>
                 <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', justifyContent: 'center' }}>
-                    <Text style={{ alignSelf: 'center', justifyContent: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20 }}>Payment</Text>
+                <View style={{ height: 50, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', paddingHorizontal: 10, justifyContent: 'center' }} >
+                <TouchableOpacity onPress={() => this.props.navigation.navigate('Account')}style={{ width: '5%', alignSelf: 'center', justifyContent: 'center' }}>
+                        <Entypo name='chevron-thin-left' size={30} color='white' />
+                    </TouchableOpacity>
+                    <View style={{ width: '95%', justifyContent: 'center' }}>
+                        <Text style={{ alignSelf: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20 }}>Nearby</Text>
+                    </View>
+                </View>   
                 </View>
-                <View style={{ justifyContent: 'space-between', flex: 1, paddingBottom: 20 }}>
-                    <View style={{ paddingHorizontal: 20, marginTop: 10, elevation: 2 }}>
-
-
 
 
                         {/* OVO */}
@@ -56,10 +60,6 @@ class Payment extends Component {
 
                     </View>
 
-
-                </View>
-
-            </View>
         )
     }
 }
