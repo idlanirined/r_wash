@@ -33,7 +33,7 @@ class Account extends Component {
 
     render() {
         return (
-            <View style={{ flex: 1, backgroundColor: '#edeff0' }}>
+            <View style={{ flex: 1, backgroundColor: '#f5f5f5' }}>
                 <Modal
                     onBackdropPress={() => this.setState({ modalLogout: false })}
                     isVisible={this.state.modalLogout}

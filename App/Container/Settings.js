@@ -25,7 +25,7 @@ class Settingss extends Component {
       const { checked } = this.state;
         return (
 
-          <View style={{ flex: 1, backgroundColor: '#edeff0' }}>
+          <View style={{ flex: 1, backgroundColor: '#f5f5f5' }}>
           <View style={{ height: 60, width: '100%', backgroundColor: '#00CCFF', justifyContent: 'center' }}>
           <View style={{ height: 50, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', paddingHorizontal: 10, justifyContent: 'center' }} >
           <TouchableOpacity onPress={() => this.props.navigation.navigate('Account')}style={{ width: '5%', alignSelf: 'center', justifyContent: 'center' }}>
