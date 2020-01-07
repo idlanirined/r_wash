@@ -150,14 +150,13 @@ class MainMenu extends Component {
                 </View>
                 <ScrollView horizontal={true} style={{flexDirection:'row', paddingLeft:20}}>
                   <View style={{marginRight:16}}>
-                    <View style={{backgroundColor: '#00CCFF', height: 130, width: 160, marginTop:20, borderRadius:11}}></View>
+                      <Image source={Images.promo1} style={{width: 180, height:130, marginTop:20, borderRadius:5}}></Image> 
                 </View>
                   <View style={{marginRight:16}}>
-                    <View style={{backgroundColor: '#00CCFF', height: 130, width: 160, marginTop:20, borderRadius:11}}></View>
-                        <Text></Text> 
+                  <Image source={Images.promo2} style={{width: 240, height:130, marginTop:20, borderRadius:5}}></Image>
                 </View>
                   <View style={{marginRight:16}}>
-                    <View style={{backgroundColor: '#00CCFF', height: 130, width: 160, marginTop:20, borderRadius:11}}></View>
+                    <View style={{backgroundColor: '#00CCFF', height: 130, width: 160, marginTop:20, borderRadius:5}}></View>
                         <Text></Text> 
                 </View>   
                 </ScrollView>

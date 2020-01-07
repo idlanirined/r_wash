@@ -33,7 +33,7 @@ class Account extends Component {
 
     render() {
         return (
-            <View style={{ flex: 1, backgroundColor: '#edeff0' }}>
+            <View style={{ flex: 1, backgroundColor: '#f5f5f5' }}>
                 <Modal
                     onBackdropPress={() => this.setState({ modalLogout: false })}
                     isVisible={this.state.modalLogout}
@@ -65,7 +65,8 @@ class Account extends Component {
                         <View style={{ backgroundColor: 'white', width: '100%', height: 140, borderRadius: 5, marginTop: 5, paddingVertical: 5, elevation:2 }}>
                             <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center' }} size='large' />
                             <Text style={{ fontFamily: Fonts.type.bold, marginTop: 10, alignSelf: 'center', fontSize: 16 }}>HAMJAH HUAILID</Text>
-                            <Text style={{ fontFamily: Fonts.type.light, alignSelf: 'center', fontSize: 12 }}>082240206592</Text>
+                            <Text style={{ fontFamily: Fonts.type.light, alignSelf: 'center', fontSize: 12, color: '#808080' }}>hamjah.huailid18@gmail.com</Text>
+                            <Text style={{ fontFamily: Fonts.type.light, alignSelf: 'center', fontSize: 12, color: '#808080'  }}>082240206592</Text>
                         </View>
 
                         {/* Profile */}
@@ -87,8 +88,8 @@ class Account extends Component {
                     </View>
 
                     <View style={{ paddingHorizontal: 20, }}>
-                        {/* Setting */}
-                        <TouchableOpacity style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 5, marginTop: 170, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20, elevation:2 }} onPress={() => this.props.navigation.navigate('')}>
+                        {/* Settings */}
+                        <TouchableOpacity style={{ backgroundColor: 'white', width: '100%', height: 60, borderRadius: 5, marginTop: 170, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20, elevation:2 }} onPress={() => this.props.navigation.navigate('Settingss')}>
                             <Fontisto name='player-settings' size={20} style={{ alignSelf: 'center' }} color={'gray'} />
                             <Text style={{ alignSelf: 'center', marginLeft: 20, fontFamily: Fonts.type.medium }}>Settings</Text>
                         </TouchableOpacity>
