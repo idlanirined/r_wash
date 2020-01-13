@@ -3,6 +3,7 @@ import { Text, Image, TextInput, ScrollView, StyleSheet, TouchableOpacity, Permi
 import { View, Icon, Container, Header,Left,Right, Content, Button, } from 'native-base';
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import Entypo from 'react-native-vector-icons/Entypo'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import { Appbar } from 'react-native-paper';
 import LinearGradient from 'react-native-linear-gradient'
 import { Fonts } from '../Themes'
@@ -74,7 +75,7 @@ class NearbyNew extends Component {
                     <View style={{ width: 180, height: 100, paddingHorizontal: 30, left: 17.5, top: -20 }}>
                         <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#E8E8E8', '#E8E8E8']} style={{ borderBottomLeftRadius: 20, borderTopLeftRadius: 20, marginVertical: 20, justifyContent: 'flex-end', elevation: 2 }}>
                             <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'row', height: 40 }} onPress={() => this.props.navigation.navigate('Filtersort')} >
-                                <Image style={styles.inputIcon} source={Images.iconFilterBlack} />
+                                <MaterialCommunityIcons name='filter-variant' size={20} style={{left:-10}}/>
                                 <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 10 }}>Filter&Sort </Text>
                             </TouchableOpacity>
                         </LinearGradient>
@@ -83,7 +84,7 @@ class NearbyNew extends Component {
                     <View style={{ backgroundColor: 'transparent', width: 180, height: 130, paddingHorizontal: 30, right: 42.5, top: -20 }}>
                         <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#E8E8E8', '#E8E8E8']} style={{ borderBottomRightRadius: 20, borderTopRightRadius: 20, marginVertical: 20, justifyContent: 'flex-end', elevation: 2 }}>
                             <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'row', height: 40 }} onPress={() => this.props.navigation.navigate('Maps')} >
-                                <Image style={styles.inputIcon} source={Images.iconMapView} />
+                                <Entypo name='map' size={20} style={{left:-10}} />
                                 <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 10 }}> Maps View </Text>
                             </TouchableOpacity>
                         </LinearGradient>

@@ -4,6 +4,8 @@ import { View, Container, Icon } from 'native-base';
 import LinearGradient from 'react-native-linear-gradient'
 import Entypo from 'react-native-vector-icons/Entypo';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
+import Feather from 'react-native-vector-icons/Feather'
 import { Avatar } from 'react-native-elements';
 import Images from '../Lib/Images';
 import Fonts from '../Themes/Fonts';
@@ -67,22 +69,23 @@ class MainMenu extends Component {
                
 
                {/* Car wash arround */}
-                <Text style={{paddingBottom:5, paddingLeft:28, fontFamily: Fonts.type.regular, color: 'grey'}}>Car Wash Arround</Text>
+                <Text style={{paddingBottom:5, paddingLeft:33, fontFamily: Fonts.type.regular, color: 'grey'}}>Car Wash Arround</Text>
                 <View style={styles.inputContainer}> 
-                    <Image source={Images.iconArround} style={{width:20, height:20}}/>
-                    <TextInput style={styles.inputs}
+                    <MaterialCommunityIcons name='map-marker-radius' size={25} color={'grey'}/>
+                    <TextInput 
+                        style={styles.inputs}
                         placeholder="City"
                         underlineColorAndroid='transparent'    
                     />
                 </View>
 
                   {/* Pilih Mobil */}
-                <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10, paddingLeft:30}}>Vehicle</Text>
+                <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10, paddingLeft:35}}>Vehicle</Text>
                 <View style={styles.inputContainer}>
                 <Image source={Images.iconCarProfile} style={{width:25, height:25}}/>
                     <Picker
                         selectedValue={this.state.vehicle}
-                        style={{ width: '90%'}}
+                        style={{ width: '90%', left: 3}}
                         onValueChange={(itemValue, itemIndex) =>
                             this.setState({vehicle: itemValue})
                           }
@@ -99,12 +102,12 @@ class MainMenu extends Component {
 
                   {/* Filter */}
 
-                  <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10, paddingLeft:30}}>Filter</Text>
+                  <Text style={{paddingBottom:5, fontFamily: Fonts.type.regular, color: 'grey', paddingTop: 10, paddingLeft:38}}>Filter</Text>
                 <View style={styles.inputContainer}>
-                <Image source={Images.iconFilter} style={{width:23, height:23}}/>
+                <AntDesign name='filter' size={25} color={'grey'}/>
                     <Picker
                         selectedValue={this.state.filter}
-                        style={{ width: '91%'}}
+                        style={{ width: '89%', left:7}}
                         onValueChange={(itemValue, itemIndex) =>
                             this.setState({filter: itemValue})
                           }
@@ -119,9 +122,9 @@ class MainMenu extends Component {
 
 
                             {/* Search */}
-                <Text style={{paddingTop:10, paddingLeft:32, fontFamily: Fonts.type.regular, color: 'grey'}}>Search</Text>
+                <Text style={{paddingTop:10, paddingLeft:39, fontFamily: Fonts.type.regular, color: 'grey'}}>Search</Text>
                 <View style={styles.inputContainer}>
-                <Image source={Images.iconSearch} style={{width:23, height:23}}/>
+                <Feather name='search' size={25} color={'grey'} />
                     <TextInput style={styles.inputs}
                         placeholder="Search by Car Wash Name"
                         underlineColorAndroid='transparent'    
@@ -175,14 +178,15 @@ const styles = StyleSheet.create({
     },
     inputs: {
         height: 45,
-        marginLeft: 10,
-        paddingLeft: -5,
+        marginLeft: 17,
+        paddingLeft: 0,
         borderBottomColor: '#FAFAFA',
         flex: 1,
         fontSize: 13,
     },
     inputContainer: {
         borderBottomWidth: 1,
+        borderBottomColor: '#eaeaea',
         borderWidth: 0,
         elevation: 0,
         backgroundColor: '#FFFFFF',

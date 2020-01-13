@@ -4,6 +4,7 @@ import { Fonts } from '../Themes'
 
 import Entypo from 'react-native-vector-icons/Entypo'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import { Avatar } from 'react-native-elements';
 import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
@@ -166,7 +167,7 @@ class Maps extends Component {
                     <View style={{ width: 180, height: 100, paddingHorizontal: 30 , left: 17.5, top: -20}}>
                         <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#E8E8E8', '#E8E8E8']} style={{ borderBottomLeftRadius: 20, borderTopLeftRadius: 20, marginVertical: 20, justifyContent: 'flex-end', elevation: 2 }}>
                             <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'row', height: 40 }} onPress={() => this.props.navigation.navigate('Filtersort')} >
-                            <Image style={styles.inputIcon2} source={Images.iconFilterBlack}/>
+                            <MaterialCommunityIcons name='filter-variant' size={20} style={{left:-10}}/>
                                 <Text style={{ color: 'Black', fontFamily: Fonts.type.bold, fontSize: 10 }}>Filter&Sort </Text>
                             </TouchableOpacity>
                         </LinearGradient>
@@ -175,7 +176,7 @@ class Maps extends Component {
                     <View style={{ backgroundColor: 'transparent', width: 180, height: 130, paddingHorizontal: 30 , right: 42.5, top: -20}}>
                         <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#E8E8E8', '#E8E8E8']} style={{ borderBottomRightRadius: 20, borderTopRightRadius: 20, marginVertical: 20, justifyContent: 'flex-end', elevation: 2 }}>
                             <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', flexDirection: 'row', height: 40 }} onPress={() => this.props.navigation.navigate('NearbyNew')} >
-                            <Entypo name='list' size={22} color='Black' />
+                            <Entypo name='list' size={22} color={'black'} style={{left:-10}} />
                                 <Text style={{ color: 'Black', fontFamily: Fonts.type.bold, fontSize: 10 }}> List View </Text>
                             </TouchableOpacity>
                         </LinearGradient>
