@@ -15,6 +15,8 @@ import Images from '../Lib/Images'
 // import { Colors, Images } from '../Themes'
 import { Image, Text } from 'react-native'
 import { View } from 'native-base';
+import FontAwesome from 'react-native-vector-icons/FontAwesome'
+import FontAwesome5 from 'react-native-vector-icons/FontAwesome5'
 
 
 export default HomeNavigation = createBottomTabNavigator({
@@ -28,7 +30,7 @@ export default HomeNavigation = createBottomTabNavigator({
             tabBarIcon: ({ tintColor }) => (  
                 <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
                     {/* <Icon style={[{color: tintColor}]} size={25} name={'ios-home'}/>   */}
-                    <Image source={Images.iconHome} style={{marginTop:10, width: 23, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>
+                    <FontAwesome name='home' size={27} color={tintColor} style={{marginTop:10}}/>
                 </View>),  
         }
     },
@@ -40,7 +42,7 @@ export default HomeNavigation = createBottomTabNavigator({
             ),
             tabBarIcon: ({ tintColor }) => (  
                 <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
-                    <Image source={Images.iconMyOrder} style={{ marginTop:10, width: 23, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>
+                    <FontAwesome5 name='clipboard-list' size={21} color={tintColor} style={{ marginTop:8}}/>
                 </View>),  
         }
     },
@@ -52,7 +54,7 @@ export default HomeNavigation = createBottomTabNavigator({
             ),
             tabBarIcon: ({ tintColor }) => (  
                 <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
-                    <Image source={Images.iconNearby} style={{ marginTop:10, width: 23, height: 30, tintColor: tintColor, resizeMode: 'center'}}/>
+                    <FontAwesome5 name='map-marked-alt' size={21} color={tintColor} style={{ marginTop:8}}/>
                 </View>),
         }
     },
@@ -76,7 +78,7 @@ export default HomeNavigation = createBottomTabNavigator({
             ),
             tabBarIcon: ({ tintColor }) => (  
                 <View style={{ justifyContent: 'center', alignSelf: 'center'}}>  
-                        <Image source={Images.iconAccount} style={{ marginTop:10, width: 23, height: 30, tintColor: tintColor, resizeMode: 'contain'}}/>
+                        <FontAwesome name='user' size={23} color={tintColor} style={{ marginTop:10}}/>
                 </View>),
         }
     }
