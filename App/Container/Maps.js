@@ -149,14 +149,11 @@ class Maps extends Component {
                                 <Marker
                                     coordinate={{ latitude: item.latitude, longitude: item.longitude }}
                                     title={item.title}
-                                    description={item.desc}
-                                 
-                            
-                                    // animasi
-                                  
-
-                                // icon={image}
-                                />
+                                    description={item.desc}>
+                                <Image source={Images.iconpinrwash2}
+                                style={{width:50, height:50}}/>
+                                
+                                </Marker>
                             )
                         })}
                     </MapView>
