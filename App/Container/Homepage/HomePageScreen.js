@@ -143,7 +143,10 @@ class HomePageScreen extends Component {
                                     // animasi
                                   
 
-                                // icon={image}
+                                icon={Images.iconpinrwash}
+
+                                
+        
                                 />
                             )
                         })}

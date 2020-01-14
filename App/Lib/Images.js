@@ -39,6 +39,7 @@ const Images = {
     iconLocation: require('../Assets/Icon/location.png'),
     iconCalender: require('../Assets/Icon/calender.png'),
     iconTopUp: require('../Assets/Icon/to.png'),
+    iconpinrwash: require('../Assets/Icon/pinrwash.png'),
 
     //img
     splash: require('../Assets/img/Splashscreen.jpg'),
