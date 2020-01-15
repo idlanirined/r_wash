@@ -1,27 +1,21 @@
-import React, { Component, useState, useEffect } from 'react'
-import { View, Text, Image, Picker, StyleSheet, TextInput, TouchableOpacity,PermissionsAndroid } from 'react-native'
-import { Fonts } from '../Themes'
-
+import React, { Component, useState } from 'react'
+import { Dimensions, TouchableOpacity, ActivityIndicator, View, Text, Image, Picker, StyleSheet, TextInput, PermissionsAndroid, Platform, Alert } from 'react-native'
+import Images from '../Lib/Images'
+import Carousel from 'react-native-snap-carousel';
 import Entypo from 'react-native-vector-icons/Entypo'
 import FontAwesome from 'react-native-vector-icons/FontAwesome'
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons'
 import AntDesign from 'react-native-vector-icons/AntDesign'
 import { Avatar } from 'react-native-elements';
-import { Container, Header, Left, Body, Right, Button, Icon, Title } from 'native-base';
 import LinearGradient from 'react-native-linear-gradient'
-
-
+import { Fonts } from '../Themes'
+import { request, PERMISSIONS } from 'react-native-permissions';
+import MapView, { PROVIDER_GOOGLE, Marker, Polygon, Callout } from 'react-native-maps';
 import Geolocation from '@react-native-community/geolocation';
-
-
-import MapView, { PROVIDER_GOOGLE, Marker } from 'react-native-maps';
-import Images from '../Lib/Images'
+import Icon from 'react-native-vector-icons/Entypo';
 let myMap;
 
-
-//create a component
-
-
+//const [marker, setMarker] = useState ({})
 
 class Maps extends Component {
      
@@ -30,25 +24,88 @@ class Maps extends Component {
         this.state = {
             mobil: 'Honda Jazz',
             search: '',
-            array: [
-                { latitude: -6.897774, longitude: 107.613805, title: 'R*Wash Dipatiukur', desc: '7 min' },
-              { latitude: -6.899035, longitude: 107.620709, title: 'Goten Wash', desc: '12 min' },
-              { latitude: -6.902092, longitude: 107.615473, title: 'Learning Clean', desc: '20 min' },
-                { latitude: -6.904738, longitude: 107.588264, title: 'Car Wash', desc: '23 min' }
+            markers: [
+                { pin: Images.iconpinrwash2}
+            ],
+            coordinates: [
+                { latitude: -6.897774, longitude: 107.613805, title: 'R*Wash Dipatiukur', desc: '7 min', src: Images.rwashimage },
+                { latitude: -6.899035, longitude: 107.620709, title: 'Goten Wash', desc: '12 min', src: Images.goten },
+                { latitude: -6.902092, longitude: 107.615473, title: 'Learning Clean', desc: '20 min', src: Images.rwashimage },
+                { latitude: -6.904738, longitude: 107.588264, title: 'Car Wash', desc: '23 min', src: Images.rwashimage }
             ],
         }
     }
-
+    
     componentDidMount() {
-        PermissionsAndroid.request(
-            PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION
-        ).then(granted => {
-            //   alert(granted) 
-        });
-        Geolocation.getCurrentPosition(info => console.log(info));
+        this.requestLocationPermission();
     }
 
-    
+    requestLocationPermission = async () => {
+        if(Platform.OS === 'android'){
+         var response = await request(PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION);
+         console.log('Android: ' + response);
+
+         if(response === 'granted'){
+             this.locateCurrentPosition();
+         }
+        } else {
+          var response = await request(PERMISSIONS.IOS.LOCATION_WHEN_IN_USE);
+          console.log('IPhone: ' + response);
+
+          if(response === 'granted'){
+             this.locateCurrentPosition();
+        }
+    }
+}
+
+    locateCurrentPosition = () => {
+        Geolocation.getCurrentPosition(
+            position => {
+                console.log(JSON.stringify(position));
+
+                let initialPosition = {
+                    latitude: position.coords.latitude,
+                    longitude: position.coords.longitude,
+                    latitudeDelta: 0.0922,
+                    longitudeDelta: 0.0421,
+                }
+
+                this.setState({initialPosition});
+            }
+            )
+            
+    }
+
+
+    onCarouselItemChange = (index) => {
+        let location = this.state.coordinates[index];
+
+        this.myMap.animateToRegion({
+            latitude: location.latitude,
+            longitude:location.longitude,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+        })
+
+        this.state.markers[index].showCallout()
+    }
+
+    onMarkerPressed = (location, index) => {
+        this.myMap.animateToRegion({
+            latitude: location.latitude,
+            longitude:location.longitude,
+            latitudeDelta: 0.0922,
+            longitudeDelta: 0.0421,
+        });
+
+        this._carousel.snapToItem(index);
+    }
+
+    renderCarouselItem = ({item}) =>
+        <View style={styles.cardCarousel}>
+        <Text style={styles.cardTitle}>{item.title}</Text>
+        <Image style={styles.cardImage} source={item.src}/>
+        </View>
 
     render() {
 
@@ -76,7 +133,7 @@ class Maps extends Component {
                 style={{ flex:1, paddingLeft: 5, flexDirection: 'column'}}
                 >
                     <Text style={{fontWeight: 'bold', alignItems: 'center', fontSize: 18, paddingLeft: 10}}>R*Wash Dipatiukur</Text>
-                    <Text style={{paddingLeft: 10}} allowFontScaling={false}>No Telp </Text>
+                    <Text style={{paddingLeft: 10}} allowFontScaling={false}>No Telp nn </Text>
 
                 </View>
 
@@ -127,38 +184,47 @@ class Maps extends Component {
                     </View>
                 </View>
 
+                <View style={styles.container1}>
                 <View style={{ flex: 1 }}>
                     <MapView
-                        ref={ref => myMap = ref}
-                        followsUserLocation={true}
+                        ref={map => this.myMap = map}
                         showsUserLocation={true}
                         provider={PROVIDER_GOOGLE} // remove if not using Google Maps
                         style={styles.map}
                         zoomEnabled={true}
-                        region={{
-                            latitude: -6.9198966,
-                            longitude: 107.6197455,
-                            latitudeDelta: 0.0922,
-                            longitudeDelta: 0.0421,
-                        }}
+                        initialRegion={this.state.initialPosition}>
 
-                     
-                    >
-                        {this.state.array.map((item, index) => {
+                        {this.state.coordinates.map((item, index, markers) => {
                             return (
                                 <Marker
-                                    coordinate={{ latitude: item.latitude, longitude: item.longitude }}
-                                    title={item.title}
-                                    description={item.desc}>
-                                <Image source={Images.iconpinrwash2}
-                                style={{width:50, height:50}}/>
+                                    draggable
+                                    key={item.title}
+                                    ref={ref => this.state.markers[index] = ref}
+                                    onPress={() => this.onMarkerPressed(item, index)}
+                                    coordinate={{ latitude: item.latitude, longitude: item.longitude }}>
+                                    <Image source={Images.iconpinrwash2} style={{width:50, height:50}}/>
                                 
-                                </Marker>
+                                <Callout>       
+                                    <Text>{item.title}</Text>
+                                    <Text>{item.desc}</Text>
+                                </Callout>
+                                
+                            </Marker>
                             )
                         })}
                     </MapView>
-                        {renderDetailMarker()}  
-                
+                        {/*renderDetailMarker() */}  
+                        <Carousel
+                            ref={(c) => { this._carousel = c; }}
+                            data={this.state.coordinates}
+                            containerCustomStyle={styles.carousel}
+                            renderItem={this.renderCarouselItem}
+                            sliderWidth={Dimensions.get('screen').width}
+                            itemWidth={350}
+                            removeClippedSubviews={true}
+                            onSnapToItem={(index) => this.onCarouselItemChange(index)}
+            />
+                </View>
                 </View>
                 <View  style={{ backgroundColor: 'transparent', width: '100%', height: 50, borderRadius: 5, marginBottom: 20, paddingVertical: 5, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, position: 'absolute', bottom: 0, }}>
                     <View style={{ width: 180, height: 100, paddingHorizontal: 30 , left: 17.5, top: -20}}>
@@ -180,8 +246,8 @@ class Maps extends Component {
                </View>
 
         </View>
-            
             </View>
+            
         )
     }
 }
@@ -191,8 +257,12 @@ class Maps extends Component {
 
 
 const styles = StyleSheet.create({
+    container1: {
+        ...StyleSheet.absoluteFillObject,
+        marginTop: 110
+    },
     container: {
-        flex: 1,
+        flex:1,
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: 'white',
@@ -215,16 +285,6 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         tintColor: '#30dae3'
     },
-
-    inputIcon2: {
-        width: 20,
-        height: 20,
-        marginLeft: 0,
-        justifyContent: 'flex-start',
-        tintColor: 'black',
-        right: 10
-    },
-
     inputs: {
         height: 45,
         marginLeft: 16,
@@ -234,6 +294,29 @@ const styles = StyleSheet.create({
     map: {
         ...StyleSheet.absoluteFillObject,
     },
+    carousel: {
+        position: 'absolute',
+        bottom: 0,
+        marginBottom: 75,
+    },
+    cardCarousel: {
+        backgroundColor: 'white',
+        height: 200,
+        width: 350,
+        padding: 10,
+        borderRadius: 7,
+    },
+    cardImage: {
+        height: 100,
+        width:120,
+        marginTop:-15,
+        borderRadius: 5,
+    },
+    cardTitle: {
+        paddingLeft: 160,
+        fontSize: 20
+    }
 })
+
 
 export default Maps;
