@@ -41,6 +41,7 @@ const Images = {
     iconTopUp: require('../Assets/Icon/to.png'),
     iconpinrwash: require('../Assets/Icon/pinrwash.png'),
     iconpinrwash2: require('../Assets/Icon/pinrwash2.png'),
+    iconwaktu: require('../Assets/Icon/waktu.png'),
 
     //img
     splash: require('../Assets/img/Splashscreen.jpg'),
@@ -49,7 +50,9 @@ const Images = {
     rwash2: require('../Assets/img/Rwash2.jpeg'),
     rwash3: require('../Assets/img/Rwash3.jpg'),
     promo1: require('../Assets/img/Promo1.png'),
-    promo2: require('../Assets/img/Promo2.png')
+    promo2: require('../Assets/img/Promo2.png'),
+    rwashimage: require('../Assets/img/Rwash4.jpg'),
+    goten: require('../Assets/img/Goten.jpeg'),
 
 
 }
