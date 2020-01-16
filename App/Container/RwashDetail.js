@@ -159,22 +159,26 @@ class RwashDetail extends Component {
 
                 {/* Booking */}
                 <View style={{ backgroundColor: 'white', top: 170, width: '100%', height: 100, paddingVertical: 5, flexDirection: 'row', paddingHorizontal: 20, justifyContent: 'space-between' }}>
-                    <Text style={{ alignSelf: 'center', top: -40, left: 100, fontFamily: Fonts.type.medium, fontSize: 22, fontWeight: 'bold' }}>Booking</Text>
+                    <Text style={{ alignSelf: 'center', top: -55, left: 120, color:'red', fontFamily: Fonts.type.medium, fontSize: 22, fontWeight: 'bold' }}>Booking</Text>
 
-                    <View style={{ backgroundColor: 'transparent', left: -110, width: '100%', height: 80, borderRadius: 5, marginTop: 5, paddingVertical: 0, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20 }}>
+                    <View style={{ backgroundColor: 'transparent', left: -100, width: '100%', height: 80, borderRadius: 5, marginTop: 5, paddingVertical: 0, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20, paddingTop:10 }}>
                         <View style={{ width: 150, height: 100, paddingHorizontal: 30, alignContent: 'center', left: -30, elevation: 10 }}>
+                        <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 14, alignSelf:'center', marginBottom:-10 }}> Slot 1 </Text>
                             <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 20, marginVertical: 20, justifyContent: 'flex-end' }}>
                                 <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.setState({ modalbooking: true })} >
-                                    <Text style={{ color: 'white', fontFamily: Fonts.type.bold, fontSize: 14 }}> Slot 1 </Text>
+                                    <Image source={Images.iconwaktu} style={{width:20, height:20, alignSelf:'flex-start', top:7, left:10}}></Image>
+                                    <Text style={{ color: 'white', fontFamily: Fonts.type.bold, fontSize: 14, top:-10, left:10 }}> 7 min </Text>
                                 </TouchableOpacity>
                             </LinearGradient>
                         </View>
 
-                        {/* Button Edit Profile */}
+                        {/* Button Slot2 */}
                         <View style={{ backgroundColor: 'transparent', width: 150, height: 100, paddingHorizontal: 30, alignContent: 'center', right: 80 }}>
+                        <Text style={{ color: 'black', fontFamily: Fonts.type.bold, fontSize: 14, alignSelf:'center', marginBottom:-10 }}> Slot 2 </Text>
                             <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 20, marginVertical: 20, justifyContent: 'flex-end' }}>
                                 <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('')} >
-                                    <Text style={{ color: 'white', fontFamily: Fonts.type.bold, fontSize: 14 }}> Slot 2 </Text>
+                                <Image source={Images.iconwaktu} style={{width:20, height:20, alignSelf:'flex-start', top:7, left:10}}></Image>
+                                    <Text style={{ color: 'white', fontFamily: Fonts.type.bold, fontSize: 14, top:-10, left:10 }}> 12 min </Text>
                                 </TouchableOpacity>
                             </LinearGradient>
                         </View>
