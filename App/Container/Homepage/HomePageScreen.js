@@ -270,8 +270,7 @@ class HomePageScreen extends Component {
                 </View>
             
             
-            </View>
-            </View>
+            </View></View>
         )
     }
 }

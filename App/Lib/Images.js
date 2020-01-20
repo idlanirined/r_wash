@@ -42,6 +42,7 @@ const Images = {
     iconpinrwash: require('../Assets/Icon/pinrwash.png'),
     iconpinrwash2: require('../Assets/Icon/pinrwash2.png'),
     iconwaktu: require('../Assets/Icon/waktu.png'),
+    iconpinrwash3: require('../Assets/Icon/pinrwash3.png'),
 
     //img
     splash: require('../Assets/img/Splashscreen.jpg'),
