@@ -7,6 +7,7 @@ import Fonts from '../Themes/Fonts';
 import { Avatar } from 'react-native-elements';
 import { Checkbox } from 'react-native-paper';
 import Modal from 'react-native-modal';
+import Entypo from 'react-native-vector-icons/Entypo'
 
 
 
@@ -45,9 +46,12 @@ class MyOrder extends Component {
                     </View>
                 </Modal>
 
-
-                <View style={{ height: 50, width: '100%', backgroundColor: '#00CCFF', justifyContent: 'center' }}>
-                    <Text style={{ alignSelf: 'center', justifyContent: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20 }}>My Order</Text>
+                <View style={{ height: 50, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', paddingHorizontal: 10, justifyContent: 'center' }} >
+           
+                    <View style={{ width: '95%', justifyContent: 'center' }}>
+                        <Text style={{ alignSelf: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20 }}>My Order</Text>
+                    </View>
+                   
                 </View>
                 {/*
                 <View style={styles.container}>
@@ -160,7 +164,7 @@ class MyOrder extends Component {
                 <View style={{ backgroundColor: 'transparent', left: 20, width: '100%', height: 80, borderRadius: 5, marginTop: 5, paddingVertical: 0, flexDirection: 'row', justifyContent: 'space-between', paddingHorizontal: 20 }}>
                     <View style={{ width: 180, height: 100, paddingHorizontal: 30, alignContent: 'center', left: -30, elevation: 10 }}>
                         <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 20, marginVertical: 20, justifyContent: 'flex-end' }}>
-                            <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('MainMenu')} >
+                            <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.props.navigation.navigate('Home')} >
                                 <Text style={{ color: 'white', fontFamily: Fonts.type.bold, fontSize: 14 }}> Back </Text>
                             </TouchableOpacity>
                         </LinearGradient>

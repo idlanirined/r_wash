@@ -16,19 +16,7 @@ class Account extends Component {
     }
 
 
-    _onPressButton() {
-        Alert.alert(
-            'Logout',
-            'Are you sure you want to logout?',
-            [
-                { text: 'NO', onPress: () => console.warn('Tidak jadi keluar'), style: 'cancel' },
-                //{text: 'YES', onPress:() => this.props.navigation.navigate('Login') }
-                { text: 'YES', onPress: () => this.props.navigation.navigate('Login') }
-            ],
-
-            //clicking out side of alert will not cancel
-        );
-    };
+ 
 
 
     render() {

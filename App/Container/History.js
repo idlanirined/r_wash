@@ -3,6 +3,7 @@ import { View, Text, ScrollView, TouchableOpacity, Alert } from 'react-native'
 import { Fonts } from '../Themes'
 import Ionicons from 'react-native-vector-icons/Ionicons'
 import Modal from 'react-native-modal'
+import Entypo from 'react-native-vector-icons/Entypo'
 
 class History extends Component {
     constructor(props) {
@@ -55,9 +56,10 @@ class History extends Component {
                         </View>
                     </View>
                 </Modal>
-
+  
 
                 <View style={{ height: 50, width: '100%', backgroundColor: '#00CCFF', flexDirection: 'row', paddingHorizontal: 20, justifyContent: 'center' }} >
+            
                     <View style={{ width: '95%', justifyContent: 'center' }}>
                         <Text style={{ alignSelf: 'center', fontFamily: Fonts.type.medium, color: 'white', fontSize: 20 }}>History</Text>
                     </View>
