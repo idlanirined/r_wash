@@ -117,8 +117,8 @@ class HomePageScreen extends Component {
         <Text style={styles.cardBooking}>{item.booking}</Text>
         <View style={{ width: 150, height: 100, paddingHorizontal: 30, alignContent: 'center', left: -30, elevation: 10, top:-20 }}>
                         <Text style={styles.cardSlot}>{item.slot}</Text>
-                            <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 20, marginVertical: 20, justifyContent: 'flex-end' }}>
-                                <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 40 }} onPress={() => this.setState({ modalbooking: true })} >
+                            <LinearGradient start={{ x: 0, y: 0 }} end={{ x: 0.9, y: 0.5 }} colors={['#00CCFF', '#00CCFF']} style={{ borderRadius: 20, marginVertical: 20, justifyContent: 'flex-end', top: -20 }}>
+                                <TouchableOpacity style={{ alignItems: 'center', justifyContent: 'center', height: 30 }} onPress={() => this.setState({ modalbooking: true })} >
                                     <Image source={Images.iconwaktu} style={{width:20, height:20, alignSelf:'flex-start', top:-2, left:10}}></Image>
                                     <Text style={styles.cardWaktu}>{item.waktu}</Text>
                                 </TouchableOpacity>
@@ -201,7 +201,7 @@ class HomePageScreen extends Component {
                 <View style={{ height: 60, width: '100%', borderBottomColor: 'gray', borderBottomWidth: 0, elevation: 0, paddingHorizontal: 20, flexDirection: 'row' }}>
                     <Avatar rounded source={Images.avatar} containerStyle={{ alignSelf: 'center' , height: 35, width:35}} />
                     <View style={{ alignSelf: 'center', justifyContent: 'center', marginLeft: 5 }}>
-                        <Text style={{ fontSize: 12, alignSelf: 'center', fontWeight: 'bold' }}>Hi, Hamjah</Text>
+                        <Text style={{ fontSize: 12, alignSelf: 'center', fontWeight: 'bold' }}>Hi, Hamjah h</Text>
                         <Text style={{ fontSize: 10, alignSelf: 'center', color: '#00CCFF', fontWeight: 'bold'}}>Honda Jazz</Text>
                     </View>
                     <Picker
@@ -329,36 +329,37 @@ const styles = StyleSheet.create({
     cardImage: {
         height: 100,
         width:135,
-        marginTop:-20,
+        top: -25,
         borderRadius: 5,
     },
     cardTitle: {
         paddingLeft: 155,
-        fontSize: 20,
+        fontSize: 16,
         fontFamily: Fonts.type.bold
     },
     cardPin: {
         height: 20,
         width:20,
-        marginTop: -80,
+        marginTop: -100,
         marginLeft: 150
     },
     cardJarak: {
         paddingLeft: 173,
         fontSize: 14,
-        marginTop:-17,
+        marginTop:-20,
         color: 'red',
         fontFamily: Fonts.type.regular
     },
     cardAlamat: {
         paddingLeft: 155,
         fontSize: 14,
-        marginTop: 5,
+       top: 5,
         color: '#808080',
         fontFamily: Fonts.type.regular
     },
     cardNotlp: {
         paddingLeft: 155,
+        top: 5,
         fontSize: 14,
         marginTop: 3,
         color: '#808080',
@@ -366,15 +367,15 @@ const styles = StyleSheet.create({
     },
     cardPrice: {
         paddingLeft: 230,
-        fontSize: 18,
+        fontSize: 14,
         marginTop: 7,
         color: 'black',
         fontFamily: Fonts.type.bold
     },
     cardBooking: {
         paddingLeft: 130,
-        fontSize: 18,
-        marginTop: 10,
+        fontSize: 16,
+       top: -10,
         color: 'red',
         fontFamily: Fonts.type.bold
     },
@@ -382,7 +383,7 @@ const styles = StyleSheet.create({
         fontFamily: Fonts.type.bold,
         paddingLeft: 25,
         paddingTop:15,
-        marginBottom:-20
+       top: -5
         
     },
     cardWaktu: {
