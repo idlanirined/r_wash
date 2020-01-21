@@ -327,38 +327,39 @@ const styles = StyleSheet.create({
         borderRadius: 7,
     },
     cardImage: {
-        height: 100,
-        width:135,
-        top: -25,
+        height: '70%',
+        width: '40%',
+        top: -20,
         borderRadius: 5,
+        left:-5
     },
     cardTitle: {
-        paddingLeft: 155,
-        fontSize: 16,
+        paddingLeft: 150,
+        fontSize: 18,
         fontFamily: Fonts.type.bold
     },
     cardPin: {
-        height: 20,
-        width:20,
-        marginTop: -100,
-        marginLeft: 150
+        height: '10%',
+        width:'5%',
+        marginTop: -125,
+        marginLeft: 147
     },
     cardJarak: {
-        paddingLeft: 173,
+        paddingLeft: 165,
         fontSize: 14,
-        marginTop:-20,
+        marginTop:-15,
         color: 'red',
         fontFamily: Fonts.type.regular
     },
     cardAlamat: {
-        paddingLeft: 155,
+        paddingLeft: 150,
         fontSize: 14,
-       top: 5,
+        top: 5,
         color: '#808080',
         fontFamily: Fonts.type.regular
     },
     cardNotlp: {
-        paddingLeft: 155,
+        paddingLeft: 150,
         top: 5,
         fontSize: 14,
         marginTop: 3,
@@ -366,24 +367,24 @@ const styles = StyleSheet.create({
         fontFamily: Fonts.type.regular
     },
     cardPrice: {
-        paddingLeft: 230,
-        fontSize: 14,
+        paddingLeft: 240,
+        fontSize: 16,
         marginTop: 7,
         color: 'black',
         fontFamily: Fonts.type.bold
     },
     cardBooking: {
-        paddingLeft: 130,
+        paddingLeft: 150,
         fontSize: 16,
-       top: -10,
+        top: 5,
         color: 'red',
         fontFamily: Fonts.type.bold
     },
     cardSlot: {
         fontFamily: Fonts.type.bold,
-        paddingLeft: 25,
-        paddingTop:15,
-       top: -5
+        paddingLeft: 27,
+        paddingTop:35,
+        top: -5
         
     },
     cardWaktu: {
