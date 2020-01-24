@@ -245,9 +245,19 @@ class HomePageScreen extends Component {
                                     coordinate={{ latitude: item.latitude, longitude: item.longitude }}>
                                     <Image source={Images.iconpinrwash2} style={{width:50, height:50}}/>
                                 
-                                <Callout style={{width:100, height:30, alignItems:'center'}}>       
-                                    <Text>{item.title}</Text>
-                                    <Text>{item.desc}</Text>
+                                <Callout 
+                                     tooltip={true} 
+                                     style={{
+                                         width:110, 
+                                         height:40, 
+                                         flex: 1,
+                                         justifyContent: 'center',
+                                         alignItems:'center', 
+                                         backgroundColor: 'blue', 
+                                         borderRadius: 10, 
+                                         }} >       
+                                    <Text style={{color: 'white', fontFamily: Fonts.type.regular}}>{item.title}</Text>
+                                    <Text style={{color: 'white', fontFamily: Fonts.type.regular}}>{item.desc}</Text>
                                 </Callout>
                                 
                             </Marker>
